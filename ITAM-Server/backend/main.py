@@ -10,14 +10,13 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="ITAM Server API")
 
-# --- ESQUEMA ACTUALIZADO ---
+# --- ESQUEMA  ---
 class AssetReport(BaseModel):
     serial_number: str
     hostname: str
     ip_address: str
     mac_address: str
     usuario: str
-    # Nuevos campos obligatorios en el reporte
     marca: str
     sistema_operativo: str
     procesador: str
