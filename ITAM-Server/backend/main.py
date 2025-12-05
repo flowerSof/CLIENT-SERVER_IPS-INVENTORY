@@ -10,6 +10,20 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="ITAM Server API")
 
+from fastapi.middleware.cors import CORSMiddleware
+
+# ... (código anterior)
+app = FastAPI(title="ITAM Server API")
+
+# Habilitar CORS para que React pueda conectarse
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permite que CUALQUIERA se conecte (ideal para desarrollo)
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite GET, POST, PUT, DELETE, etc.
+    allow_headers=["*"],  # Permite cualquier encabezado
+)
+
 # --- ESQUEMA  ---
 class AssetReport(BaseModel):
     serial_number: str
@@ -21,6 +35,11 @@ class AssetReport(BaseModel):
     sistema_operativo: str
     procesador: str
     memoria_ram: str
+
+class PositionUpdate(BaseModel):
+    pos_x: float
+    pos_y: float
+    piso_id: int
 
 @app.get("/")
 def read_root():
@@ -63,6 +82,21 @@ def recibir_reporte(reporte: AssetReport, db: Session = Depends(get_db)):
     
     db.commit()
     return {"status": "ok", "mensaje": msg}
+    
+@app.put("/api/assets/{serial}/position")
+def actualizar_posicion(serial: str, pos: PositionUpdate, db: Session = Depends(get_db)):
+    """Guarda la ubicación física (X, Y, Piso) de un activo"""
+    activo = db.query(assets.Activo).filter(assets.Activo.serial_number == serial).first()
+    
+    if not activo:
+        raise HTTPException(status_code=404, detail="Activo no encontrado")
+    
+    activo.pos_x = pos.pos_x
+    activo.pos_y = pos.pos_y
+    activo.piso_id = pos.piso_id
+    
+    db.commit()
+    return {"status": "ok", "new_pos": pos}
 
 @app.get("/api/assets")
 def listar_activos(db: Session = Depends(get_db)):
