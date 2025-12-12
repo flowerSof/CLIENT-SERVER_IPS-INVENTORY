@@ -1,103 +1,82 @@
-from fastapi import FastAPI, Depends, HTTPException
-from sqlalchemy.orm import Session
-from pydantic import BaseModel
-from datetime import datetime
-
-from .database import engine, get_db, Base
-from .models import assets
-
-Base.metadata.create_all(bind=engine)
-
-app = FastAPI(title="ITAM Server API")
-
+import time
+from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 
-# ... (código anterior)
-app = FastAPI(title="ITAM Server API")
+from sqlalchemy.orm import Session
+# GOOD (Fix)
+from database import engine, get_db, Base
+from .config import settings
+from .models import assets, locations, users
 
-# Habilitar CORS para que React pueda conectarse
+from .schemas import asset_schema
+
+# --- CREACIÓN AUTOMÁTICA DE TABLAS ---
+# Esperamos un poco a que la BD inicie (parche simple para Docker)
+time.sleep(3) 
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI(title=settings.PROJECT_NAME, version=settings.PROJECT_VERSION)
+
+# --- CORS (Seguridad Frontend) ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Permite que CUALQUIERA se conecte (ideal para desarrollo)
+    allow_origins=["*"], # En producción poner dominio real
     allow_credentials=True,
-    allow_methods=["*"],  # Permite GET, POST, PUT, DELETE, etc.
-    allow_headers=["*"],  # Permite cualquier encabezado
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-# --- ESQUEMA  ---
-class AssetReport(BaseModel):
-    serial_number: str
-    hostname: str
-    ip_address: str
-    mac_address: str
-    usuario: str
-    marca: str
-    sistema_operativo: str
-    procesador: str
-    memoria_ram: str
-
-class PositionUpdate(BaseModel):
-    pos_x: float
-    pos_y: float
-    piso_id: int
+# --- RUTAS DE PRUEBA (Moveremos esto a 'routers' en la parte 2) ---
 
 @app.get("/")
-def read_root():
-    return {"mensaje": "ITAM Server Activo"}
+def health_check():
+    return {"status": "online", "db": settings.POSTGRES_DB}
 
-@app.post("/api/report")
-def recibir_reporte(reporte: AssetReport, db: Session = Depends(get_db)):
-    # Buscamos por Serial
+@app.post("/api/report", response_model=asset_schema.AssetResponse)
+def recibir_reporte(reporte: asset_schema.AssetReportCreate, db: Session = Depends(get_db)):
+    # 1. Validar Token de Seguridad
+    if reporte.auth_token != settings.API_TOKEN:
+        raise HTTPException(status_code=401, detail="Token de agente inválido")
+    
+    # 2. Buscar si existe
     activo = db.query(assets.Activo).filter(assets.Activo.serial_number == reporte.serial_number).first()
     
+    # 3. Lógica de Dominio (Ejemplo simple)
+    en_dominio = "ED" in reporte.hostname or "PC" in reporte.hostname
+
     if activo:
-        # ACTUALIZAR TODO
+        # ACTUALIZAR
         activo.hostname = reporte.hostname
         activo.ip_address = reporte.ip_address
+        activo.mac_address = reporte.mac_address
         activo.usuario_detectado = reporte.usuario
-        # Actualizamos hardware también (por si le pusieron más RAM)
         activo.marca = reporte.marca
+        activo.modelo = reporte.modelo
         activo.sistema_operativo = reporte.sistema_operativo
         activo.procesador = reporte.procesador
         activo.memoria_ram = reporte.memoria_ram
-        
-        activo.ultimo_reporte = datetime.now()
-        msg = "Datos actualizados"
+        activo.es_dominio = en_dominio
+        # ultimo_reporte se actualiza solo por la config del modelo
     else:
-        # CREAR NUEVO CON TODOS LOS DATOS
+        # CREAR
         nuevo_activo = assets.Activo(
             serial_number=reporte.serial_number,
             hostname=reporte.hostname,
             ip_address=reporte.ip_address,
             mac_address=reporte.mac_address,
             usuario_detectado=reporte.usuario,
-            # Nuevos datos
             marca=reporte.marca,
+            modelo=reporte.modelo,
             sistema_operativo=reporte.sistema_operativo,
             procesador=reporte.procesador,
-            memoria_ram=reporte.memoria_ram
+            memoria_ram=reporte.memoria_ram,
+            es_dominio=en_dominio
         )
         db.add(nuevo_activo)
-        msg = "Nuevo equipo registrado"
+        db.commit() # Commit para obtener el ID
+        db.refresh(nuevo_activo)
+        activo = nuevo_activo
     
     db.commit()
-    return {"status": "ok", "mensaje": msg}
     
-@app.put("/api/assets/{serial}/position")
-def actualizar_posicion(serial: str, pos: PositionUpdate, db: Session = Depends(get_db)):
-    """Guarda la ubicación física (X, Y, Piso) de un activo"""
-    activo = db.query(assets.Activo).filter(assets.Activo.serial_number == serial).first()
-    
-    if not activo:
-        raise HTTPException(status_code=404, detail="Activo no encontrado")
-    
-    activo.pos_x = pos.pos_x
-    activo.pos_y = pos.pos_y
-    activo.piso_id = pos.piso_id
-    
-    db.commit()
-    return {"status": "ok", "new_pos": pos}
-
-@app.get("/api/assets")
-def listar_activos(db: Session = Depends(get_db)):
-    return db.query(assets.Activo).all()
+    return {"id": activo.id, "hostname": activo.hostname, "estado": "procesado"}
