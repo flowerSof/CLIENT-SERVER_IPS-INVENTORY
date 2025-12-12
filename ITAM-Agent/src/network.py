@@ -1,6 +1,6 @@
 import requests
 import json
-from .config import settings
+from config import settings
 
 def send_report(data):
     """
@@ -16,7 +16,7 @@ def send_report(data):
     endpoint = f"{settings.API_URL}/api/report"
     
     try:
-        print(f"📡 Conectando a {endpoint}...")
+        print(f" Conectando a {endpoint}...")
         response = requests.post(endpoint, json=payload, timeout=5)
         
         if response.status_code == 200:

@@ -25,15 +25,15 @@ def main():
             # 2. Enviar
             success = send_report(data)
         else:
-            print("   ⚠️ No se pudieron recolectar datos del sistema.")
+            print("   No se pudieron recolectar datos del sistema.")
 
         # 3. Esperar
-        print(f"   💤 Durmiendo {settings.REPORT_INTERVAL} segundos...\n")
+        print(f"   Durmiendo {settings.REPORT_INTERVAL} segundos...\n")
         time.sleep(settings.REPORT_INTERVAL)
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n🛑 Agente detenido por el usuario.")
+        print("\n Agente detenido por el usuario.")
         sys.exit(0)
