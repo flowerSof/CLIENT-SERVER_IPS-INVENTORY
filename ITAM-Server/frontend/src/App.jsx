@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import InventoryTable from './components/InventoryTable';
 import MapView from './components/MapView';
+import StatsWidget from './components/StatsWidget'; // <--- IMPORTANTE
 import { LayoutDashboard, Map } from 'lucide-react';
 
 function App() {
-  const [vista, setVista] = useState('logica'); // 'logica' o 'fisica'
+  const [vista, setVista] = useState('logica');
 
   return (
     <div className="p-8 max-w-7xl mx-auto min-h-screen bg-gray-100 font-sans">
@@ -27,6 +28,9 @@ function App() {
           </button>
         </div>
       </header>
+
+      {/* WIDGET DE ESTADÍSTICAS (Solo visible en inventario para no tapar el mapa) */}
+      {vista === 'logica' && <StatsWidget />}
 
       <main>
         {vista === 'logica' ? <InventoryTable /> : <MapView />}
