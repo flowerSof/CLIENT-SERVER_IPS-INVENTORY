@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 # GOOD (Fix)
 from database import engine, get_db, Base
 from config import settings
-from models import assets, locations, users
+from models import assets
 
 from schemas import asset_schema
 
@@ -27,7 +27,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- RUTAS DE PRUEBA (Moveremos esto a 'routers' en la parte 2) ---
 
 @app.get("/")
 def health_check():

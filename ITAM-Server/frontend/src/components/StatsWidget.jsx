@@ -8,16 +8,15 @@ export default function StatsWidget() {
     // Usamos la URL configurada o localhost
     const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
-    const fetchStats = () => {
-        axios.get(`${API_URL}/api/assets/stats`)
-            .then(res => setStats(res.data))
-            .catch(err => console.error(err));
-    };
-
     useEffect(() => {
+        const fetchStats = () => {
+            axios.get(`${API_URL}/api/assets/stats`)
+                .then(res => setStats(res.data))
+                .catch(err => console.error(err));
+        };
+
         fetchStats();
-        // Actualizar cada 10 segundos
-        const interval = setInterval(fetchStats, 10000);
+        const interval = setInterval(fetchStats, 5000); // Actualiza cada 5s
         return () => clearInterval(interval);
     }, []);
 
