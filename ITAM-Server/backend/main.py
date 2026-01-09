@@ -1,7 +1,7 @@
 import time
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from routers import dashboard, floors
+from routers import dashboard, floors, buildings, auth
 
 from sqlalchemy.orm import Session
 # GOOD (Fix)
@@ -15,6 +15,13 @@ from schemas import asset_schema
 # Esperamos un poco a que la BD inicie (parche simple para Docker)
 time.sleep(3) 
 Base.metadata.create_all(bind=engine)
+
+# --- INICIALIZAR DATOS POR DEFECTO ---
+try:
+    from init_db import init_default_data
+    init_default_data()
+except Exception as e:
+    print(f"Note: Could not initialize default data: {e}")
 
 app = FastAPI(title=settings.PROJECT_NAME, version=settings.PROJECT_VERSION)
 
@@ -82,5 +89,7 @@ def recibir_reporte(reporte: asset_schema.AssetReportCreate, db: Session = Depen
     return {"id": activo.id, "hostname": activo.hostname, "estado": "procesado"}
 
 # Registrar routers
+app.include_router(auth.router)
 app.include_router(dashboard.router)
 app.include_router(floors.router)
+app.include_router(buildings.router)

@@ -1,0 +1,718 @@
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | CICLO #1 - 2026-01-07 11:09:45
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:09:45 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:09:50 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:09:50 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:09:50 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:09:50 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:09:50 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:09:50 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:09:50 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:09:50 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:09:50 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:15:23 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-01-07 11:15:24 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-01-07 11:15:24 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:15:24 | INFO     | ITAM-Agent | CICLO #1 - 2026-01-07 11:15:24
+2026-01-07 11:15:24 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:15:24 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:15:24 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:15:27 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:15:27 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:15:27 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:15:27 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:15:27 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:15:27 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:15:28 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:15:28 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:15:28 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:20:28 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:20:28 | INFO     | ITAM-Agent | CICLO #2 - 2026-01-07 11:20:28
+2026-01-07 11:20:28 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:20:28 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:20:28 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:20:32 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:20:32 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:20:32 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:20:32 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:20:32 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:20:32 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:20:32 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:20:32 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:20:32 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:25:33 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:25:33 | INFO     | ITAM-Agent | CICLO #3 - 2026-01-07 11:25:33
+2026-01-07 11:25:33 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:25:33 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:25:33 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:25:36 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:25:36 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:25:36 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:25:36 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:25:36 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:25:36 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:25:37 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:25:37 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:25:37 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:30:37 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:30:37 | INFO     | ITAM-Agent | CICLO #4 - 2026-01-07 11:30:37
+2026-01-07 11:30:37 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:30:37 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:30:37 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:30:40 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:30:40 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:30:40 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:30:40 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:30:40 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:30:40 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:30:40 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:30:40 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:30:40 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:35:41 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:35:41 | INFO     | ITAM-Agent | CICLO #5 - 2026-01-07 11:35:41
+2026-01-07 11:35:41 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:35:41 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:35:41 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:35:44 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:35:44 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:35:44 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:35:44 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:35:44 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:35:44 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:35:44 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:35:44 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:35:44 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:40:44 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:40:44 | INFO     | ITAM-Agent | CICLO #6 - 2026-01-07 11:40:44
+2026-01-07 11:40:44 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:40:44 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:40:44 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:40:47 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:40:47 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:40:47 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:40:47 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:40:47 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:40:47 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:40:48 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:40:48 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:40:48 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:45:48 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:45:48 | INFO     | ITAM-Agent | CICLO #7 - 2026-01-07 11:45:48
+2026-01-07 11:45:48 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:45:48 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:45:48 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:45:51 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:45:51 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:45:51 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:45:51 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:45:51 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:45:51 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:45:51 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:45:51 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:45:51 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:50:51 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:50:51 | INFO     | ITAM-Agent | CICLO #8 - 2026-01-07 11:50:51
+2026-01-07 11:50:51 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:50:51 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:50:51 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:50:54 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:50:54 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:50:54 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:50:54 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:50:54 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:50:54 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:50:54 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:50:54 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:50:54 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 11:55:55 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 11:55:55 | INFO     | ITAM-Agent | CICLO #9 - 2026-01-07 11:55:55
+2026-01-07 11:55:55 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 11:55:55 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 11:55:55 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 11:55:58 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 11:55:58 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 11:55:58 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 11:55:58 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 11:55:58 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 11:55:58 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 11:55:58 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 11:55:58 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 11:55:58 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:00:58 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:00:58 | INFO     | ITAM-Agent | CICLO #10 - 2026-01-07 12:00:58
+2026-01-07 12:00:58 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:00:58 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:00:58 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:01:01 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:01:01 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:01:01 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:01:01 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:01:01 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:01:01 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:01:02 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:01:02 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:01:02 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:06:02 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:06:02 | INFO     | ITAM-Agent | CICLO #11 - 2026-01-07 12:06:02
+2026-01-07 12:06:02 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:06:02 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:06:02 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:06:06 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:06:06 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:06:06 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:06:06 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:06:06 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:06:06 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:06:06 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:06:06 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:06:06 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:11:06 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:11:06 | INFO     | ITAM-Agent | CICLO #12 - 2026-01-07 12:11:06
+2026-01-07 12:11:06 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:11:06 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:11:06 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:11:10 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:11:10 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:11:10 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:11:10 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:11:10 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:11:10 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:11:10 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:11:10 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:11:10 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:16:11 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:16:11 | INFO     | ITAM-Agent | CICLO #13 - 2026-01-07 12:16:11
+2026-01-07 12:16:11 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:16:11 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:16:11 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:16:14 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:16:14 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:16:14 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:16:14 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:16:14 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:16:14 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:16:15 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:16:15 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:16:15 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:21:15 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:21:15 | INFO     | ITAM-Agent | CICLO #14 - 2026-01-07 12:21:15
+2026-01-07 12:21:15 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:21:15 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:21:15 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:21:19 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:21:19 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:21:19 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:21:19 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:21:19 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:21:19 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:21:20 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:21:20 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:21:20 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:26:20 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:26:20 | INFO     | ITAM-Agent | CICLO #15 - 2026-01-07 12:26:20
+2026-01-07 12:26:20 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:26:20 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:26:20 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:26:23 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:26:23 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:26:23 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:26:23 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:26:23 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:26:23 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:26:24 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:26:24 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:26:24 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:31:24 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:31:24 | INFO     | ITAM-Agent | CICLO #16 - 2026-01-07 12:31:24
+2026-01-07 12:31:24 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:31:24 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:31:24 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:31:27 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:31:27 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:31:27 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:31:27 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:31:27 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:31:27 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:31:27 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:31:27 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:31:27 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:36:27 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:36:27 | INFO     | ITAM-Agent | CICLO #17 - 2026-01-07 12:36:27
+2026-01-07 12:36:27 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:36:27 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:36:27 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:36:30 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:36:30 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:36:30 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:36:30 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:36:30 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:36:30 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:36:30 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:36:30 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:36:30 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:41:31 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:41:31 | INFO     | ITAM-Agent | CICLO #18 - 2026-01-07 12:41:31
+2026-01-07 12:41:31 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:41:31 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:41:31 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:41:34 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:41:34 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:41:34 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:41:34 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:41:34 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:41:34 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:41:34 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:41:34 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:41:34 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:46:35 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:46:35 | INFO     | ITAM-Agent | CICLO #19 - 2026-01-07 12:46:35
+2026-01-07 12:46:35 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:46:35 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:46:35 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:46:39 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:46:39 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:46:39 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:46:39 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:46:39 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:46:39 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:46:40 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:46:40 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:46:40 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:51:41 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:51:41 | INFO     | ITAM-Agent | CICLO #20 - 2026-01-07 12:51:41
+2026-01-07 12:51:41 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:51:41 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:51:41 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:51:44 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:51:44 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:51:44 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:51:44 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:51:44 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:51:44 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:51:45 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:51:45 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:51:45 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 12:56:45 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 12:56:46 | INFO     | ITAM-Agent | CICLO #21 - 2026-01-07 12:56:46
+2026-01-07 12:56:46 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 12:56:46 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 12:56:46 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 12:56:49 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 12:56:49 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 12:56:49 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 12:56:49 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 12:56:49 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 12:56:49 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 12:56:50 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 12:56:50 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 12:56:50 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 13:01:51 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 13:01:51 | INFO     | ITAM-Agent | CICLO #22 - 2026-01-07 13:01:51
+2026-01-07 13:01:51 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 13:01:51 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 13:01:51 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 13:01:55 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 13:01:55 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 13:01:55 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 13:01:55 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 13:01:55 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 13:01:55 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 13:01:56 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 13:01:56 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 13:01:56 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 13:06:56 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 13:06:56 | INFO     | ITAM-Agent | CICLO #23 - 2026-01-07 13:06:56
+2026-01-07 13:06:56 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 13:06:56 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 13:06:56 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 13:07:00 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 13:07:00 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 13:07:00 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 13:07:00 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 13:07:00 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 13:07:00 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 13:07:01 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 13:07:01 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 13:07:01 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 13:12:01 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 13:12:01 | INFO     | ITAM-Agent | CICLO #24 - 2026-01-07 13:12:01
+2026-01-07 13:12:01 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 13:12:01 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 13:12:01 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 13:12:04 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 13:12:04 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 13:12:04 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 13:12:04 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 13:12:04 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 13:12:04 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 13:12:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 13:12:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 13:12:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 13:17:05 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 13:17:05 | INFO     | ITAM-Agent | CICLO #25 - 2026-01-07 13:17:05
+2026-01-07 13:17:05 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 13:17:05 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 13:17:05 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 13:17:08 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 13:17:08 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 13:17:08 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 13:17:08 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 13:17:08 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 13:17:08 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 13:17:09 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 13:17:09 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 13:17:09 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 13:22:09 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 13:22:09 | INFO     | ITAM-Agent | CICLO #26 - 2026-01-07 13:22:09
+2026-01-07 13:22:09 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 13:22:09 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 13:22:09 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 13:22:12 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 13:22:12 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 13:22:12 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 13:22:12 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 13:22:12 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 13:22:12 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 13:22:12 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 13:22:12 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 13:22:12 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 13:27:12 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 13:27:12 | INFO     | ITAM-Agent | CICLO #27 - 2026-01-07 13:27:12
+2026-01-07 13:27:12 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 13:27:12 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 13:27:12 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 13:27:15 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 13:27:15 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 13:27:15 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 13:27:15 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 13:27:15 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 13:27:15 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 13:27:16 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 13:27:16 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 13:27:16 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 14:07:58 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 14:07:58 | INFO     | ITAM-Agent | CICLO #28 - 2026-01-07 14:07:58
+2026-01-07 14:07:58 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 14:07:58 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 14:07:58 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 14:08:00 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 14:08:00 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 14:08:00 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 14:08:00 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 14:08:00 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 14:08:00 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 14:08:00 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 14:08:00 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 14:08:00 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 14:13:00 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 14:13:00 | INFO     | ITAM-Agent | CICLO #29 - 2026-01-07 14:13:00
+2026-01-07 14:13:00 | INFO     | ITAM-Agent | ============================================================
+2026-01-07 14:13:00 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-07 14:13:00 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-07 14:13:04 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-07 14:13:04 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-07 14:13:04 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-07 14:13:04 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-07 14:13:04 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-07 14:13:04 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-07 14:13:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-07 14:13:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-07 14:13:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-07 14:14:48 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-01-07 14:14:49 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-07 14:14:49 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-01-07 14:14:49 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 09:55:38 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-01-09 09:55:39 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-01-09 09:55:39 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 09:55:39 | INFO     | ITAM-Agent | CICLO #1 - 2026-01-09 09:55:39
+2026-01-09 09:55:39 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 09:55:39 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 09:55:39 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 09:55:43 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 09:55:43 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 09:55:43 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 09:55:43 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 09:55:43 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 09:55:43 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 09:55:43 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 09:55:43 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 09:55:43 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:00:44 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:00:44 | INFO     | ITAM-Agent | CICLO #2 - 2026-01-09 10:00:44
+2026-01-09 10:00:44 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:00:44 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:00:44 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:00:49 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:00:49 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:00:49 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:00:49 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:00:49 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:00:49 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:00:50 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:00:50 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:00:50 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:05:50 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:05:50 | INFO     | ITAM-Agent | CICLO #3 - 2026-01-09 10:05:50
+2026-01-09 10:05:50 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:05:50 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:05:50 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:05:53 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:05:53 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:05:53 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:05:53 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:05:53 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:05:53 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:05:54 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:05:54 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:05:54 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:10:54 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:10:54 | INFO     | ITAM-Agent | CICLO #4 - 2026-01-09 10:10:54
+2026-01-09 10:10:54 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:10:54 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:10:54 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:10:58 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:10:58 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:10:58 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:10:58 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:10:58 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:10:58 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:10:58 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:10:58 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:10:58 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:15:58 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:15:58 | INFO     | ITAM-Agent | CICLO #5 - 2026-01-09 10:15:58
+2026-01-09 10:15:58 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:15:58 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:15:58 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:16:03 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:16:03 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:16:03 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:16:03 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:16:03 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:16:03 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:16:03 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:16:03 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:16:03 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:21:04 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:21:04 | INFO     | ITAM-Agent | CICLO #6 - 2026-01-09 10:21:04
+2026-01-09 10:21:04 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:21:04 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:21:04 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:21:08 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:21:08 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:21:08 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:21:08 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:21:08 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:21:08 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:21:08 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:21:08 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:21:08 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | CICLO #1 - 2026-01-09 10:27:18
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:27:18 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:27:23 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:27:23 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:27:23 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:27:23 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:27:23 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:27:23 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:27:23 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:27:23 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:27:23 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:32:23 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:32:24 | INFO     | ITAM-Agent | CICLO #2 - 2026-01-09 10:32:24
+2026-01-09 10:32:24 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:32:24 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:32:24 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:32:28 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:32:28 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:32:28 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:32:28 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:32:28 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:32:28 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:32:28 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:32:28 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:32:28 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:37:29 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:37:29 | INFO     | ITAM-Agent | CICLO #3 - 2026-01-09 10:37:29
+2026-01-09 10:37:29 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:37:29 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:37:29 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:37:34 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:37:34 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:37:34 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:37:34 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:37:34 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:37:34 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:37:36 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:37:36 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:37:36 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 10:42:37 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:42:37 | INFO     | ITAM-Agent | CICLO #4 - 2026-01-09 10:42:37
+2026-01-09 10:42:37 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 10:42:37 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 10:42:37 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 10:42:41 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 10:42:41 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 10:42:41 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 10:42:41 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-01-09 10:42:41 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:18:07 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-01-09 14:18:08 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-01-09 14:18:08 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 14:18:08 | INFO     | ITAM-Agent | CICLO #1 - 2026-01-09 14:18:08
+2026-01-09 14:18:08 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:18:08 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 14:18:08 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 14:18:13 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 14:18:14 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 14:18:14 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 14:18:14 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 14:18:14 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 14:18:14 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 14:18:17 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 14:18:17 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 14:18:17 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 14:19:09 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-01-09 14:19:10 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 14:19:10 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-01-09 14:19:10 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:26:16 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-01-09 14:26:17 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-01-09 14:26:17 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 14:26:17 | INFO     | ITAM-Agent | CICLO #1 - 2026-01-09 14:26:17
+2026-01-09 14:26:17 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:26:17 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 14:26:17 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 14:26:22 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 14:26:22 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 14:26:22 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 14:26:22 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 14:26:22 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 14:26:22 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 14:26:23 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 14:26:23 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 14:26:23 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 14:31:23 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 14:31:23 | INFO     | ITAM-Agent | CICLO #2 - 2026-01-09 14:31:23
+2026-01-09 14:31:23 | INFO     | ITAM-Agent | ============================================================
+2026-01-09 14:31:23 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-01-09 14:31:23 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-01-09 14:31:27 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-DEMKIJN (PF3WY2XF)
+2026-01-09 14:31:27 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-DEMKIJN
+2026-01-09 14:31:27 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-DEMKIJN\SOFIAA
+2026-01-09 14:31:27 | INFO     | ITAM-Agent |   ✓ IP: 10.226.166.125
+2026-01-09 14:31:27 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-01-09 14:31:27 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-01-09 14:31:28 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
+2026-01-09 14:31:28 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-01-09 14:31:28 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-01-09 14:34:39 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-01-09 14:34:40 | INFO     | ITAM-Agent | 
+============================================================
+2026-01-09 14:34:40 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-01-09 14:34:40 | INFO     | ITAM-Agent | ============================================================

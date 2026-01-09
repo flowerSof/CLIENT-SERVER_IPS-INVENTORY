@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, Float, ForeignKey, JSON
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from database import Base
 
 class Activo(Base):
@@ -45,5 +45,5 @@ class Activo(Base):
         """Determina si el activo está online basado en el último reporte"""
         if not self.ultimo_reporte:
             return False
-        limite = datetime.now() - timedelta(minutes=threshold_minutes)
+        limite = datetime.now(timezone.utc) - timedelta(minutes=threshold_minutes)
         return self.ultimo_reporte >= limite

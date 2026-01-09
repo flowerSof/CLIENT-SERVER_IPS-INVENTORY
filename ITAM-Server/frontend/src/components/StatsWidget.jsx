@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import { Activity, AlertCircle, Monitor, Server, Wifi, WifiOff } from 'lucide-react';
+import { Monitor, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 export default function StatsWidget() {
     const [stats, setStats] = useState({
@@ -32,144 +32,75 @@ export default function StatsWidget() {
 
     const statCards = [
         {
-            title: 'Total Assets',
-            value: stats.total,
+            title: 'TOTAL ACTIVOS',
+            value: stats.total.toLocaleString(),
             icon: Monitor,
-            iconBgColor: 'var(--icon-bg-blue)',
-            iconColor: 'var(--icon-blue)',
-            subtitle: '+12 this week',
-            subtitleColor: 'var(--status-online)'
+            color: '#B91C1C',
+            bgColor: '#FEE2E2',
+            borderColor: '#B91C1C'
         },
         {
-            title: 'Online',
-            value: stats.online,
-            icon: Wifi,
-            iconBgColor: 'var(--icon-bg-green)',
-            iconColor: 'var(--icon-green)',
-            subtitle: '92% Availability',
-            subtitleColor: 'var(--text-secondary)'
+            title: 'OPERATIVOS',
+            value: stats.online.toLocaleString(),
+            icon: CheckCircle,
+            color: '#059669',
+            bgColor: '#D1FAE5',
+            borderColor: '#059669'
         },
         {
-            title: 'Offline',
-            value: stats.offline,
-            icon: WifiOff,
-            iconBgColor: 'var(--icon-bg-gray)',
-            iconColor: 'var(--icon-gray)',
-            subtitle: 'Last check: 2 mins ago',
-            subtitleColor: 'var(--text-secondary)'
+            title: 'NO DISPONIBLES',
+            value: stats.offline.toLocaleString(),
+            icon: XCircle,
+            color: '#6B7280',
+            bgColor: '#F3F4F6',
+            borderColor: '#6B7280'
         },
         {
-            title: 'Critical Alerts',
-            value: stats.alertas,
-            icon: AlertCircle,
-            iconBgColor: 'var(--icon-bg-red)',
-            iconColor: 'var(--icon-red)',
-            subtitle: 'Requires attention',
-            subtitleColor: 'var(--status-offline)'
+            title: 'ALERTAS CRÍTICAS',
+            value: stats.alertas.toLocaleString(),
+            icon: AlertTriangle,
+            color: '#F59E0B',
+            bgColor: '#FEF3C7',
+            borderColor: '#F59E0B'
         }
     ];
 
     if (loading) {
         return (
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                gap: '1.5rem',
-                marginBottom: '2rem'
-            }}>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                 {[...Array(4)].map((_, i) => (
-                    <div key={i} style={{
-                        height: '140px',
-                        background: 'linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%)',
-                        backgroundSize: '200% 100%',
-                        animation: 'shimmer 1.5s infinite',
-                        borderRadius: '0.75rem'
-                    }} />
+                    <div key={i} className="h-32 bg-gray-100 rounded-lg animate-pulse" />
                 ))}
             </div>
         );
     }
 
     return (
-        <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '1.5rem',
-            marginBottom: '2rem'
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             {statCards.map((card, index) => (
                 <motion.div
                     key={card.title}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    style={{
-                        background: 'var(--bg-card)',
-                        borderRadius: '0.75rem',
-                        padding: '1.5rem',
-                        boxShadow: 'var(--shadow-md)',
-                        border: '1px solid var(--border-light)',
-                        transition: 'all 0.3s ease',
-                        cursor: 'default'
-                    }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
-                        e.currentTarget.style.transform = 'translateY(-2px)';
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow = 'var(--shadow-md)';
-                        e.currentTarget.style.transform = 'translateY(0)';
-                    }}
+                    className="bg-white rounded-lg shadow-sm border-l-4 overflow-hidden"
+                    style={{ borderLeftColor: card.borderColor }}
                 >
-                    {/* Icon */}
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'flex-end',
-                        marginBottom: '1rem'
-                    }}>
-                        <div style={{
-                            padding: '0.75rem',
-                            borderRadius: '0.75rem',
-                            backgroundColor: card.iconBgColor,
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }}>
-                            <card.icon size={24} style={{ color: card.iconColor }} />
-                        </div>
-                    </div>
-
-                    {/* Content */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                        <div style={{
-                            fontSize: '0.875rem',
-                            fontWeight: '500',
-                            color: 'var(--text-secondary)'
-                        }}>
-                            {card.title}
-                        </div>
-                        <motion.div
-                            key={card.value}
-                            initial={{ scale: 1.1, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            style={{
-                                fontSize: '2rem',
-                                fontWeight: '700',
-                                color: 'var(--text-primary)',
-                                lineHeight: '1'
-                            }}
-                        >
-                            {card.value.toLocaleString()}
-                        </motion.div>
-                        {card.subtitle && (
-                            <div style={{
-                                fontSize: '0.75rem',
-                                color: card.subtitleColor,
-                                fontWeight: card.title === 'Critical Alerts' && card.value > 0 ? '600' : '400'
-                            }}>
-                                {card.subtitle}
+                    <div className="p-6">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                                {card.title}
                             </div>
-                        )}
+                            <div
+                                className="w-10 h-10 rounded-lg flex items-center justify-center"
+                                style={{ backgroundColor: card.bgColor }}
+                            >
+                                <card.icon size={20} style={{ color: card.color }} />
+                            </div>
+                        </div>
+                        <div className="text-3xl font-bold text-gray-900">
+                            {card.value}
+                        </div>
                     </div>
                 </motion.div>
             ))}

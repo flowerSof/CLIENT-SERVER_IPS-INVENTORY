@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Download, Filter, ChevronDown, ChevronUp, MoreVertical } from 'lucide-react';
+import { Search, Download, ChevronDown, Edit2, Circle } from 'lucide-react';
 import AssetIcon from './AssetIcon';
 import Pagination from './Pagination';
 import useRealTimeAssets from '../hooks/useRealTimeAssets';
@@ -10,15 +10,13 @@ export default function InventoryTable() {
     const { activos, loading, lastUpdate } = useRealTimeAssets();
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'hostname', direction: 'asc' });
-    const [filterStatus, setFilterStatus] = useState('all'); // all, online, offline
+    const [filterStatus, setFilterStatus] = useState('all');
     const [filterLocation, setFilterLocation] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
 
-    // Get unique locations
     const locations = ['all', ...new Set(activos.map(a => a.piso_id).filter(Boolean))];
 
-    // Filter and sort assets
     const filteredActivos = activos
         .filter(pc => {
             const matchesSearch =
@@ -48,7 +46,6 @@ export default function InventoryTable() {
             }
         });
 
-    // Pagination calculations
     const totalPages = Math.ceil(filteredActivos.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, filteredActivos.length);
@@ -91,19 +88,12 @@ export default function InventoryTable() {
         a.click();
     };
 
-    const SortIcon = ({ column }) => {
-        if (sortConfig.key !== column) return null;
-        return sortConfig.direction === 'asc' ?
-            <ChevronUp size={16} className="inline ml-1" /> :
-            <ChevronDown size={16} className="inline ml-1" />;
-    };
-
     if (loading) {
         return (
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-white rounded-lg shadow overflow-hidden">
                 <div className="p-6 space-y-4">
                     {[...Array(5)].map((_, i) => (
-                        <div key={i} className="skeleton h-16 rounded-lg" />
+                        <div key={i} className="h-16 bg-gray-100 rounded animate-pulse" />
                     ))}
                 </div>
             </div>
@@ -114,20 +104,20 @@ export default function InventoryTable() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-xl shadow-lg overflow-hidden"
+            className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200"
         >
             {/* Toolbar */}
-            <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-gray-50 to-white">
+            <div className="p-6 border-b border-gray-200 bg-white">
                 <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
                     {/* Search */}
                     <div className="relative flex-1 max-w-md w-full">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                         <input
                             type="text"
-                            placeholder="Search by hostname, user..."
+                            placeholder="Buscar por Hostname, Usuario..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-all"
+                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm"
                         />
                     </div>
 
@@ -136,23 +126,38 @@ export default function InventoryTable() {
                         <select
                             value={filterStatus}
                             onChange={(e) => setFilterStatus(e.target.value)}
-                            className="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-all font-medium bg-white"
+                            className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer"
                         >
-                            <option value="all">All Statuses</option>
-                            <option value="online">Online</option>
-                            <option value="offline">Offline</option>
+                            <option value="all">TODOS LOS ESTADOS</option>
+                            <option value="online">ONLINE</option>
+                            <option value="offline">OFFLINE</option>
                         </select>
 
                         <select
                             value={filterLocation}
                             onChange={(e) => setFilterLocation(e.target.value)}
-                            className="px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-all font-medium bg-white"
+                            className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer"
                         >
-                            <option value="all">All Locations</option>
+                            <option value="all">TODAS LAS SEDES</option>
                             {locations.filter(l => l !== 'all').map(loc => (
-                                <option key={loc} value={loc}>Floor {loc}</option>
+                                <option key={loc} value={loc}>Piso {loc}</option>
                             ))}
                         </select>
+
+                        <button
+                            onClick={exportToCSV}
+                            className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-all text-sm font-medium"
+                        >
+                            <Download size={16} />
+                            EXPORTAR CSV
+                        </button>
+
+                        <button
+                            className="flex items-center gap-2 px-4 py-2 bg-red-700 text-white rounded-md hover:bg-red-800 transition-all text-sm font-medium"
+                        >
+                            <span>+</span>
+                            NUEVO ACTIVO
+                        </button>
                     </div>
                 </div>
             </div>
@@ -162,31 +167,35 @@ export default function InventoryTable() {
                 <table className="w-full">
                     <thead className="bg-gray-50 border-b border-gray-200">
                         <tr>
-                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                Status
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                ESTADO
                             </th>
-                            <th
-                                className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors"
-                                onClick={() => handleSort('hostname')}
-                            >
-                                Hostname <SortIcon column="hostname" />
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                                onClick={() => handleSort('hostname')}>
+                                HOSTNAME
                             </th>
-                            <th
-                                className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors"
-                                onClick={() => handleSort('usuario_detectado')}
-                            >
-                                User / Dept <SortIcon column="usuario_detectado" />
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                DIRECCIÓN IP
                             </th>
-                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                Network Info
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                MAC ADDRESS
                             </th>
-                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                Hardware
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                USUARIO
                             </th>
-                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                OS
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                MARCA/MODELO
                             </th>
-                            <th className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                S.O.
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                PROCESADOR
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                RAM
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             </th>
                         </tr>
                     </thead>
@@ -194,95 +203,78 @@ export default function InventoryTable() {
                         {paginatedActivos.map((pc, index) => (
                             <motion.tr
                                 key={pc.id}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: index * 0.05 }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: index * 0.03 }}
                                 className="hover:bg-gray-50 transition-colors"
                             >
                                 {/* Status */}
-                                <td className="px-6 py-4">
+                                <td className="px-6 py-4 whitespace-nowrap">
                                     <div className="flex items-center gap-2">
-                                        {pc.is_online ? (
-                                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
-                                                Online
-                                            </span>
-                                        ) : (
-                                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
-                                                Offline
-                                            </span>
-                                        )}
+                                        <Circle
+                                            size={10}
+                                            className={pc.is_online ? 'fill-green-500 text-green-500' : 'fill-gray-400 text-gray-400'}
+                                        />
+                                        <span className={`text-xs font-medium ${pc.is_online ? 'text-green-700' : 'text-gray-500'}`}>
+                                            {pc.is_online ? 'ONLINE' : 'OFFLINE'}
+                                        </span>
                                     </div>
                                 </td>
 
                                 {/* Hostname */}
-                                <td className="px-6 py-4">
-                                    <div className="flex items-center gap-3">
-                                        <AssetIcon
-                                            tipo={pc.icono_tipo}
-                                            isOnline={pc.is_online}
-                                            size={20}
-                                        />
-                                        <div>
-                                            <div className="font-semibold text-gray-900">{pc.hostname}</div>
-                                            <div className="text-sm text-gray-500">IT Dept</div>
-                                        </div>
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-sm font-medium text-gray-900">{pc.hostname}</div>
+                                </td>
+
+                                {/* IP Address */}
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <code className="text-xs text-gray-700">{pc.ip_address}</code>
+                                </td>
+
+                                {/* MAC Address */}
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <code className="text-xs text-gray-600">{pc.mac_address || 'N/A'}</code>
+                                </td>
+
+                                {/* User */}
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <div>
+                                        <div className="text-sm font-medium text-gray-900">{pc.usuario_detectado || 'N/A'}</div>
+                                        <div className="text-xs text-gray-500 uppercase">INFORMÁTICA</div>
                                     </div>
                                 </td>
 
-                                {/* User / Dept */}
-                                <td className="px-6 py-4">
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-8 h-8 rounded-full bg-primary-blue text-white flex items-center justify-center text-xs font-semibold">
-                                            {pc.usuario_detectado?.substring(0, 2).toUpperCase() || 'JD'}
-                                        </div>
-                                        <div className="text-gray-900 font-medium">{pc.usuario_detectado || 'Unknown'}</div>
-                                    </div>
-                                </td>
-
-                                {/* Network Info */}
-                                <td className="px-6 py-4">
-                                    <div className="text-sm space-y-1">
-                                        <div className="flex items-center gap-1">
-                                            <span className="text-gray-500 text-xs">IP:</span>
-                                            <code className="text-xs bg-gray-100 px-2 py-0.5 rounded">{pc.ip_address}</code>
-                                        </div>
-                                        <div className="flex items-center gap-1">
-                                            <span className="text-gray-500 text-xs">MAC:</span>
-                                            <code className="text-xs text-gray-600">{pc.mac_address || '00:11:44:11:3A:B7'}</code>
-                                        </div>
-                                    </div>
-                                </td>
-
-                                {/* Hardware */}
-                                <td className="px-6 py-4">
-                                    <div className="text-sm">
-                                        <div className="font-medium text-gray-900">
-                                            {pc.marca || 'Dell'} {pc.memoria_ram ? `/ ${pc.memoria_ram}` : '/ 16GB RAM'}
-                                        </div>
-                                        <div className="text-gray-500 truncate max-w-[200px]">
-                                            {pc.procesador ? pc.procesador.substring(0, 30) + '...' : 'Intel Core i7'}
-                                        </div>
+                                {/* Brand/Model */}
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <div>
+                                        <div className="text-sm font-medium text-gray-900">{pc.marca || 'Dell'}</div>
+                                        <div className="text-xs text-gray-500">{pc.modelo || 'Latitude 5420'}</div>
                                     </div>
                                 </td>
 
                                 {/* OS */}
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                                        {pc.sistema_operativo || 'WIN 11 PRO'}
+                                    </span>
+                                </td>
+
+                                {/* Processor */}
                                 <td className="px-6 py-4">
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-6 h-6 flex items-center justify-center">
-                                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="#5B5FED">
-                                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
-                                            </svg>
-                                        </div>
-                                        <div className="text-sm text-gray-900">
-                                            {pc.sistema_operativo || 'Windows 11 Pro'}
-                                        </div>
+                                    <div className="text-xs text-gray-700 max-w-[150px] truncate" title={pc.procesador}>
+                                        {pc.procesador || 'i7-1185G7'}
                                     </div>
                                 </td>
 
+                                {/* RAM */}
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-sm text-gray-900">{pc.memoria_ram || '16 GB'}</div>
+                                </td>
+
                                 {/* Actions */}
-                                <td className="px-6 py-4">
-                                    <button className="p-1 hover:bg-gray-200 rounded transition-colors">
-                                        <MoreVertical size={18} className="text-gray-500" />
+                                <td className="px-6 py-4 whitespace-nowrap text-right">
+                                    <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                                        <Edit2 size={16} />
                                     </button>
                                 </td>
                             </motion.tr>
@@ -292,22 +284,29 @@ export default function InventoryTable() {
 
                 {filteredActivos.length === 0 && (
                     <div className="text-center py-12 text-gray-500">
-                        No assets found matching your filters
+                        No se encontraron activos
                     </div>
                 )}
             </div>
 
             {/* Pagination */}
             {filteredActivos.length > 0 && (
-                <Pagination
-                    currentPage={currentPage}
-                    totalPages={totalPages}
-                    onPageChange={handlePageChange}
-                    totalItems={filteredActivos.length}
-                    itemsPerPage={itemsPerPage}
-                    startItem={startIndex + 1}
-                    endItem={endIndex}
-                />
+                <div className="bg-white border-t border-gray-200 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                        <div className="text-sm text-gray-700">
+                            MOSTRANDO <span className="font-medium">{startIndex + 1}</span> - <span className="font-medium">{endIndex}</span> DE <span className="font-medium">{filteredActivos.length}</span> ACTIVOS
+                        </div>
+                        <Pagination
+                            currentPage={currentPage}
+                            totalPages={totalPages}
+                            onPageChange={handlePageChange}
+                            totalItems={filteredActivos.length}
+                            itemsPerPage={itemsPerPage}
+                            startItem={startIndex + 1}
+                            endItem={endIndex}
+                        />
+                    </div>
+                </div>
             )}
         </motion.div>
     );
