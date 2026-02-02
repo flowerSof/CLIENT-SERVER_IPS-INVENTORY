@@ -3,9 +3,10 @@ Authentication router - Login and user management
 """
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 from database import get_db
 from models import users
+from models.permisos import PermisoUsuario
 from schemas import auth_schema
 from auth_utils import verify_password, create_access_token, verify_token
 from datetime import datetime, timezone
@@ -50,14 +51,32 @@ def login(credentials: auth_schema.LoginRequest, db: Session = Depends(get_db)):
     
     # Crear token
     access_token = create_access_token(
-        data={"sub": user.username, "user_id": user.id}
+        data={"sub": user.username, "user_id": user.id, "es_superadmin": user.es_superadmin}
     )
+    
+    # Obtener permisos del usuario
+    permisos = []
+    if not user.es_superadmin:  # Superadmin no necesita permisos específicos
+        permisos_db = db.query(PermisoUsuario).options(
+            joinedload(PermisoUsuario.edificio),
+            joinedload(PermisoUsuario.piso)
+        ).filter(PermisoUsuario.usuario_id == user.id).all()
+        
+        for p in permisos_db:
+            permisos.append({
+                "edificio_id": p.edificio_id,
+                "edificio_nombre": p.edificio.nombre if p.edificio else None,
+                "piso_id": p.piso_id,
+                "piso_nombre": p.piso.nombre if p.piso else None
+            })
     
     return {
         "access_token": access_token,
         "token_type": "bearer",
         "username": user.username,
-        "nombre_completo": user.nombre_completo
+        "nombre_completo": user.nombre_completo,
+        "es_superadmin": user.es_superadmin,
+        "permisos": permisos
     }
 
 @router.get("/me", response_model=auth_schema.UserResponse)

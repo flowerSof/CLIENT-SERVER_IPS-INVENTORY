@@ -9,7 +9,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from database import SessionLocal, engine, Base
-from models import locations, users
+from models import locations, users, assets, history, glossary
 from auth_utils import get_password_hash
 import base64
 

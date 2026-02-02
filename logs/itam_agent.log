@@ -1079,3 +1079,103 @@
 2026-01-19 15:29:36 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-DEMKIJN
 2026-01-19 15:29:36 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
 2026-01-19 15:29:36 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:25:08 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-02-02 00:25:08 | ERROR    | ITAM-Agent | ✗ No se pudo conectar al servidor: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-02 00:25:08 | WARNING  | ITAM-Agent | No se pudo conectar al servidor. El agente continuará intentando...
+2026-02-02 00:25:09 | INFO     | ITAM-Agent | 📡 Command Server iniciado en puerto 5001
+2026-02-02 00:25:09 | INFO     | ITAM-Agent | Servidor de comandos remotos activo - esperando instrucciones...
+2026-02-02 00:25:09 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-02 00:25:09 | INFO     | ITAM-Agent | CICLO #1 - 2026-02-02 00:25:09
+2026-02-02 00:25:09 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:25:09 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-02 00:25:09 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-02 00:25:11 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-02 00:25:11 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-02 00:25:11 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-02 00:25:11 | INFO     | ITAM-Agent |   ✓ IP: 192.168.3.48
+2026-02-02 00:25:11 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-02 00:25:11 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-02 00:25:11 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-02 00:25:11 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-02 00:25:11 | INFO     | ITAM-Agent | Reintentando en 5 segundos...
+2026-02-02 00:25:16 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 2/3)
+2026-02-02 00:25:16 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-02 00:25:16 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-02 00:25:16 | INFO     | ITAM-Agent | Reintentando en 10 segundos...
+2026-02-02 00:25:26 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 3/3)
+2026-02-02 00:25:26 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-02 00:25:26 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-02 00:25:26 | ERROR    | ITAM-Agent | ✗ No se pudo enviar el reporte después de 3 intentos
+2026-02-02 00:25:26 | WARNING  | ITAM-Agent |   ✗ No se pudo enviar el reporte
+2026-02-02 00:25:26 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-02 00:29:00 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-02-02 00:29:00 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-02 00:29:00 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-02-02 00:29:00 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-02-02 00:29:02 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-02-02 00:29:03 | INFO     | ITAM-Agent | 📡 Command Server iniciado en puerto 5001
+2026-02-02 00:29:03 | INFO     | ITAM-Agent | Servidor de comandos remotos activo - esperando instrucciones...
+2026-02-02 00:29:03 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-02 00:29:03 | INFO     | ITAM-Agent | CICLO #1 - 2026-02-02 00:29:03
+2026-02-02 00:29:03 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:29:03 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-02 00:29:03 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-02 00:29:05 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-02 00:29:05 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-02 00:29:05 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-02 00:29:05 | INFO     | ITAM-Agent |   ✓ IP: 192.168.3.48
+2026-02-02 00:29:05 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-02 00:29:05 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-02 00:29:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-02 00:29:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-02 00:29:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-02 00:29:17 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-02-02 00:29:17 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-02 00:29:17 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-02-02 00:29:17 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | 📡 Command Server iniciado en puerto 5001
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | Servidor de comandos remotos activo - esperando instrucciones...
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | CICLO #1 - 2026-02-02 00:54:39
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | ============================================================
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-02 00:54:39 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-02 00:54:42 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-02 00:54:42 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-02 00:54:42 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-02 00:54:42 | INFO     | ITAM-Agent |   ✓ IP: 192.168.3.48
+2026-02-02 00:54:42 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-02 00:54:42 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-02 00:54:42 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-02 00:54:42 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-02 00:54:42 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-02 00:54:51 | WARNING  | ITAM-Agent | 🔴 APAGADO PROGRAMADO en 60 segundos

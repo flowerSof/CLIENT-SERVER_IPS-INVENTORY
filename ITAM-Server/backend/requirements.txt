@@ -12,3 +12,4 @@ python-jose[cryptography]
 pandas
 openpyxl
 reportlab
+httpx

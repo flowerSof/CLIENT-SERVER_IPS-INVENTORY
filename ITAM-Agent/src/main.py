@@ -20,6 +20,8 @@ from collector import SystemCollector
 from network import NetworkService
 from config import settings
 from logger import logger
+from command_server import get_command_server
+
 
 class ITAMAgent:
     """
@@ -53,6 +55,13 @@ class ITAMAgent:
         # Prueba de conexión inicial
         if not self.network.test_connection():
             logger.warning("No se pudo conectar al servidor. El agente continuará intentando...")
+        
+        # Iniciar servidor de comandos remotos
+        command_server = get_command_server()
+        if command_server.start():
+            logger.info("Servidor de comandos remotos activo - esperando instrucciones...")
+        else:
+            logger.warning("No se pudo iniciar el servidor de comandos remotos")
         
         # Ciclo principal
         cycle_count = 0

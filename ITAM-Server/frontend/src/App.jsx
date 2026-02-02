@@ -11,7 +11,8 @@ import {
   Search,
   ChevronRight,
   User,
-  LogOut
+  LogOut,
+  Users
 } from "lucide-react";
 import InventoryTable from "./components/InventoryTable";
 import StatsWidget from "./components/StatsWidget";
@@ -19,6 +20,7 @@ import FloorManager from "./components/FloorManager";
 import BuildingManager from "./components/BuildingManager";
 import InfrastructurePage from "./pages/InfrastructurePage";
 import MapView from "./components/MapView";
+import UserManagement from "./components/UserManagement";
 import { AuthProvider, useAuth } from "./AuthContext";
 
 // Componente Header interno para acceder al contexto de Auth
@@ -33,6 +35,7 @@ const AppHeader = () => {
       case '/inventory': return 'Inventario de Activos';
       case '/map': return 'Mapa de Ubicaciones';
       case '/floors': return 'Gestión de Pisos';
+      case '/users': return 'Gestión de Usuarios';
       default: return 'ITAM Platform';
     }
   };
@@ -68,6 +71,9 @@ const AppHeader = () => {
           <NavLink to="/inventory" icon={<Server size={18} />} text="Inventario" active={location.pathname === '/inventory'} />
           <NavLink to="/map" icon={<Map size={18} />} text="Mapa" active={location.pathname === '/map'} />
           <NavLink to="/floors" icon={<Building2 size={18} />} text="Edificios" active={location.pathname === '/floors'} />
+          {user?.es_superadmin && (
+            <NavLink to="/users" icon={<Users size={18} />} text="Usuarios" active={location.pathname === '/users'} />
+          )}
         </nav>
 
         {/* User Area */}
@@ -99,7 +105,7 @@ const AppHeader = () => {
           <span className="text-white font-medium">{getPageTitle()}</span>
         </div>
       </div>
-    </header>
+    </header >
   );
 };
 
@@ -166,9 +172,19 @@ const AppContent = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="h-[calc(100vh-100px)]" // Adjust height as needed
+                className="h-[calc(100vh-100px)]"
               >
                 <InfrastructurePage />
+              </motion.div>
+            } />
+            <Route path="/users" element={
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+              >
+                <UserManagement />
               </motion.div>
             } />
           </Routes>

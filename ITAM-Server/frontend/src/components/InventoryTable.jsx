@@ -1,37 +1,65 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Download, ChevronDown, Edit2, Circle, Upload, Check, X } from 'lucide-react';
+import { Search, Download, ChevronDown, Edit2, Circle, Upload, Check, X, Building2, Layers } from 'lucide-react';
 import AssetIcon from './AssetIcon';
 import Pagination from './Pagination';
 import useRealTimeAssets from '../hooks/useRealTimeAssets';
 import { format } from 'date-fns';
 import axios from 'axios';
-// import InfrastructureModal from './InfrastructureModal'; // Removed as per request
 import AssetHistoryModal from './AssetHistoryModal';
-import { Settings, FileText, Clock } from 'lucide-react'; // Import Settings, FileText, Clock icons
+import { Settings, FileText, Clock } from 'lucide-react';
 
 export default function InventoryTable() {
     const { activos, loading, lastUpdate, refresh } = useRealTimeAssets();
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'hostname', direction: 'asc' });
     const [filterStatus, setFilterStatus] = useState('all');
-    const [filterLocation, setFilterLocation] = useState('all');
     const [filterDominio, setFilterDominio] = useState('all');
     const [filterArea, setFilterArea] = useState('all');
+    const [filterEdificio, setFilterEdificio] = useState('all');
+    const [filterPiso, setFilterPiso] = useState('all');
 
-    // const [isInfrastructureOpen, setIsInfrastructureOpen] = useState(false); // Removed
-    const [historyAsset, setHistoryAsset] = useState(null); // { id, hostname }
+    // Datos de edificios y pisos
+    const [edificios, setEdificios] = useState([]);
+    const [pisos, setPisos] = useState([]);
 
+    const [historyAsset, setHistoryAsset] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [uploading, setUploading] = useState(false);
     const fileInputRef = useRef(null);
 
     const itemsPerPage = 10;
 
+    // Cargar edificios y pisos
+    useEffect(() => {
+        const loadFilters = async () => {
+            try {
+                const [edificiosRes, pisosRes] = await Promise.all([
+                    axios.get('http://localhost:8000/api/buildings'),
+                    axios.get('http://localhost:8000/api/floors')
+                ]);
+                setEdificios(edificiosRes.data);
+                setPisos(pisosRes.data);
+            } catch (error) {
+                console.error('Error loading filters:', error);
+            }
+        };
+        loadFilters();
+    }, []);
+
+    // Filtrar pisos según edificio seleccionado
+    const pisosFiltrados = filterEdificio === 'all'
+        ? pisos
+        : pisos.filter(p => p.edificio_id === parseInt(filterEdificio));
+
+    // Resetear filtro de piso cuando cambia edificio
+    useEffect(() => {
+        setFilterPiso('all');
+    }, [filterEdificio]);
+
     // Defensive check: Ensure activos is an array
     const safeActivos = Array.isArray(activos) ? activos : [];
 
-    const locations = ['all', ...new Set(safeActivos.map(a => a.piso_id).filter(Boolean))];
     const areas = ['all', ...new Set(safeActivos.map(a => a.area).filter(a => a && a !== 'Unknown'))];
 
     const filteredActivos = safeActivos
@@ -46,10 +74,6 @@ export default function InventoryTable() {
                     filterStatus === 'online' ? pc.is_online :
                         !pc.is_online;
 
-            const matchesLocation =
-                filterLocation === 'all' ? true :
-                    pc.piso_id === parseInt(filterLocation);
-
             const matchesDominio =
                 filterDominio === 'all' ? true :
                     filterDominio === 'si' ? pc.es_dominio :
@@ -59,7 +83,15 @@ export default function InventoryTable() {
                 filterArea === 'all' ? true :
                     pc.area === filterArea;
 
-            return matchesSearch && matchesStatus && matchesLocation && matchesDominio && matchesArea;
+            // Filtro de edificio - a través del piso
+            const matchesEdificio = filterEdificio === 'all' ? true :
+                pisos.some(p => p.edificio_id === parseInt(filterEdificio) && p.id === pc.piso_id);
+
+            // Filtro de piso
+            const matchesPiso = filterPiso === 'all' ? true :
+                pc.piso_id === parseInt(filterPiso);
+
+            return matchesSearch && matchesStatus && matchesDominio && matchesArea && matchesEdificio && matchesPiso;
         })
         .sort((a, b) => {
             const aVal = a[sortConfig.key] || '';
@@ -104,7 +136,7 @@ export default function InventoryTable() {
                 },
             });
             alert('Carga masiva completada exitosamente');
-            refresh(); // Recargar datos
+            refresh();
         } catch (error) {
             console.error('Error uploading file:', error);
             alert('Error al cargar el archivo. Asegúrese de que sea un .xlsx válido.');
@@ -120,6 +152,14 @@ export default function InventoryTable() {
 
     const exportToPDF = () => {
         window.location.href = 'http://localhost:8000/api/reports/pdf';
+    };
+
+    // Obtener nombre de piso para mostrar en la tabla
+    const getPisoNombre = (pisoId) => {
+        const piso = pisos.find(p => p.id === pisoId);
+        if (!piso) return '-';
+        const edificio = edificios.find(e => e.id === piso.edificio_id);
+        return edificio ? `${edificio.nombre} - ${piso.nombre}` : piso.nombre;
     };
 
     if (loading) {
@@ -142,22 +182,65 @@ export default function InventoryTable() {
         >
             {/* Toolbar */}
             <div className="p-6 border-b border-gray-200 bg-white">
-                <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
-                    {/* Search */}
-                    <div className="relative flex-1 max-w-md w-full">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
-                        <input
-                            type="text"
-                            placeholder="Buscar por Hostname, Usuario..."
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm"
-                        />
+                <div className="flex flex-col gap-4">
+                    {/* Primera fila: Búsqueda y Acciones */}
+                    <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
+                        {/* Search */}
+                        <div className="relative flex-1 max-w-md w-full">
+                            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                            <input
+                                type="text"
+                                placeholder="Buscar por Hostname, Usuario..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm"
+                            />
+                        </div>
+
+                        {/* Acciones */}
+                        <div className="flex flex-wrap gap-2">
+                            <input
+                                type="file"
+                                ref={fileInputRef}
+                                onChange={handleFileUpload}
+                                accept=".xlsx"
+                                className="hidden"
+                            />
+
+                            <button
+                                onClick={() => fileInputRef.current?.click()}
+                                disabled={uploading}
+                                className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-md hover:bg-blue-100 transition-all text-sm font-medium disabled:opacity-50"
+                            >
+                                {uploading ? (
+                                    <span className="animate-spin h-4 w-4 border-2 border-blue-600 rounded-full border-t-transparent"></span>
+                                ) : (
+                                    <Upload size={16} />
+                                )}
+                                {uploading ? 'SUBIENDO...' : 'IMPORTAR EXCEL'}
+                            </button>
+
+                            <button
+                                onClick={exportToCSV}
+                                className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-all text-sm font-medium"
+                            >
+                                <Download size={16} />
+                                EXCEL
+                            </button>
+
+                            <button
+                                onClick={exportToPDF}
+                                className="flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 text-red-700 rounded-md hover:bg-red-100 transition-all text-sm font-medium"
+                            >
+                                <FileText size={16} />
+                                PDF
+                            </button>
+                        </div>
                     </div>
 
-                    {/* Filters and Actions */}
+                    {/* Segunda fila: Filtros */}
                     <div className="flex flex-wrap gap-3">
-                        <select // Filter Status
+                        <select
                             value={filterStatus}
                             onChange={(e) => setFilterStatus(e.target.value)}
                             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer"
@@ -167,7 +250,7 @@ export default function InventoryTable() {
                             <option value="offline">OFFLINE</option>
                         </select>
 
-                        <select // Filter Domain
+                        <select
                             value={filterDominio}
                             onChange={(e) => setFilterDominio(e.target.value)}
                             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer"
@@ -177,74 +260,41 @@ export default function InventoryTable() {
                             <option value="no">FUERA DE DOMINIO</option>
                         </select>
 
-                        <select // Filter Area
+                        <select
                             value={filterArea}
                             onChange={(e) => setFilterArea(e.target.value)}
                             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer max-w-[150px]"
                         >
                             <option value="all">ÁREA: TODAS</option>
-                            {areas.map(area => (
+                            {areas.filter(a => a !== 'all').map(area => (
                                 <option key={area} value={area}>{area}</option>
                             ))}
                         </select>
 
-                        <select // Filter Location
-                            value={filterLocation}
-                            onChange={(e) => setFilterLocation(e.target.value)}
+                        {/* Filtro de Edificio (Sede) */}
+                        <select
+                            value={filterEdificio}
+                            onChange={(e) => setFilterEdificio(e.target.value)}
                             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer"
                         >
-                            <option value="all">TODAS LAS SEDES</option>
-                            {locations.filter(l => l !== 'all').map(loc => (
-                                <option key={loc} value={loc}>Piso {loc}</option>
+                            <option value="all">SEDE: TODAS</option>
+                            {edificios.map(ed => (
+                                <option key={ed.id} value={ed.id}>{ed.nombre}</option>
                             ))}
                         </select>
 
-                        <input
-                            type="file"
-                            ref={fileInputRef}
-                            onChange={handleFileUpload}
-                            accept=".xlsx"
-                            className="hidden"
-                        />
-
-                        <button
-                            onClick={() => fileInputRef.current?.click()}
-                            disabled={uploading}
-                            className="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-md hover:bg-blue-100 transition-all text-sm font-medium disabled:opacity-50"
+                        {/* Filtro de Piso */}
+                        <select
+                            value={filterPiso}
+                            onChange={(e) => setFilterPiso(e.target.value)}
+                            className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer"
+                            disabled={pisosFiltrados.length === 0}
                         >
-                            {uploading ? (
-                                <span className="animate-spin h-4 w-4 border-2 border-blue-600 rounded-full border-t-transparent"></span>
-                            ) : (
-                                <Upload size={16} />
-                            )}
-                            {uploading ? 'SUBIENDO...' : 'IMPORTAR EXCEL'}
-                        </button>
-
-                        {/* Button Removed as per request
-                        <button
-                            onClick={() => setIsInfrastructureOpen(true)}
-                            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-md hover:shadow-lg hover:scale-105 transition-all text-sm font-medium"
-                        >
-                            <Settings size={16} />
-                            INFRAESTRUCTURA
-                        </button>
-                        */}
-
-                        <button
-                            onClick={exportToCSV}
-                            className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-all text-sm font-medium"
-                        >
-                            <Download size={16} />
-                            EXCEL
-                        </button>
-
-                        <button
-                            onClick={exportToPDF}
-                            className="flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 text-red-700 rounded-md hover:bg-red-100 transition-all text-sm font-medium"
-                        >
-                            <FileText size={16} />
-                            PDF
-                        </button>
+                            <option value="all">PISO: TODOS</option>
+                            {pisosFiltrados.map(piso => (
+                                <option key={piso.id} value={piso.id}>{piso.nombre}</option>
+                            ))}
+                        </select>
                     </div>
                 </div>
             </div>
@@ -263,6 +313,9 @@ export default function InventoryTable() {
                             <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                                 onClick={() => handleSort('area')}>
                                 ÁREA
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                SEDE / PISO
                             </th>
                             <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                                 onClick={() => handleSort('hostname')}>
@@ -323,6 +376,13 @@ export default function InventoryTable() {
                                 {/* Area */}
                                 <td className="px-6 py-4 whitespace-nowrap">
                                     <div className="text-sm text-gray-700 font-medium">{pc.area || '-'}</div>
+                                </td>
+
+                                {/* Sede / Piso */}
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-xs text-gray-600">
+                                        {getPisoNombre(pc.piso_id)}
+                                    </div>
                                 </td>
 
                                 {/* Hostname */}
@@ -404,12 +464,7 @@ export default function InventoryTable() {
                     </div>
                 </div>
             )}
-            {/* Removed InfrastructureModal
-            <InfrastructureModal
-                isOpen={isInfrastructureOpen}
-                onClose={() => setIsInfrastructureOpen(false)}
-            />
-            */}
+
             {/* Modal de Historial */}
             <AssetHistoryModal
                 isOpen={!!historyAsset}

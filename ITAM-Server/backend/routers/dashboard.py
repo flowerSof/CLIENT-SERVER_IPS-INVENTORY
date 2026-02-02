@@ -157,6 +157,27 @@ def guardar_posicion(serial: str, pos: PositionUpdate, db: Session = Depends(get
     db.commit()
     return {"status": "updated", "serial": serial}
 
+# --- ENDPOINT 3.5: QUITAR UBICACIÓN DEL MAPA ---
+@router.delete("/{serial}/position")
+def quitar_ubicacion(serial: str, db: Session = Depends(get_db)):
+    """Quita un activo del mapa (lo devuelve a 'sin ubicar')"""
+    activo = db.query(assets.Activo).filter(assets.Activo.serial_number == serial).first()
+    
+    if not activo:
+        raise HTTPException(status_code=404, detail="Activo no encontrado")
+    
+    # Loguear el cambio
+    if activo.piso_id:
+        log_asset_change(db, activo.id, "piso_id", str(activo.piso_id), "NULL")
+    
+    # Quitar posición
+    activo.pos_x = None
+    activo.pos_y = None
+    activo.piso_id = None
+    
+    db.commit()
+    return {"status": "unassigned", "serial": serial}
+
 # --- ENDPOINT 4: CARGA MASIVA (EXCEL) ---
 @router.post("/upload")
 async def upload_excel(file: UploadFile = File(...), db: Session = Depends(get_db)):

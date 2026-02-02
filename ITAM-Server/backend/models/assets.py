@@ -46,7 +46,7 @@ class Activo(Base):
     # Historial de cambios
     historial = relationship("HistorialActivo", back_populates="activo", cascade="all, delete-orphan")
     
-    def is_online(self, threshold_minutes=5):
+    def is_online(self, threshold_minutes=7):
         """Determina si el activo está online basado en el último reporte"""
         if not self.ultimo_reporte:
             return False

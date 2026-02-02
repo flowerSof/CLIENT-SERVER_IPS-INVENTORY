@@ -13,18 +13,31 @@ export const AuthProvider = ({ children }) => {
         const token = localStorage.getItem('access_token');
         const username = localStorage.getItem('username');
         const fullName = localStorage.getItem('nombre_completo');
+        const esSuperadmin = localStorage.getItem('es_superadmin') === 'true';
+        const permisos = JSON.parse(localStorage.getItem('permisos') || '[]');
 
         if (token && username) {
-            setUser({ username, nombre_completo: fullName });
+            setUser({
+                username,
+                nombre_completo: fullName,
+                es_superadmin: esSuperadmin,
+                permisos
+            });
         }
         setLoading(false);
     }, []);
 
     // Función de Login
     const login = (userData) => {
+        // Guardar permisos en localStorage
+        localStorage.setItem('es_superadmin', userData.es_superadmin ? 'true' : 'false');
+        localStorage.setItem('permisos', JSON.stringify(userData.permisos || []));
+
         setUser({
             username: userData.username,
-            nombre_completo: userData.nombre_completo
+            nombre_completo: userData.nombre_completo,
+            es_superadmin: userData.es_superadmin || false,
+            permisos: userData.permisos || []
         });
     };
 
@@ -33,9 +46,55 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem('access_token');
         localStorage.removeItem('username');
         localStorage.removeItem('nombre_completo');
+        localStorage.removeItem('es_superadmin');
+        localStorage.removeItem('permisos');
         setUser(null);
         window.location.href = '/'; // Forzar recarga limpia
     }, []);
+
+    // Helper para verificar si puede ver un edificio
+    const canViewBuilding = useCallback((edificioId) => {
+        if (!user) return false;
+        if (user.es_superadmin) return true;
+
+        return user.permisos.some(p =>
+            p.edificio_id === edificioId
+        );
+    }, [user]);
+
+    // Helper para verificar si puede ver un piso específico
+    const canViewFloor = useCallback((edificioId, pisoId) => {
+        if (!user) return false;
+        if (user.es_superadmin) return true;
+
+        return user.permisos.some(p =>
+            p.edificio_id === edificioId &&
+            (p.piso_id === null || p.piso_id === pisoId)
+        );
+    }, [user]);
+
+    // Helper para filtrar edificios según permisos
+    const filterBuildingsByPermission = useCallback((edificios) => {
+        if (!user) return [];
+        if (user.es_superadmin) return edificios;
+
+        const allowedEdificioIds = [...new Set(user.permisos.map(p => p.edificio_id))];
+        return edificios.filter(e => allowedEdificioIds.includes(e.id));
+    }, [user]);
+
+    // Helper para filtrar pisos según permisos
+    const filterFloorsByPermission = useCallback((pisos, edificioId = null) => {
+        if (!user) return [];
+        if (user.es_superadmin) return pisos;
+
+        return pisos.filter(piso => {
+            const targetEdificioId = edificioId || piso.edificio_id;
+            return user.permisos.some(p =>
+                p.edificio_id === targetEdificioId &&
+                (p.piso_id === null || p.piso_id === piso.id)
+            );
+        });
+    }, [user]);
 
     // --- MANEJO DE INACTIVIDAD (5 min) ---
     useEffect(() => {
@@ -90,10 +149,19 @@ export const AuthProvider = ({ children }) => {
 
     // Si hay usuario, mostrar app (children)
     return (
-        <AuthContext.Provider value={{ user, login, logout }}>
+        <AuthContext.Provider value={{
+            user,
+            login,
+            logout,
+            canViewBuilding,
+            canViewFloor,
+            filterBuildingsByPermission,
+            filterFloorsByPermission
+        }}>
             {children}
         </AuthContext.Provider>
     );
 };
 
 export const useAuth = () => useContext(AuthContext);
+

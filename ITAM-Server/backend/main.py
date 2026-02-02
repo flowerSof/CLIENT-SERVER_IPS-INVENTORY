@@ -1,7 +1,7 @@
 import time
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from routers import dashboard, floors, buildings, auth, areas, reports, history as history_router, glossary as glossary_router, catalogs
+from routers import dashboard, floors, buildings, auth, areas, reports, history as history_router, glossary as glossary_router, catalogs, users, remote
 from utils.history import log_asset_change
 from utils.parser import parse_hostname_logic
 
@@ -13,7 +13,7 @@ from sqlalchemy.orm import Session
 from database import engine, get_db, Base
 from config import settings
 # Importar TODOS los modelos antes de create_all para que SQLAlchemy los detecte
-from models import assets, locations, users, history, glossary 
+from models import assets, locations, users as users_model, history, glossary, permisos
 from schemas import asset_schema
 
 # --- CREACIÓN AUTOMÁTICA DE TABLAS ---
@@ -39,12 +39,20 @@ except Exception as e:
 app = FastAPI(title=settings.PROJECT_NAME, version=settings.PROJECT_VERSION)
 
 # --- CORS (Seguridad Frontend) ---
+# Permitir múltiples orígenes para desarrollo local
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # En producción poner dominio real
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "*"  # Fallback para desarrollo
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 
@@ -135,5 +143,7 @@ app.include_router(reports.router)
 app.include_router(history_router.router)
 app.include_router(catalogs.router)
 app.include_router(glossary_router.router)
+app.include_router(users.router)
+app.include_router(remote.router)
 
 # Trigger reload for schema update

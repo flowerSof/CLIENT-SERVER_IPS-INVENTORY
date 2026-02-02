@@ -338,11 +338,25 @@ export default function FloorManager({ isOpen, onClose, onFloorCreated, embedded
                                     </div>
                                 </div>
 
-                                {piso.mapa_filename && (
+                                {piso.mapa_filename ? (
                                     <div className="flex items-center gap-2 px-3 py-2 bg-green-50 rounded-lg border border-green-200">
                                         <ImageIcon size={16} className="text-green-600" />
-                                        <span className="text-xs font-medium text-green-700 truncate">{piso.mapa_filename}</span>
+                                        <span className="text-xs font-medium text-green-700 truncate flex-1">{piso.mapa_filename}</span>
+                                        <button
+                                            onClick={() => handleEdit(piso)}
+                                            className="text-xs text-primary-blue hover:underline font-medium"
+                                        >
+                                            Cambiar
+                                        </button>
                                     </div>
+                                ) : (
+                                    <button
+                                        onClick={() => handleEdit(piso)}
+                                        className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-amber-50 rounded-lg border border-amber-200 text-amber-700 hover:bg-amber-100 transition-colors"
+                                    >
+                                        <Upload size={14} />
+                                        <span className="text-xs font-medium">Subir plano</span>
+                                    </button>
                                 )}
                             </motion.div>
                         ))}
