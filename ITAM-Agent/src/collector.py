@@ -41,6 +41,13 @@ class SystemCollector:
                 **self._get_network_info()
             }
             
+            # Recolectar datos de impresión (no bloquea si falla)
+            try:
+                data["print_data"] = self._get_print_info(c)
+            except Exception as e:
+                logger.warning(f"No se pudieron obtener datos de impresión: {e}")
+                data["print_data"] = []
+            
             # Validar datos
             if self._validate_data(data):
                 logger.info(f"✓ Datos recolectados: {data['hostname']} ({data['serial_number']})")
@@ -164,6 +171,70 @@ class SystemCollector:
                 "ip_address": "0.0.0.0",
                 "mac_address": "00:00:00:00:00:00"
             }
+    
+    def _get_print_info(self, c) -> list:
+        """Obtiene información de impresiones por impresora usando WMI"""
+        try:
+            print_stats = []
+            
+            # Obtener contadores del spooler de impresión
+            perf_data = c.Win32_PerfFormattedData_Spooler_PrintQueue()
+            
+            # Obtener lista de impresoras para datos adicionales
+            printers = {}
+            try:
+                for p in c.Win32_Printer():
+                    printers[p.Name] = {
+                        "port": p.PortName or "",
+                        "driver": p.DriverName or "",
+                        "is_network": bool(p.Network),
+                        "is_default": bool(p.Default)
+                    }
+            except Exception:
+                pass
+            
+            for queue in perf_data:
+                nombre = queue.Name
+                
+                # Ignorar la cola _Total y colas virtuales
+                if nombre == "_Total":
+                    continue
+                
+                # Filtrar impresoras virtuales
+                virtual_keywords = ["Microsoft", "OneNote", "XPS", "PDF", "Fax", "nul"]
+                if any(kw.lower() in nombre.lower() for kw in virtual_keywords):
+                    continue
+                
+                total_jobs = int(queue.TotalJobsPrinted or 0)
+                total_pages = int(queue.TotalPagesPrinted or 0)
+                
+                # Solo reportar impresoras con actividad
+                if total_jobs == 0 and total_pages == 0:
+                    continue
+                
+                printer_info = printers.get(nombre, {})
+                
+                stat = {
+                    "printer_name": nombre,
+                    "total_jobs": total_jobs,
+                    "total_pages": total_pages,
+                    "port": printer_info.get("port", ""),
+                    "driver": printer_info.get("driver", ""),
+                    "is_network": printer_info.get("is_network", False),
+                    "is_default": printer_info.get("is_default", False)
+                }
+                print_stats.append(stat)
+            
+            if print_stats:
+                logger.info(f"  ✓ Impresoras detectadas: {len(print_stats)}")
+                for ps in print_stats:
+                    logger.info(f"    - {ps['printer_name']}: {ps['total_jobs']} trabajos, {ps['total_pages']} páginas")
+            
+            return print_stats
+            
+        except Exception as e:
+            logger.warning(f"Error obteniendo datos de impresión: {e}")
+            return []
     
     def _validate_data(self, data: Dict) -> bool:
         """Valida que los datos recolectados sean correctos"""

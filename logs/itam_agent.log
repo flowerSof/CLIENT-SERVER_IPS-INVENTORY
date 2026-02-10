@@ -1179,3 +1179,2027 @@
 2026-02-02 00:54:42 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
 2026-02-02 00:54:42 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
 2026-02-02 00:54:51 | WARNING  | ITAM-Agent | 🔴 APAGADO PROGRAMADO en 60 segundos
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:26:25 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | 📡 Command Server iniciado en puerto 5001
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | Servidor de comandos remotos activo - esperando instrucciones...
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | CICLO #1 - 2026-02-09 16:26:26
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 16:26:26 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 16:26:28 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 16:26:28 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 16:26:28 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 16:26:28 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 16:26:28 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 16:26:28 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 16:26:29 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 16:26:29 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 16:26:29 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 16:26:44 | WARNING  | ITAM-Agent | 🔴 APAGADO PROGRAMADO en 60 segundos
+2026-02-09 16:26:50 | INFO     | ITAM-Agent | ✅ Apagado/reinicio CANCELADO
+2026-02-09 16:31:29 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:31:29 | INFO     | ITAM-Agent | CICLO #2 - 2026-02-09 16:31:29
+2026-02-09 16:31:29 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:31:29 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 16:31:29 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 16:31:31 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 16:31:31 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 16:31:31 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 16:31:31 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 16:31:31 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 16:31:31 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 16:31:31 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 16:31:31 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 16:31:31 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 16:36:32 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:36:32 | INFO     | ITAM-Agent | CICLO #3 - 2026-02-09 16:36:32
+2026-02-09 16:36:32 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:36:32 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 16:36:32 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 16:36:34 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 16:36:34 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 16:36:34 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 16:36:34 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 16:36:34 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 16:36:34 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 16:36:34 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 16:36:34 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 16:36:34 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 16:40:49 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-02-09 16:40:50 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-02-09 16:40:50 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-02-09 16:40:50 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:40:50 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-02-09 16:40:50 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | 📡 Command Server iniciado en puerto 5001
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | Servidor de comandos remotos activo - esperando instrucciones...
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | CICLO #1 - 2026-02-09 16:40:55
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 16:40:55 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 16:40:58 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 16:40:58 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 16:40:58 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 16:40:59 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 16:40:59 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 16:40:59 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 16:40:59 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 16:40:59 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 16:40:59 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 16:41:25 | WARNING  | ITAM-Agent | 🔴 APAGADO PROGRAMADO en 60 segundos
+2026-02-09 16:41:42 | INFO     | ITAM-Agent | ✅ Apagado/reinicio CANCELADO
+2026-02-09 16:45:24 | WARNING  | ITAM-Agent | 🔴 APAGADO PROGRAMADO en 60 segundos
+2026-02-09 16:45:36 | INFO     | ITAM-Agent | ✅ Apagado/reinicio CANCELADO
+2026-02-09 16:46:01 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:46:01 | INFO     | ITAM-Agent | CICLO #2 - 2026-02-09 16:46:01
+2026-02-09 16:46:01 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:46:01 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 16:46:01 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 16:46:03 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 16:46:03 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 16:46:03 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 16:46:03 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 16:46:03 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 16:46:03 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 16:46:03 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 16:46:03 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 16:46:03 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 16:51:08 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:51:08 | INFO     | ITAM-Agent | CICLO #3 - 2026-02-09 16:51:08
+2026-02-09 16:51:08 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:51:08 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 16:51:08 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 16:51:10 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 16:51:10 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 16:51:10 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 16:51:10 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 16:51:10 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 16:51:10 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 16:51:10 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 16:51:10 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 16:51:10 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 16:56:13 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 16:56:13 | INFO     | ITAM-Agent | CICLO #4 - 2026-02-09 16:56:13
+2026-02-09 16:56:13 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 16:56:13 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 16:56:13 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 16:56:15 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 16:56:15 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 16:56:15 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 16:56:15 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 16:56:15 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 16:56:15 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 16:56:16 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 16:56:16 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 16:56:16 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:01:18 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:01:18 | INFO     | ITAM-Agent | CICLO #5 - 2026-02-09 17:01:18
+2026-02-09 17:01:18 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:01:18 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:01:18 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:01:20 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:01:20 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:01:20 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:01:20 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:01:20 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:01:20 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:01:20 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:01:20 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:01:20 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:06:20 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:06:20 | INFO     | ITAM-Agent | CICLO #6 - 2026-02-09 17:06:20
+2026-02-09 17:06:20 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:06:20 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:06:20 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:06:22 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:06:22 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:06:22 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:06:22 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:06:22 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:06:22 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:06:22 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:06:22 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:06:22 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:11:23 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:11:23 | INFO     | ITAM-Agent | CICLO #7 - 2026-02-09 17:11:23
+2026-02-09 17:11:23 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:11:23 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:11:23 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:11:24 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:11:24 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:11:24 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:11:24 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:11:24 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:11:24 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:11:24 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:11:24 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:11:24 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:16:25 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:16:25 | INFO     | ITAM-Agent | CICLO #8 - 2026-02-09 17:16:25
+2026-02-09 17:16:25 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:16:25 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:16:25 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:16:26 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:16:27 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:16:27 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:16:27 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:16:27 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:16:27 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:16:27 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:16:27 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:16:27 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:21:27 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:21:27 | INFO     | ITAM-Agent | CICLO #9 - 2026-02-09 17:21:27
+2026-02-09 17:21:27 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:21:27 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:21:27 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:21:28 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:21:28 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:21:28 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:21:28 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:21:28 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:21:28 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:21:28 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:21:28 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:21:28 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:26:29 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:26:29 | INFO     | ITAM-Agent | CICLO #10 - 2026-02-09 17:26:29
+2026-02-09 17:26:29 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:26:29 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:26:29 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:26:31 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:26:31 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:26:31 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:26:31 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:26:31 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:26:31 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:26:31 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:26:31 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:26:31 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:31:31 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:31:31 | INFO     | ITAM-Agent | CICLO #11 - 2026-02-09 17:31:31
+2026-02-09 17:31:31 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:31:31 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:31:31 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:31:33 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:31:33 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:31:33 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:31:33 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:31:33 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:31:33 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:31:33 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:31:33 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:31:33 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:36:34 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:36:34 | INFO     | ITAM-Agent | CICLO #12 - 2026-02-09 17:36:34
+2026-02-09 17:36:34 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:36:35 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:36:35 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:36:37 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:36:37 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:36:37 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:36:37 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:36:37 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:36:37 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:36:37 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:36:37 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:36:37 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:41:40 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:41:40 | INFO     | ITAM-Agent | CICLO #13 - 2026-02-09 17:41:40
+2026-02-09 17:41:40 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:41:40 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:41:40 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:41:42 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:41:42 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:41:42 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:41:42 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:41:42 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:41:42 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:41:42 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:41:42 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:41:42 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:46:43 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:46:43 | INFO     | ITAM-Agent | CICLO #14 - 2026-02-09 17:46:43
+2026-02-09 17:46:43 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:46:43 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:46:43 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:46:45 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:46:45 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:46:45 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:46:45 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:46:45 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:46:45 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:46:45 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:46:45 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:46:45 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:51:46 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:51:46 | INFO     | ITAM-Agent | CICLO #15 - 2026-02-09 17:51:46
+2026-02-09 17:51:46 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:51:46 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:51:46 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:51:48 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:51:48 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:51:48 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:51:48 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:51:48 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:51:48 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:51:48 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:51:48 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:51:48 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 17:56:49 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 17:56:49 | INFO     | ITAM-Agent | CICLO #16 - 2026-02-09 17:56:49
+2026-02-09 17:56:49 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 17:56:49 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 17:56:49 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 17:56:51 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 17:56:51 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 17:56:51 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 17:56:51 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 17:56:51 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 17:56:51 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 17:56:52 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 17:56:52 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 17:56:52 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:01:52 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:01:52 | INFO     | ITAM-Agent | CICLO #17 - 2026-02-09 18:01:52
+2026-02-09 18:01:52 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:01:52 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:01:52 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:01:55 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:01:55 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:01:55 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:01:55 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:01:55 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:01:55 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:01:55 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:01:55 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:01:55 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:06:55 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:06:55 | INFO     | ITAM-Agent | CICLO #18 - 2026-02-09 18:06:55
+2026-02-09 18:06:55 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:06:55 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:06:55 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:06:58 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:06:58 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:06:58 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:06:58 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:06:58 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:06:58 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:06:58 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:06:58 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:06:58 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:11:59 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:11:59 | INFO     | ITAM-Agent | CICLO #19 - 2026-02-09 18:11:59
+2026-02-09 18:11:59 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:11:59 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:11:59 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:12:01 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:12:01 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:12:01 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:12:01 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:12:01 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:12:01 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:12:01 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:12:01 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:12:01 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:17:02 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:17:02 | INFO     | ITAM-Agent | CICLO #20 - 2026-02-09 18:17:02
+2026-02-09 18:17:02 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:17:02 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:17:02 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:17:03 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:17:03 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:17:03 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:17:03 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:17:03 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:17:03 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:17:03 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:17:03 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:17:03 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:22:04 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:22:04 | INFO     | ITAM-Agent | CICLO #21 - 2026-02-09 18:22:04
+2026-02-09 18:22:04 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:22:04 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:22:04 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:22:06 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:22:06 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:22:06 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:22:06 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:22:06 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:22:06 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:22:06 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:22:06 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:22:06 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:27:07 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:27:07 | INFO     | ITAM-Agent | CICLO #22 - 2026-02-09 18:27:07
+2026-02-09 18:27:07 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:27:07 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:27:07 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:27:10 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:27:10 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:27:10 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:27:10 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:27:10 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:27:10 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:27:10 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:27:10 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:27:10 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:32:10 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:32:10 | INFO     | ITAM-Agent | CICLO #23 - 2026-02-09 18:32:10
+2026-02-09 18:32:10 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:32:10 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:32:10 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:32:13 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:32:13 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:32:13 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:32:13 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:32:13 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:32:13 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:32:13 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:32:13 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:32:13 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:37:14 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:37:14 | INFO     | ITAM-Agent | CICLO #24 - 2026-02-09 18:37:14
+2026-02-09 18:37:14 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:37:14 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:37:14 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:37:16 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:37:16 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:37:16 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:37:16 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:37:16 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:37:16 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:37:16 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:37:16 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:37:16 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:42:17 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:42:17 | INFO     | ITAM-Agent | CICLO #25 - 2026-02-09 18:42:17
+2026-02-09 18:42:17 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:42:17 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:42:17 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:42:19 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:42:19 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:42:19 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:42:19 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:42:19 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:42:19 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:42:19 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:42:19 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:42:19 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:47:22 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:47:22 | INFO     | ITAM-Agent | CICLO #26 - 2026-02-09 18:47:22
+2026-02-09 18:47:22 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:47:22 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:47:22 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:48:13 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:48:13 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:48:13 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:48:13 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:48:13 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:48:13 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:48:30 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:48:30 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:48:30 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:53:30 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:53:30 | INFO     | ITAM-Agent | CICLO #27 - 2026-02-09 18:53:30
+2026-02-09 18:53:30 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:53:30 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:53:30 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:53:33 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:53:33 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:53:33 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:53:33 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:53:33 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:53:33 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:53:34 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:53:34 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:53:34 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 18:58:35 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 18:58:35 | INFO     | ITAM-Agent | CICLO #28 - 2026-02-09 18:58:35
+2026-02-09 18:58:35 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 18:58:35 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 18:58:35 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 18:58:36 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 18:58:36 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 18:58:36 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 18:58:36 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 18:58:36 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 18:58:36 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 18:58:37 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 18:58:37 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 18:58:37 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:03:38 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:03:38 | INFO     | ITAM-Agent | CICLO #29 - 2026-02-09 19:03:38
+2026-02-09 19:03:38 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:03:38 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:03:38 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:03:40 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:03:40 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:03:40 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:03:40 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:03:40 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:03:40 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:03:40 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:03:40 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:03:40 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:08:42 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:08:42 | INFO     | ITAM-Agent | CICLO #30 - 2026-02-09 19:08:42
+2026-02-09 19:08:42 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:08:42 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:08:42 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:08:44 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:08:44 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:08:44 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:08:44 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:08:44 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:08:44 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:08:44 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:08:44 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:08:44 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:13:45 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:13:45 | INFO     | ITAM-Agent | CICLO #31 - 2026-02-09 19:13:45
+2026-02-09 19:13:45 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:13:45 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:13:45 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:13:47 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:13:47 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:13:47 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:13:47 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:13:47 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:13:47 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:13:47 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:13:47 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:13:47 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:18:48 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:18:48 | INFO     | ITAM-Agent | CICLO #32 - 2026-02-09 19:18:48
+2026-02-09 19:18:48 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:18:48 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:18:48 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:18:51 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:18:51 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:18:51 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:18:51 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:18:51 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:18:51 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:18:51 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:18:51 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:18:51 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:23:52 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:23:52 | INFO     | ITAM-Agent | CICLO #33 - 2026-02-09 19:23:52
+2026-02-09 19:23:52 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:23:52 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:23:52 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:23:54 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:23:54 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:23:54 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:23:54 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:23:54 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:23:54 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:23:54 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:23:54 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:23:54 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:28:54 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:28:54 | INFO     | ITAM-Agent | CICLO #34 - 2026-02-09 19:28:54
+2026-02-09 19:28:54 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:28:54 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:28:54 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:28:57 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:28:57 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:28:57 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:28:57 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:28:57 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:28:57 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:28:57 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:28:57 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:28:57 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:33:57 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:33:57 | INFO     | ITAM-Agent | CICLO #35 - 2026-02-09 19:33:57
+2026-02-09 19:33:57 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:33:57 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:33:57 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:33:59 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:33:59 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:33:59 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:33:59 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:33:59 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:33:59 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:34:00 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:34:00 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:34:00 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:39:01 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:39:01 | INFO     | ITAM-Agent | CICLO #36 - 2026-02-09 19:39:01
+2026-02-09 19:39:01 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:39:01 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:39:01 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:39:02 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:39:02 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:39:02 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:39:02 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:39:02 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:39:02 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:39:02 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:39:02 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:39:02 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:44:03 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:44:03 | INFO     | ITAM-Agent | CICLO #37 - 2026-02-09 19:44:03
+2026-02-09 19:44:03 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:44:03 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:44:03 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:44:05 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:44:05 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:44:05 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:44:05 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:44:05 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:44:05 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:44:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:44:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:44:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:49:05 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:49:05 | INFO     | ITAM-Agent | CICLO #38 - 2026-02-09 19:49:05
+2026-02-09 19:49:05 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:49:05 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:49:05 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:49:08 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:49:08 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:49:08 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:49:08 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:49:08 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:49:08 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:49:08 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:49:08 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:49:08 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:54:09 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:54:09 | INFO     | ITAM-Agent | CICLO #39 - 2026-02-09 19:54:09
+2026-02-09 19:54:09 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:54:09 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:54:09 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:54:11 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:54:11 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:54:11 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:54:11 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:54:11 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:54:11 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:54:11 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:54:11 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:54:11 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 19:59:11 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 19:59:11 | INFO     | ITAM-Agent | CICLO #40 - 2026-02-09 19:59:11
+2026-02-09 19:59:11 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 19:59:11 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 19:59:11 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 19:59:13 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 19:59:13 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 19:59:13 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 19:59:13 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 19:59:13 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 19:59:13 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 19:59:13 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 19:59:13 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 19:59:13 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:04:14 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:04:14 | INFO     | ITAM-Agent | CICLO #41 - 2026-02-09 20:04:14
+2026-02-09 20:04:14 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:04:14 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:04:14 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:04:16 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:04:16 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:04:16 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:04:16 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:04:16 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:04:16 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:04:16 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:04:16 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:04:16 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:09:17 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:09:17 | INFO     | ITAM-Agent | CICLO #42 - 2026-02-09 20:09:17
+2026-02-09 20:09:17 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:09:17 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:09:17 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:09:19 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:09:19 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:09:19 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:09:19 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:09:19 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:09:19 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:09:19 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:09:19 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:09:19 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:14:20 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:14:20 | INFO     | ITAM-Agent | CICLO #43 - 2026-02-09 20:14:20
+2026-02-09 20:14:20 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:14:20 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:14:20 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:14:23 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:14:23 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:14:23 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:14:23 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:14:23 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:14:23 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:14:23 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:14:23 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:14:23 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:19:23 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:19:23 | INFO     | ITAM-Agent | CICLO #44 - 2026-02-09 20:19:23
+2026-02-09 20:19:23 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:19:23 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:19:23 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:19:25 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:19:25 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:19:25 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:19:25 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:19:25 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:19:25 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:19:26 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:19:26 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:19:26 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:24:27 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:24:27 | INFO     | ITAM-Agent | CICLO #45 - 2026-02-09 20:24:27
+2026-02-09 20:24:27 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:24:27 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:24:27 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:24:29 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:24:29 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:24:29 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:24:29 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:24:29 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:24:29 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:24:29 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:24:29 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:24:29 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:29:29 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:29:29 | INFO     | ITAM-Agent | CICLO #46 - 2026-02-09 20:29:29
+2026-02-09 20:29:29 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:29:29 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:29:29 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:29:31 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:29:31 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:29:31 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:29:31 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:29:31 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:29:31 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:29:31 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:29:31 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:29:31 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:34:33 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:34:33 | INFO     | ITAM-Agent | CICLO #47 - 2026-02-09 20:34:33
+2026-02-09 20:34:33 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:34:33 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:34:33 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:34:35 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:34:35 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:34:35 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:34:35 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:34:35 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:34:35 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:34:35 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:34:35 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:34:35 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:39:36 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:39:36 | INFO     | ITAM-Agent | CICLO #48 - 2026-02-09 20:39:36
+2026-02-09 20:39:36 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:39:36 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:39:37 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:39:39 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:39:39 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:39:39 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:39:39 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:39:39 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:39:39 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:39:39 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:39:39 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:39:39 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:44:40 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:44:40 | INFO     | ITAM-Agent | CICLO #49 - 2026-02-09 20:44:40
+2026-02-09 20:44:40 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:44:40 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:44:40 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:44:42 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:44:42 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:44:42 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:44:42 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:44:42 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:44:42 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:44:42 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:44:42 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:44:42 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:49:43 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:49:43 | INFO     | ITAM-Agent | CICLO #50 - 2026-02-09 20:49:43
+2026-02-09 20:49:43 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:49:43 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:49:43 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:49:44 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:49:44 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:49:44 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:49:44 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:49:44 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:49:44 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:49:44 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:49:44 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:49:44 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:54:46 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:54:46 | INFO     | ITAM-Agent | CICLO #51 - 2026-02-09 20:54:46
+2026-02-09 20:54:46 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:54:46 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:54:46 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:54:48 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:54:48 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:54:48 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:54:48 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:54:48 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:54:48 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:54:48 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:54:48 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:54:48 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 20:59:49 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 20:59:49 | INFO     | ITAM-Agent | CICLO #52 - 2026-02-09 20:59:49
+2026-02-09 20:59:49 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 20:59:49 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 20:59:49 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 20:59:51 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 20:59:51 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 20:59:51 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 20:59:51 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 20:59:51 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 20:59:51 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 20:59:51 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 20:59:51 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 20:59:51 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 21:04:52 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 21:04:52 | INFO     | ITAM-Agent | CICLO #53 - 2026-02-09 21:04:52
+2026-02-09 21:04:52 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 21:04:52 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 21:04:52 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 21:04:54 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 21:04:54 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 21:04:54 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 21:04:54 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 21:04:54 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 21:04:54 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 21:04:54 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 21:04:54 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 21:04:54 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 21:09:55 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 21:09:55 | INFO     | ITAM-Agent | CICLO #54 - 2026-02-09 21:09:55
+2026-02-09 21:09:55 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 21:09:55 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 21:09:55 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 21:09:56 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 21:09:56 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 21:09:56 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 21:09:56 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 21:09:56 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 21:09:56 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 21:09:56 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 21:09:56 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 21:09:56 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 21:14:57 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 21:14:57 | INFO     | ITAM-Agent | CICLO #55 - 2026-02-09 21:14:57
+2026-02-09 21:14:57 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 21:14:57 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 21:14:57 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 21:14:58 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 21:14:58 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 21:14:58 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 21:14:58 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 21:14:58 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 21:14:58 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 21:14:58 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 21:14:58 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 21:14:58 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 21:19:59 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 21:19:59 | INFO     | ITAM-Agent | CICLO #56 - 2026-02-09 21:19:59
+2026-02-09 21:19:59 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 21:19:59 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 21:19:59 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 21:20:00 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 21:20:00 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 21:20:00 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 21:20:00 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 21:20:00 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 21:20:00 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 21:20:00 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 21:20:00 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 21:20:00 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 21:25:01 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 21:25:01 | INFO     | ITAM-Agent | CICLO #57 - 2026-02-09 21:25:01
+2026-02-09 21:25:01 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 21:25:01 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 21:25:01 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 21:25:02 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 21:25:02 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 21:25:02 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 21:25:02 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 21:25:02 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 21:25:02 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 21:25:02 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 21:25:02 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 21:25:02 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-09 21:30:03 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-09 21:30:03 | INFO     | ITAM-Agent | CICLO #58 - 2026-02-09 21:30:03
+2026-02-09 21:30:03 | INFO     | ITAM-Agent | ============================================================
+2026-02-09 21:30:03 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-09 21:30:03 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-09 21:30:04 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-09 21:30:04 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-09 21:30:04 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-09 21:30:04 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-09 21:30:04 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-09 21:30:04 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-09 21:30:04 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-09 21:30:04 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-09 21:30:04 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 08:29:35 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 08:29:35 | INFO     | ITAM-Agent | CICLO #59 - 2026-02-10 08:29:35
+2026-02-10 08:29:35 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 08:29:35 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 08:29:35 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 08:29:37 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 08:29:37 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 08:29:37 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 08:29:37 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 08:29:37 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 08:29:37 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 08:29:37 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 08:29:37 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 08:29:37 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 08:34:37 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 08:34:37 | INFO     | ITAM-Agent | CICLO #60 - 2026-02-10 08:34:37
+2026-02-10 08:34:37 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 08:34:37 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 08:34:37 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 08:34:39 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 08:34:39 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 08:34:39 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 08:34:39 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 08:34:39 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 08:34:39 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 08:34:39 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 08:34:39 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 08:34:39 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 08:39:39 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 08:39:39 | INFO     | ITAM-Agent | CICLO #61 - 2026-02-10 08:39:39
+2026-02-10 08:39:39 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 08:39:39 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 08:39:39 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 08:39:41 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 08:39:41 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 08:39:41 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 08:39:41 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 08:39:41 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 08:39:41 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 08:39:41 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 08:39:41 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 08:39:41 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 08:44:41 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 08:44:42 | INFO     | ITAM-Agent | CICLO #62 - 2026-02-10 08:44:41
+2026-02-10 08:44:42 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 08:44:42 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 08:44:42 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 08:44:43 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 08:44:43 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 08:44:43 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 08:44:43 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 08:44:43 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 08:44:43 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 08:44:43 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 08:44:43 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 08:44:43 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 08:49:44 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 08:49:44 | INFO     | ITAM-Agent | CICLO #63 - 2026-02-10 08:49:44
+2026-02-10 08:49:44 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 08:49:44 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 08:49:44 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 08:49:46 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 08:49:46 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 08:49:46 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 08:49:46 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 08:49:46 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 08:49:46 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 08:49:46 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 08:49:46 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 08:49:46 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 08:54:46 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 08:54:46 | INFO     | ITAM-Agent | CICLO #64 - 2026-02-10 08:54:46
+2026-02-10 08:54:46 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 08:54:46 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 08:54:46 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 08:54:48 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 08:54:48 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 08:54:48 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 08:54:48 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 08:54:48 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 08:54:48 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 08:54:48 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 08:54:48 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 08:54:48 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 08:59:48 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 08:59:48 | INFO     | ITAM-Agent | CICLO #65 - 2026-02-10 08:59:48
+2026-02-10 08:59:48 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 08:59:48 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 08:59:48 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 08:59:50 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 08:59:50 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 08:59:50 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 08:59:50 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 08:59:50 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 08:59:50 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 08:59:50 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 08:59:50 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 08:59:50 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:04:51 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:04:51 | INFO     | ITAM-Agent | CICLO #66 - 2026-02-10 09:04:51
+2026-02-10 09:04:51 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:04:51 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:04:51 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:04:52 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:04:52 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:04:52 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:04:52 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:04:52 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:04:52 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:04:52 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:04:52 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:04:52 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:09:53 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:09:53 | INFO     | ITAM-Agent | CICLO #67 - 2026-02-10 09:09:53
+2026-02-10 09:09:53 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:09:53 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:09:53 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:09:54 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:09:54 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:09:54 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:09:54 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:09:54 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:09:54 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:09:55 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:09:55 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:09:55 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:14:55 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:14:55 | INFO     | ITAM-Agent | CICLO #68 - 2026-02-10 09:14:55
+2026-02-10 09:14:55 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:14:55 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:14:55 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:14:57 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:14:57 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:14:57 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:14:57 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:14:57 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:14:57 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:14:57 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:14:57 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:14:57 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:19:57 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:19:57 | INFO     | ITAM-Agent | CICLO #69 - 2026-02-10 09:19:57
+2026-02-10 09:19:57 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:19:57 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:19:57 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:19:59 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:19:59 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:19:59 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:19:59 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:19:59 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:19:59 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:19:59 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:19:59 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:19:59 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:24:59 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:24:59 | INFO     | ITAM-Agent | CICLO #70 - 2026-02-10 09:24:59
+2026-02-10 09:24:59 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:24:59 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:24:59 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:25:01 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:25:01 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:25:01 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:25:01 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:25:01 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:25:01 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:25:01 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:25:01 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:25:01 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:30:01 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:30:01 | INFO     | ITAM-Agent | CICLO #71 - 2026-02-10 09:30:01
+2026-02-10 09:30:01 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:30:01 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:30:01 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:30:03 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:30:03 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:30:03 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:30:03 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:30:03 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:30:03 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:30:03 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:30:03 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:30:03 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:35:04 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:35:04 | INFO     | ITAM-Agent | CICLO #72 - 2026-02-10 09:35:04
+2026-02-10 09:35:04 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:35:04 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:35:04 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:35:05 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:35:05 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:35:05 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:35:05 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:35:05 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:35:05 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:35:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:35:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:35:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:40:06 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:40:06 | INFO     | ITAM-Agent | CICLO #73 - 2026-02-10 09:40:06
+2026-02-10 09:40:06 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:40:06 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:40:06 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:40:07 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:40:07 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:40:07 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:40:07 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:40:07 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:40:07 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:40:08 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:40:08 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:40:08 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:45:08 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:45:08 | INFO     | ITAM-Agent | CICLO #74 - 2026-02-10 09:45:08
+2026-02-10 09:45:08 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:45:08 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:45:08 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:45:10 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:45:10 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:45:10 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:45:10 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:45:10 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:45:10 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:45:10 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:45:10 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:45:10 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:50:10 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:50:10 | INFO     | ITAM-Agent | CICLO #75 - 2026-02-10 09:50:10
+2026-02-10 09:50:10 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:50:10 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:50:10 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:50:12 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:50:12 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:50:12 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:50:12 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:50:12 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:50:12 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:50:12 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:50:12 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:50:12 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 09:55:12 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 09:55:12 | INFO     | ITAM-Agent | CICLO #76 - 2026-02-10 09:55:12
+2026-02-10 09:55:12 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 09:55:12 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 09:55:12 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 09:55:14 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 09:55:14 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 09:55:14 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 09:55:14 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 09:55:14 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 09:55:14 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 09:55:14 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 09:55:14 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 09:55:14 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:00:14 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:00:14 | INFO     | ITAM-Agent | CICLO #77 - 2026-02-10 10:00:14
+2026-02-10 10:00:14 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:00:14 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:00:14 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:00:16 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:00:16 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:00:16 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:00:16 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:00:16 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:00:16 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:00:16 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:00:16 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:00:16 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:05:17 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:05:17 | INFO     | ITAM-Agent | CICLO #78 - 2026-02-10 10:05:17
+2026-02-10 10:05:17 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:05:17 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:05:17 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:05:18 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:05:18 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:05:18 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:05:18 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:05:18 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:05:18 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:05:18 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:05:18 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:05:18 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:10:19 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:10:19 | INFO     | ITAM-Agent | CICLO #79 - 2026-02-10 10:10:19
+2026-02-10 10:10:19 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:10:19 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:10:19 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:10:21 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:10:21 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:10:21 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:10:21 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:10:21 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:10:21 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:10:21 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:10:21 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:10:21 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:15:21 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:15:21 | INFO     | ITAM-Agent | CICLO #80 - 2026-02-10 10:15:21
+2026-02-10 10:15:21 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:15:21 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:15:21 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:15:23 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:15:23 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:15:23 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:15:23 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:15:23 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:15:23 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:15:23 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:15:23 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:15:23 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:20:23 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:20:23 | INFO     | ITAM-Agent | CICLO #81 - 2026-02-10 10:20:23
+2026-02-10 10:20:23 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:20:23 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:20:23 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:20:25 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:20:25 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:20:25 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:20:25 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:20:25 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:20:25 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:20:25 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:20:25 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:20:25 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:25:25 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:25:25 | INFO     | ITAM-Agent | CICLO #82 - 2026-02-10 10:25:25
+2026-02-10 10:25:25 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:25:25 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:25:25 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:25:27 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:25:27 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:25:27 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:25:27 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:25:27 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:25:27 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:25:27 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:25:27 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:25:27 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:30:28 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:30:28 | INFO     | ITAM-Agent | CICLO #83 - 2026-02-10 10:30:28
+2026-02-10 10:30:28 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:30:28 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:30:28 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:30:29 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:30:29 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:30:29 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:30:29 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:30:29 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:30:29 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:30:29 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:30:29 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:30:29 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:35:30 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:35:30 | INFO     | ITAM-Agent | CICLO #84 - 2026-02-10 10:35:30
+2026-02-10 10:35:30 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:35:30 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:35:30 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:35:32 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:35:32 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:35:32 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:35:32 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:35:32 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:35:32 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:35:32 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:35:32 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:35:32 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:40:32 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:40:32 | INFO     | ITAM-Agent | CICLO #85 - 2026-02-10 10:40:32
+2026-02-10 10:40:32 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:40:32 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:40:32 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:40:34 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:40:34 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:40:34 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:40:34 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:40:34 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:40:34 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:40:34 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:40:34 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:40:34 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:45:34 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:45:34 | INFO     | ITAM-Agent | CICLO #86 - 2026-02-10 10:45:34
+2026-02-10 10:45:34 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:45:34 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:45:34 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:45:36 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:45:36 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:45:36 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:45:36 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:45:36 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:45:36 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:45:36 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:45:36 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:45:36 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:50:36 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:50:36 | INFO     | ITAM-Agent | CICLO #87 - 2026-02-10 10:50:36
+2026-02-10 10:50:36 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:50:36 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:50:36 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:50:38 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:50:38 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:50:38 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:50:38 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:50:38 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:50:38 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:50:38 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:50:38 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:50:38 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 10:55:38 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 10:55:38 | INFO     | ITAM-Agent | CICLO #88 - 2026-02-10 10:55:38
+2026-02-10 10:55:38 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 10:55:38 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 10:55:38 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 10:55:40 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 10:55:40 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 10:55:40 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 10:55:40 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 10:55:40 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 10:55:40 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 10:55:40 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 10:55:40 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 10:55:40 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:00:40 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:00:40 | INFO     | ITAM-Agent | CICLO #89 - 2026-02-10 11:00:40
+2026-02-10 11:00:40 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:00:40 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:00:40 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:00:42 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:00:42 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:00:42 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:00:42 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:00:42 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:00:42 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:00:42 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:00:42 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:00:42 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:05:43 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:05:43 | INFO     | ITAM-Agent | CICLO #90 - 2026-02-10 11:05:43
+2026-02-10 11:05:43 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:05:43 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:05:43 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:05:44 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:05:44 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:05:44 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:05:44 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:05:44 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:05:44 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:05:44 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:05:44 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:05:44 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:10:46 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:10:46 | INFO     | ITAM-Agent | CICLO #91 - 2026-02-10 11:10:46
+2026-02-10 11:10:46 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:10:46 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:10:46 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:10:49 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:10:49 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:10:49 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:10:49 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:10:49 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:10:49 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:10:49 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:10:49 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:10:49 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:15:54 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:15:54 | INFO     | ITAM-Agent | CICLO #92 - 2026-02-10 11:15:54
+2026-02-10 11:15:54 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:15:54 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:15:54 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:15:58 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:15:58 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:15:58 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:15:58 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:15:58 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:15:58 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:15:58 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:15:58 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:15:58 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:21:02 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:21:02 | INFO     | ITAM-Agent | CICLO #93 - 2026-02-10 11:21:02
+2026-02-10 11:21:02 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:21:02 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:21:02 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:21:05 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:21:05 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:21:05 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:21:05 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:21:05 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:21:05 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:21:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:21:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:21:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:26:10 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:26:10 | INFO     | ITAM-Agent | CICLO #94 - 2026-02-10 11:26:10
+2026-02-10 11:26:10 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:26:10 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:26:10 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:26:14 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:26:14 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:26:14 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:26:14 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:26:14 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:26:14 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:26:14 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:26:14 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:26:14 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:31:16 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:31:16 | INFO     | ITAM-Agent | CICLO #95 - 2026-02-10 11:31:16
+2026-02-10 11:31:16 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:31:16 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:31:16 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:31:19 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:31:19 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:31:19 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:31:19 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:31:19 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:31:19 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:31:19 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:31:19 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:31:19 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:36:20 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:36:20 | INFO     | ITAM-Agent | CICLO #96 - 2026-02-10 11:36:20
+2026-02-10 11:36:20 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:36:20 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:36:20 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:36:21 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:36:21 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:36:21 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:36:21 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:36:21 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:36:21 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:36:21 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:36:21 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:36:21 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:41:22 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:41:22 | INFO     | ITAM-Agent | CICLO #97 - 2026-02-10 11:41:22
+2026-02-10 11:41:22 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:41:22 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:41:22 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:41:24 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:41:24 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:41:24 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:41:24 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:41:24 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:41:24 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:41:24 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:41:24 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:41:24 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:46:26 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:46:26 | INFO     | ITAM-Agent | CICLO #98 - 2026-02-10 11:46:26
+2026-02-10 11:46:26 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:46:26 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:46:26 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:46:28 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:46:28 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:46:28 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:46:28 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:46:28 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:46:28 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:46:28 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:46:28 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:46:28 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:51:30 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:51:30 | INFO     | ITAM-Agent | CICLO #99 - 2026-02-10 11:51:30
+2026-02-10 11:51:30 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:51:30 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:51:30 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:51:32 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:51:32 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:51:32 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:51:32 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:51:32 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:51:32 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:51:33 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:51:33 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:51:33 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 11:56:33 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 11:56:33 | INFO     | ITAM-Agent | CICLO #100 - 2026-02-10 11:56:33
+2026-02-10 11:56:33 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 11:56:33 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 11:56:33 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 11:56:36 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 11:56:36 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 11:56:36 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 11:56:36 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 11:56:36 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 11:56:36 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 11:56:37 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 11:56:37 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 11:56:37 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:01:37 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:01:37 | INFO     | ITAM-Agent | CICLO #101 - 2026-02-10 12:01:37
+2026-02-10 12:01:37 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:01:37 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:01:37 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:01:40 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:01:40 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:01:40 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:01:40 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:01:40 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:01:40 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:01:40 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:01:40 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:01:40 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:06:41 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:06:41 | INFO     | ITAM-Agent | CICLO #102 - 2026-02-10 12:06:41
+2026-02-10 12:06:41 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:06:41 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:06:41 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:06:43 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:06:43 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:06:43 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:06:43 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:06:43 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:06:43 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:06:43 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:06:43 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:06:43 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:11:44 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:11:44 | INFO     | ITAM-Agent | CICLO #103 - 2026-02-10 12:11:44
+2026-02-10 12:11:44 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:11:44 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:11:44 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:11:46 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:11:46 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:11:46 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:11:46 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:11:46 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:11:46 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:11:46 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:11:46 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:11:46 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:16:46 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:16:46 | INFO     | ITAM-Agent | CICLO #104 - 2026-02-10 12:16:46
+2026-02-10 12:16:46 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:16:46 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:16:46 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:16:48 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:16:48 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:16:48 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:16:48 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:16:48 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:16:48 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:16:48 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:16:48 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:16:48 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:21:48 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:21:48 | INFO     | ITAM-Agent | CICLO #105 - 2026-02-10 12:21:48
+2026-02-10 12:21:48 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:21:48 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:21:48 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:21:50 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:21:50 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:21:50 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:21:50 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:21:50 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:21:50 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:21:50 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:21:50 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:21:50 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:26:51 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:26:51 | INFO     | ITAM-Agent | CICLO #106 - 2026-02-10 12:26:51
+2026-02-10 12:26:51 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:26:51 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:26:51 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:26:52 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:26:52 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:26:52 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:26:52 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:26:52 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:26:52 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:26:52 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:26:52 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:26:52 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:31:53 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:31:53 | INFO     | ITAM-Agent | CICLO #107 - 2026-02-10 12:31:53
+2026-02-10 12:31:53 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:31:53 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:31:53 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:31:55 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:31:55 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:31:55 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:31:55 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:31:55 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:31:55 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:31:55 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:31:55 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:31:55 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:33:30 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-02-10 12:33:31 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-02-10 12:33:31 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:33:31 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-02-10 12:33:31 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:33:38 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-02-10 12:33:39 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-02-10 12:33:40 | INFO     | ITAM-Agent | 📡 Command Server iniciado en puerto 5001
+2026-02-10 12:33:40 | INFO     | ITAM-Agent | Servidor de comandos remotos activo - esperando instrucciones...
+2026-02-10 12:33:40 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:33:40 | INFO     | ITAM-Agent | CICLO #1 - 2026-02-10 12:33:40
+2026-02-10 12:33:40 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:33:40 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:33:40 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:33:41 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:33:41 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:33:41 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:33:41 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:33:41 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:33:41 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:33:41 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:33:41 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:33:41 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:38:42 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:38:42 | INFO     | ITAM-Agent | CICLO #2 - 2026-02-10 12:38:42
+2026-02-10 12:38:42 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:38:42 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:38:42 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:38:44 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:38:44 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:38:44 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:38:44 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:38:44 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:38:44 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:38:44 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-10 12:38:44 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-10 12:38:44 | INFO     | ITAM-Agent | Reintentando en 5 segundos...
+2026-02-10 12:38:49 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 2/3)
+2026-02-10 12:38:49 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-10 12:38:49 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-10 12:38:49 | INFO     | ITAM-Agent | Reintentando en 10 segundos...
+2026-02-10 12:38:59 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 3/3)
+2026-02-10 12:38:59 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-10 12:38:59 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-10 12:38:59 | ERROR    | ITAM-Agent | ✗ No se pudo enviar el reporte después de 3 intentos
+2026-02-10 12:38:59 | WARNING  | ITAM-Agent |   ✗ No se pudo enviar el reporte
+2026-02-10 12:38:59 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:43:59 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:43:59 | INFO     | ITAM-Agent | CICLO #3 - 2026-02-10 12:43:59
+2026-02-10 12:43:59 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:43:59 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:43:59 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:44:01 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:44:01 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:44:01 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:44:01 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:44:01 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:44:01 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:44:01 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:44:01 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:44:01 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:49:01 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:49:01 | INFO     | ITAM-Agent | CICLO #4 - 2026-02-10 12:49:01
+2026-02-10 12:49:01 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:49:01 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:49:01 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:49:03 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:49:03 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:49:03 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:49:03 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:49:03 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:49:03 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:49:03 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:49:03 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:49:03 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:54:03 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:54:03 | INFO     | ITAM-Agent | CICLO #5 - 2026-02-10 12:54:03
+2026-02-10 12:54:03 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:54:03 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:54:03 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:54:05 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:54:05 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:54:05 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:54:05 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:54:05 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:54:05 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:54:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:54:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:54:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 12:59:05 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 12:59:05 | INFO     | ITAM-Agent | CICLO #6 - 2026-02-10 12:59:05
+2026-02-10 12:59:05 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 12:59:05 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 12:59:05 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 12:59:07 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 12:59:07 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 12:59:07 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 12:59:07 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 12:59:07 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 12:59:07 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 12:59:07 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 12:59:07 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 12:59:07 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:04:07 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:04:07 | INFO     | ITAM-Agent | CICLO #7 - 2026-02-10 13:04:07
+2026-02-10 13:04:07 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:04:07 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:04:07 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:04:09 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:04:09 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:04:09 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:04:09 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:04:09 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:04:09 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:04:09 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:04:09 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:04:09 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:09:11 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:09:11 | INFO     | ITAM-Agent | CICLO #8 - 2026-02-10 13:09:11
+2026-02-10 13:09:11 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:09:11 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:09:11 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:09:13 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:09:13 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:09:13 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:09:13 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:09:13 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:09:13 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:09:14 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:09:14 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:09:14 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:14:18 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:14:18 | INFO     | ITAM-Agent | CICLO #9 - 2026-02-10 13:14:18
+2026-02-10 13:14:18 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:14:18 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:14:18 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:14:20 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:14:20 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:14:20 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:14:20 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:14:20 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:14:20 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:14:20 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:14:20 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:14:20 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:19:23 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:19:23 | INFO     | ITAM-Agent | CICLO #10 - 2026-02-10 13:19:23
+2026-02-10 13:19:23 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:19:23 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:19:23 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:19:26 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:19:26 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:19:26 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:19:26 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:19:26 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:19:26 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:19:26 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:19:26 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:19:26 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:24:30 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:24:30 | INFO     | ITAM-Agent | CICLO #11 - 2026-02-10 13:24:30
+2026-02-10 13:24:30 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:24:30 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:24:30 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:24:33 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:24:33 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:24:33 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:24:33 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:24:33 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:24:33 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:24:33 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:24:33 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:24:33 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:24:50 | WARNING  | ITAM-Agent | 🔴 APAGADO PROGRAMADO en 60 segundos
+2026-02-10 13:25:00 | INFO     | ITAM-Agent | ✅ Apagado/reinicio CANCELADO
+2026-02-10 13:29:38 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:29:38 | INFO     | ITAM-Agent | CICLO #12 - 2026-02-10 13:29:38
+2026-02-10 13:29:38 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:29:38 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:29:38 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:29:41 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:29:41 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:29:41 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:29:41 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:29:41 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:29:41 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:29:41 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:29:41 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:29:41 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:34:43 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:34:43 | INFO     | ITAM-Agent | CICLO #13 - 2026-02-10 13:34:43
+2026-02-10 13:34:43 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:34:43 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:34:43 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:34:45 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:34:45 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:34:45 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:34:45 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:34:45 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:34:45 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:34:45 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:34:45 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:34:45 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:39:45 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:39:45 | INFO     | ITAM-Agent | CICLO #14 - 2026-02-10 13:39:45
+2026-02-10 13:39:45 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:39:45 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:39:45 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:39:47 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:39:47 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:39:47 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:39:47 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:39:47 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:39:47 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:39:47 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:39:47 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:39:47 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:44:47 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:44:47 | INFO     | ITAM-Agent | CICLO #15 - 2026-02-10 13:44:47
+2026-02-10 13:44:47 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:44:47 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:44:47 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:44:49 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:44:49 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:44:49 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:44:49 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:44:49 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:44:49 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:44:49 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:44:49 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:44:49 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:49:49 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:49:49 | INFO     | ITAM-Agent | CICLO #16 - 2026-02-10 13:49:49
+2026-02-10 13:49:49 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:49:49 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:49:49 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:49:51 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:49:51 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:49:51 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:49:51 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:49:51 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:49:51 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:49:51 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:49:51 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:49:51 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:54:52 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:54:52 | INFO     | ITAM-Agent | CICLO #17 - 2026-02-10 13:54:52
+2026-02-10 13:54:52 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:54:52 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:54:52 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:54:55 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:54:55 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:54:55 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:54:55 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:54:55 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:54:55 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:54:55 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:54:55 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:54:55 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 13:59:56 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 13:59:56 | INFO     | ITAM-Agent | CICLO #18 - 2026-02-10 13:59:56
+2026-02-10 13:59:56 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 13:59:56 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 13:59:56 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 13:59:58 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 13:59:58 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 13:59:58 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 13:59:58 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 13:59:58 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 13:59:58 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 13:59:58 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 13:59:58 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 13:59:58 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 14:04:58 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 14:04:58 | INFO     | ITAM-Agent | CICLO #19 - 2026-02-10 14:04:58
+2026-02-10 14:04:58 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 14:04:58 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 14:04:58 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 14:05:00 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 14:05:00 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 14:05:00 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 14:05:00 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 14:05:00 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 14:05:00 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 14:05:00 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 14:05:00 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 14:05:00 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 14:10:01 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 14:10:01 | INFO     | ITAM-Agent | CICLO #20 - 2026-02-10 14:10:01
+2026-02-10 14:10:01 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 14:10:01 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 14:10:01 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 14:10:02 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 14:10:02 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 14:10:02 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 14:10:02 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 14:10:02 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 14:10:02 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 14:10:06 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/report (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019A1FEDBBB0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+2026-02-10 14:10:06 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-10 14:10:06 | INFO     | ITAM-Agent | Reintentando en 5 segundos...
+2026-02-10 14:10:11 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 2/3)
+2026-02-10 14:10:15 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/report (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019A208743E0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+2026-02-10 14:10:15 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-10 14:10:15 | INFO     | ITAM-Agent | Reintentando en 10 segundos...
+2026-02-10 14:10:25 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 3/3)
+2026-02-10 14:10:29 | WARNING  | ITAM-Agent | ✗ No se pudo conectar al servidor: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/report (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019A1FF870B0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+2026-02-10 14:10:29 | INFO     | ITAM-Agent | Verifica que el servidor esté ejecutándose
+2026-02-10 14:10:29 | ERROR    | ITAM-Agent | ✗ No se pudo enviar el reporte después de 3 intentos
+2026-02-10 14:10:29 | WARNING  | ITAM-Agent |   ✗ No se pudo enviar el reporte
+2026-02-10 14:10:29 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...

@@ -1,13 +1,34 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Draggable from 'react-draggable';
 import axios from 'axios';
 import AssetIcon from './AssetIcon';
-import { MapPinOff, Power, RotateCcw, XCircle, X } from 'lucide-react';
+import { MapPinOff, Power, RotateCcw, XCircle, X, Timer } from 'lucide-react';
 
 export default function DraggableAsset({ asset, onStop, onUnassign }) {
     const nodeRef = useRef(null);
     const [showMenu, setShowMenu] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [pendingShutdown, setPendingShutdown] = useState(false);
+    const [countdown, setCountdown] = useState(0);
+
+    // Auto-clear pendingShutdown después de 60 segundos
+    useEffect(() => {
+        if (!pendingShutdown) return;
+
+        setCountdown(60);
+        const interval = setInterval(() => {
+            setCountdown(prev => {
+                if (prev <= 1) {
+                    clearInterval(interval);
+                    setPendingShutdown(false);
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [pendingShutdown]);
 
     const API_ASSETS = 'http://localhost:8000/api/assets';
     const API_REMOTE = 'http://localhost:8000/api/remote';
@@ -45,6 +66,7 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
         try {
             const response = await axios.post(`${API_REMOTE}/${asset.id}/shutdown`);
             alert(response.data.message);
+            setPendingShutdown(true);
         } catch (error) {
             const msg = error.response?.data?.detail || 'Error al enviar comando';
             alert(`Error: ${msg}`);
@@ -64,6 +86,7 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
         try {
             const response = await axios.post(`${API_REMOTE}/${asset.id}/restart`);
             alert(response.data.message);
+            setPendingShutdown(true);
         } catch (error) {
             const msg = error.response?.data?.detail || 'Error al enviar comando';
             alert(`Error: ${msg}`);
@@ -78,6 +101,8 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
         try {
             const response = await axios.post(`${API_REMOTE}/${asset.id}/cancel`);
             alert(response.data.message);
+            setPendingShutdown(false);
+            setCountdown(0);
         } catch (error) {
             const msg = error.response?.data?.detail || 'Error al cancelar';
             alert(`Error: ${msg}`);
@@ -96,7 +121,7 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
             >
                 <div
                     ref={nodeRef}
-                    className="draggable-asset absolute cursor-pointer flex flex-col items-center group z-20 hover:z-30"
+                    className={`draggable-asset absolute cursor-pointer flex flex-col items-center group z-20 hover:z-30`}
                     style={{
                         left: `${asset.pos_x}%`,
                         top: `${asset.pos_y}%`,
@@ -108,13 +133,20 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
                         } ${asset.is_online
                             ? 'bg-white border-green-500 text-green-600'
                             : 'bg-white border-red-500 text-red-600'
-                        } ${asset.es_dominio ? 'ring-2 ring-blue-100' : ''}`}>
+                        } ${asset.es_dominio ? 'ring-2 ring-blue-100' : ''} ${pendingShutdown ? 'animate-pulse border-orange-500 text-orange-600' : ''}`}>
                         <AssetIcon tipo={asset.icono_tipo} size={20} isOnline={asset.is_online} />
                     </div>
 
+                    {/* Countdown badge */}
+                    {pendingShutdown && (
+                        <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-[9px] font-bold rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+                            {countdown}
+                        </div>
+                    )}
+
                     {/* Tooltip Label */}
                     <div className="absolute top-full mt-1 px-2 py-0.5 bg-gray-900/90 text-white text-[10px] rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        {asset.hostname} • Click para opciones
+                        {asset.hostname} {pendingShutdown ? `• Apagando en ${countdown}s` : '• Click para opciones'}
                     </div>
 
                     {/* Menu desplegable al seleccionar */}
@@ -154,7 +186,7 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
                                     <>
                                         <button
                                             onClick={handleShutdown}
-                                            disabled={loading}
+                                            disabled={loading || pendingShutdown}
                                             className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-red-50 text-red-600 disabled:opacity-50"
                                         >
                                             <Power size={16} />
@@ -162,20 +194,24 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
                                         </button>
                                         <button
                                             onClick={handleRestart}
-                                            disabled={loading}
+                                            disabled={loading || pendingShutdown}
                                             className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-blue-50 text-blue-600 disabled:opacity-50"
                                         >
                                             <RotateCcw size={16} />
                                             Reiniciar PC
                                         </button>
-                                        <button
-                                            onClick={handleCancelShutdown}
-                                            disabled={loading}
-                                            className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-green-50 text-green-600 disabled:opacity-50"
-                                        >
-                                            <XCircle size={16} />
-                                            Cancelar apagado
-                                        </button>
+
+                                        {/* Cancelar SOLO si hay un shutdown/restart pendiente */}
+                                        {pendingShutdown && (
+                                            <button
+                                                onClick={handleCancelShutdown}
+                                                disabled={loading}
+                                                className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-green-50 text-green-600 disabled:opacity-50 border-t border-gray-100"
+                                            >
+                                                <XCircle size={16} />
+                                                Cancelar apagado ({countdown}s)
+                                            </button>
+                                        )}
                                     </>
                                 ) : (
                                     <div className="px-3 py-2 text-xs text-gray-400 italic">

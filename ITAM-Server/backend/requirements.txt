@@ -13,3 +13,5 @@ pandas
 openpyxl
 reportlab
 httpx
+pysnmp-lextudio
+apscheduler

@@ -1,6 +1,15 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime
+
+class PrintDataItem(BaseModel):
+    printer_name: str
+    total_jobs: int = 0
+    total_pages: int = 0
+    port: str = ""
+    driver: str = ""
+    is_network: bool = False
+    is_default: bool = False
 
 class AssetReportCreate(BaseModel):
     auth_token: str # Para validar seguridad
@@ -16,6 +25,9 @@ class AssetReportCreate(BaseModel):
     sistema_operativo: str
     procesador: str
     memoria_ram: str
+    
+    # Datos de impresión (opcional)
+    print_data: Optional[List[PrintDataItem]] = None
 
 class AssetResponse(BaseModel):
     id: int

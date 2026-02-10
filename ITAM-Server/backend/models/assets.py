@@ -31,8 +31,8 @@ class Activo(Base):
     icono_tipo = Column(String, default="desktop")  # desktop, laptop, server
     area = Column(String, nullable=True)
     
-    # Estado
-    ultimo_reporte = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+    # Estado - solo se actualiza explícitamente al recibir reporte del agente
+    ultimo_reporte = Column(DateTime(timezone=True), server_default=func.now())
     
     # Ubicación Física (Relaciones)
     piso_id = Column(Integer, ForeignKey("pisos.id"), nullable=True)
@@ -46,9 +46,18 @@ class Activo(Base):
     # Historial de cambios
     historial = relationship("HistorialActivo", back_populates="activo", cascade="all, delete-orphan")
     
-    def is_online(self, threshold_minutes=7):
-        """Determina si el activo está online basado en el último reporte"""
+    def is_online(self, threshold_minutes=10):
+        """Determina si el activo está online basado en el último reporte
+        threshold_minutes=10 da margen al intervalo de 5min del agente"""
         if not self.ultimo_reporte:
             return False
-        limite = datetime.now(timezone.utc) - timedelta(minutes=threshold_minutes)
-        return self.ultimo_reporte >= limite
+        
+        ahora = datetime.now(timezone.utc)
+        ultimo = self.ultimo_reporte
+        
+        # Asegurar que ultimo_reporte sea timezone-aware
+        if ultimo.tzinfo is None:
+            ultimo = ultimo.replace(tzinfo=timezone.utc)
+        
+        limite = ahora - timedelta(minutes=threshold_minutes)
+        return ultimo >= limite

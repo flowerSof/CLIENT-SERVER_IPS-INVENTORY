@@ -12,7 +12,8 @@ import {
   ChevronRight,
   User,
   LogOut,
-  Users
+  Users,
+  Printer
 } from "lucide-react";
 import InventoryTable from "./components/InventoryTable";
 import StatsWidget from "./components/StatsWidget";
@@ -21,6 +22,7 @@ import BuildingManager from "./components/BuildingManager";
 import InfrastructurePage from "./pages/InfrastructurePage";
 import MapView from "./components/MapView";
 import UserManagement from "./components/UserManagement";
+import PrinterPanel from "./components/PrinterPanel";
 import { AuthProvider, useAuth } from "./AuthContext";
 
 // Componente Header interno para acceder al contexto de Auth
@@ -36,6 +38,7 @@ const AppHeader = () => {
       case '/map': return 'Mapa de Ubicaciones';
       case '/floors': return 'Gestión de Pisos';
       case '/users': return 'Gestión de Usuarios';
+      case '/printers': return 'Panel de Impresoras';
       default: return 'ITAM Platform';
     }
   };
@@ -71,6 +74,7 @@ const AppHeader = () => {
           <NavLink to="/inventory" icon={<Server size={18} />} text="Inventario" active={location.pathname === '/inventory'} />
           <NavLink to="/map" icon={<Map size={18} />} text="Mapa" active={location.pathname === '/map'} />
           <NavLink to="/floors" icon={<Building2 size={18} />} text="Edificios" active={location.pathname === '/floors'} />
+          <NavLink to="/printers" icon={<Printer size={18} />} text="Impresoras" active={location.pathname === '/printers'} />
           {user?.es_superadmin && (
             <NavLink to="/users" icon={<Users size={18} />} text="Usuarios" active={location.pathname === '/users'} />
           )}
@@ -185,6 +189,15 @@ const AppContent = () => {
                 className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
               >
                 <UserManagement />
+              </motion.div>
+            } />
+            <Route path="/printers" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+              >
+                <PrinterPanel />
               </motion.div>
             } />
           </Routes>

@@ -1,7 +1,9 @@
 import time
+from datetime import datetime, timezone
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from routers import dashboard, floors, buildings, auth, areas, reports, history as history_router, glossary as glossary_router, catalogs, users, remote
+from routers import dashboard, floors, buildings, auth, areas, reports, history as history_router, glossary as glossary_router, catalogs, users, remote, printers, audit as audit_router, print_stats as print_stats_router
+from middleware import RateLimitMiddleware, AuditMiddleware
 from utils.history import log_asset_change
 from utils.parser import parse_hostname_logic
 
@@ -13,7 +15,8 @@ from sqlalchemy.orm import Session
 from database import engine, get_db, Base
 from config import settings
 # Importar TODOS los modelos antes de create_all para que SQLAlchemy los detecte
-from models import assets, locations, users as users_model, history, glossary, permisos
+from models import assets, locations, users as users_model, history, glossary, permisos, printers as printers_model, audit as audit_model
+from models.print_stats import PrintStatsPC
 from schemas import asset_schema
 
 # --- CREACIÓN AUTOMÁTICA DE TABLAS ---
@@ -54,6 +57,13 @@ app.add_middleware(
     allow_headers=["*"],
     expose_headers=["*"],
 )
+
+# --- SECURITY MIDDLEWARE ---
+# Rate Limiting: Previene ataques de fuerza bruta
+app.add_middleware(RateLimitMiddleware)
+
+# Auditoría: Registra todas las acciones importantes
+app.add_middleware(AuditMiddleware)
 
 
 @app.get("/")
@@ -104,7 +114,8 @@ def recibir_reporte(reporte: asset_schema.AssetReportCreate, db: Session = Depen
                 log_asset_change(db, activo.id, "area", activo.area, parsed_area)
                 activo.area = parsed_area
 
-        # ultimo_reporte se actualiza solo por la config del modelo
+        # Forzar actualización de ultimo_reporte SIEMPRE (incluso si los datos no cambian)
+        activo.ultimo_reporte = datetime.now(timezone.utc)
     else:
         # CREAR
         nuevo_activo = assets.Activo(
@@ -131,6 +142,51 @@ def recibir_reporte(reporte: asset_schema.AssetReportCreate, db: Session = Depen
     
     db.commit()
     
+    # Procesar datos de impresión si vienen en el reporte
+    if reporte.print_data:
+        today = datetime.now(timezone.utc).date()
+        for pd in reporte.print_data:
+            try:
+                # Buscar registro existente para este PC + impresora + día
+                stat = db.query(PrintStatsPC).filter(
+                    PrintStatsPC.activo_id == activo.id,
+                    PrintStatsPC.printer_name == pd.printer_name,
+                    PrintStatsPC.fecha == today
+                ).first()
+                
+                if stat:
+                    # Calcular delta (impresiones nuevas desde última lectura)
+                    if pd.total_jobs > stat.jobs_acumulados:
+                        stat.total_jobs += (pd.total_jobs - stat.jobs_acumulados)
+                    if pd.total_pages > stat.pages_acumuladas:
+                        stat.total_pages += (pd.total_pages - stat.pages_acumuladas)
+                    stat.jobs_acumulados = pd.total_jobs
+                    stat.pages_acumuladas = pd.total_pages
+                    stat.ultima_lectura = datetime.now(timezone.utc)
+                else:
+                    # Crear nuevo registro del día
+                    stat = PrintStatsPC(
+                        activo_id=activo.id,
+                        serial_number=activo.serial_number,
+                        hostname=activo.hostname,
+                        printer_name=pd.printer_name,
+                        printer_port=pd.port,
+                        printer_driver=pd.driver,
+                        is_network_printer=pd.is_network,
+                        fecha=today,
+                        total_jobs=0,  # Primer lectura del día, sin delta aún
+                        total_pages=0,
+                        jobs_acumulados=pd.total_jobs,
+                        pages_acumuladas=pd.total_pages
+                    )
+                    db.add(stat)
+                
+                db.commit()
+            except Exception as e:
+                db.rollback()
+                import logging
+                logging.getLogger(__name__).warning(f"Error guardando stats de impresión: {e}")
+    
     return {"id": activo.id, "hostname": activo.hostname, "estado": "procesado"}
 
 # Registrar routers
@@ -145,5 +201,8 @@ app.include_router(catalogs.router)
 app.include_router(glossary_router.router)
 app.include_router(users.router)
 app.include_router(remote.router)
+app.include_router(printers.router)
+app.include_router(audit_router.router)
+app.include_router(print_stats_router.router)
 
 # Trigger reload for schema update
