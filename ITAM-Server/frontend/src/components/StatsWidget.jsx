@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config';
 import { Monitor, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 export default function StatsWidget() {
@@ -21,7 +22,7 @@ export default function StatsWidget() {
 
     const fetchStats = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/assets/stats');
+            const response = await axios.get(`${API_ENDPOINTS.ASSETS}/stats`);
             if (response.data && typeof response.data === 'object') {
                 setStats(response.data);
             } else {

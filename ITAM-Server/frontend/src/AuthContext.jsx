@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
+import { API_ENDPOINTS } from './config';
 import Login from './components/Login';
 
 const AuthContext = createContext(null);
@@ -8,24 +10,79 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    // Función de Logout (debe estar declarada antes del useEffect de interceptors)
+    const logout = useCallback(() => {
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('username');
+        localStorage.removeItem('nombre_completo');
+        localStorage.removeItem('es_superadmin');
+        localStorage.removeItem('permisos');
+        setUser(null);
+        window.location.href = '/'; // Forzar recarga limpia
+    }, []);
+
     // Verificar si hay token al cargar
     useEffect(() => {
-        const token = localStorage.getItem('access_token');
-        const username = localStorage.getItem('username');
-        const fullName = localStorage.getItem('nombre_completo');
-        const esSuperadmin = localStorage.getItem('es_superadmin') === 'true';
-        const permisos = JSON.parse(localStorage.getItem('permisos') || '[]');
+        const initAuth = async () => {
+            const token = localStorage.getItem('access_token');
+            if (token) {
+                try {
+                    // Validar token real con el backend
+                    const response = await axios.get(`${API_ENDPOINTS.AUTH}/me`, {
+                        headers: { Authorization: `Bearer ${token}` }
+                    });
 
-        if (token && username) {
-            setUser({
-                username,
-                nombre_completo: fullName,
-                es_superadmin: esSuperadmin,
-                permisos
-            });
-        }
-        setLoading(false);
+                    // Asegurar que si el token es válido, seteamos el usuario con datos frescos de la BD
+                    const username = localStorage.getItem('username') || response.data.username;
+                    const fullName = localStorage.getItem('nombre_completo') || response.data.nombre_completo;
+                    const esSuperadmin = response.data.es_superadmin;
+                    const permisos = response.data.permisos || [];
+
+                    setUser({
+                        username,
+                        nombre_completo: fullName,
+                        es_superadmin: esSuperadmin,
+                        permisos
+                    });
+                } catch (error) {
+                    console.error("Sesión inválida o expirada", error);
+                    localStorage.removeItem('access_token');
+                }
+            }
+            setLoading(false);
+        };
+        initAuth();
     }, []);
+
+    // Configurar axios interceptors globales para token y 401
+    useEffect(() => {
+        const reqInterceptor = axios.interceptors.request.use(config => {
+            const token = localStorage.getItem('access_token');
+            if (token) {
+                config.headers.Authorization = `Bearer ${token}`;
+            }
+            return config;
+        });
+
+        const resInterceptor = axios.interceptors.response.use(
+            response => response,
+            error => {
+                if (error.response && error.response.status === 401) {
+                    // Evitar loop infinito si ya estamos deslogeando
+                    if (localStorage.getItem('access_token')) {
+                        console.warn('Token rechazado por la API (401), cerrando sesión...');
+                        logout();
+                    }
+                }
+                return Promise.reject(error);
+            }
+        );
+
+        return () => {
+            axios.interceptors.request.eject(reqInterceptor);
+            axios.interceptors.response.eject(resInterceptor);
+        };
+    }, [logout]);
 
     // Función de Login
     const login = (userData) => {
@@ -40,17 +97,6 @@ export const AuthProvider = ({ children }) => {
             permisos: userData.permisos || []
         });
     };
-
-    // Función de Logout
-    const logout = useCallback(() => {
-        localStorage.removeItem('access_token');
-        localStorage.removeItem('username');
-        localStorage.removeItem('nombre_completo');
-        localStorage.removeItem('es_superadmin');
-        localStorage.removeItem('permisos');
-        setUser(null);
-        window.location.href = '/'; // Forzar recarga limpia
-    }, []);
 
     // Helper para verificar si puede ver un edificio
     const canViewBuilding = useCallback((edificioId) => {

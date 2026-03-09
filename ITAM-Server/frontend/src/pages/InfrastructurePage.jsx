@@ -12,7 +12,6 @@ export default function InfrastructurePage() {
     const tabs = [
         { id: 'buildings', label: 'Edificios', icon: Building2 },
         { id: 'floors', label: 'Pisos', icon: Layers },
-        { id: 'areas', label: 'Áreas', icon: Map },
         { id: 'catalogs', label: 'Catálogos', icon: Database },
     ];
 
@@ -69,11 +68,6 @@ export default function InfrastructurePage() {
                     <FloorManager isOpen={true} onClose={() => { }} embedded={true} />
                 </div>
 
-                {/* Areas Tab */}
-                <div className={`absolute inset-0 p-8 transition-opacity duration-300 ${activeTab === 'areas' ? 'opacity-100 z-10 overflow-auto' : 'opacity-0 z-0 pointer-events-none'}`}>
-                    <AreaManager isOpen={true} onClose={() => { }} />
-                </div>
-
                 {/* Catalogs Tab */}
                 <div className={`absolute inset-0 p-8 transition-opacity duration-300 ${activeTab === 'catalogs' ? 'opacity-100 z-10 overflow-auto' : 'opacity-0 z-0 pointer-events-none'}`}>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-full pb-20">
@@ -81,7 +75,6 @@ export default function InfrastructurePage() {
                         <CatalogManager category="SEDE" title="Sedes" />
                         <CatalogManager category="TIPO" title="Tipos de Dispositivo" />
                         <CatalogManager category="OOJJ" title="Órganos Judiciales" />
-                        <CatalogManager category="AREA" title="Áreas Genéricas" />
                     </div>
                 </div>
             </div>

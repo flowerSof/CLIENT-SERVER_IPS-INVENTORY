@@ -4,10 +4,12 @@ from database import get_db
 from models.glossary import NamingConvention
 from pydantic import BaseModel
 from typing import List
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/catalogs",
-    tags=["Catalogs"]
+    tags=["Catalogs"],
+    dependencies=[Depends(get_current_user)]
 )
 
 class CatalogItemCreate(BaseModel):

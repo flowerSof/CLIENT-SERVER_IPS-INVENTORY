@@ -17,8 +17,9 @@ import {
     Wifi,
     WifiOff
 } from "lucide-react";
+import { API_ENDPOINTS } from '../config';
 
-const API_URL = "http://localhost:8000";
+const API_URL = API_ENDPOINTS.PRINTERS;
 
 const PrinterDetailModal = ({ printer, onClose, onUpdate }) => {
     const [details, setDetails] = useState(null);
@@ -38,7 +39,7 @@ const PrinterDetailModal = ({ printer, onClose, onUpdate }) => {
 
     const fetchDetails = async () => {
         try {
-            const response = await fetch(`${API_URL}/api/printers/${printer.id}`);
+            const response = await fetch(`${API_URL}/${printer.id}`);
             if (response.ok) {
                 const data = await response.json();
                 setDetails(data);
@@ -51,7 +52,7 @@ const PrinterDetailModal = ({ printer, onClose, onUpdate }) => {
     const fetchHistory = async () => {
         setLoading(true);
         try {
-            let url = `${API_URL}/api/printers/${printer.id}/history`;
+            let url = `${API_URL}/${printer.id}/history`;
 
             const today = new Date();
             let fechaInicio, fechaFin;
@@ -95,7 +96,7 @@ const PrinterDetailModal = ({ printer, onClose, onUpdate }) => {
     const scanPrinter = async () => {
         setScanning(true);
         try {
-            const response = await fetch(`${API_URL}/api/printers/${printer.id}/scan`, {
+            const response = await fetch(`${API_URL}/${printer.id}/scan`, {
                 method: "POST"
             });
 
@@ -115,7 +116,7 @@ const PrinterDetailModal = ({ printer, onClose, onUpdate }) => {
         if (!window.confirm("¿Estás seguro de eliminar esta impresora?")) return;
 
         try {
-            const response = await fetch(`${API_URL}/api/printers/${printer.id}`, {
+            const response = await fetch(`${API_URL}/${printer.id}`, {
                 method: "DELETE"
             });
 
@@ -148,8 +149,8 @@ const PrinterDetailModal = ({ printer, onClose, onUpdate }) => {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
                             <div className={`p-4 rounded-xl ${data.is_online
-                                    ? "bg-gradient-to-br from-green-500 to-green-600"
-                                    : "bg-gradient-to-br from-gray-500 to-gray-600"
+                                ? "bg-gradient-to-br from-green-500 to-green-600"
+                                : "bg-gradient-to-br from-gray-500 to-gray-600"
                                 }`}>
                                 <Printer size={32} />
                             </div>
@@ -158,8 +159,8 @@ const PrinterDetailModal = ({ printer, onClose, onUpdate }) => {
                                 <div className="flex items-center gap-3 mt-1">
                                     <span className="text-gray-300">{data.ip_address}</span>
                                     <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${data.is_online
-                                            ? "bg-green-500/30 text-green-300"
-                                            : "bg-gray-500/30 text-gray-300"
+                                        ? "bg-green-500/30 text-green-300"
+                                        : "bg-gray-500/30 text-gray-300"
                                         }`}>
                                         {data.is_online ? "En línea" : "Fuera de línea"}
                                     </span>

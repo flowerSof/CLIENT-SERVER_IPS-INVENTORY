@@ -5,10 +5,12 @@ from typing import List
 from database import get_db
 from models import locations
 from schemas import building_schema
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/buildings",
-    tags=["Buildings"]
+    tags=["Buildings"],
+    dependencies=[Depends(get_current_user)]
 )
 
 # --- ENDPOINT 1: LISTAR TODOS LOS EDIFICIOS ---

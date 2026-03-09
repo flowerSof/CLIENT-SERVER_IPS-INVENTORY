@@ -69,5 +69,5 @@ def parse_hostname_logic(hostname: str, db: Session):
         "parts": parts,
         "decoded": decoded,
         "is_domain": is_domain,
-        "derived_area": decoded.get("area") # The descriptive name, e.g. "Sala de Audiencias"
+        "derived_area": decoded.get("oojj") # Now maps Area to OOJJ (Órgano Judicial) rather than the sub-area.
     }

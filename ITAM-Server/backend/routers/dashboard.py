@@ -8,10 +8,12 @@ import pandas as pd
 from io import BytesIO
 from utils.history import log_asset_change
 from utils.parser import parse_hostname_logic
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/assets",
-    tags=["Dashboard"]
+    tags=["Dashboard"],
+    dependencies=[Depends(get_current_user)]
 )
 
 class PositionUpdate(BaseModel):

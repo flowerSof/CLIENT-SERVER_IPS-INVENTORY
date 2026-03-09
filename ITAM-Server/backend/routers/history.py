@@ -4,10 +4,12 @@ from database import get_db
 from models.history import HistorialActivo
 from schemas.history_schema import HistoryResponse
 from typing import List
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/history",
-    tags=["History"]
+    tags=["History"],
+    dependencies=[Depends(get_current_user)]
 )
 
 @router.get("/{asset_id}", response_model=List[HistoryResponse])

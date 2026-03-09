@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config';
 import DraggableAsset from './DraggableAsset';
 import {
     ZoomIn, ZoomOut, Maximize2, Grid3x3, Plus, Settings, Upload, Save
 } from 'lucide-react';
 import AssetIcon from './AssetIcon';
 import useRealTimeAssets from '../hooks/useRealTimeAssets';
+import { useLocation } from 'react-router-dom';
 
 export default function MapView({ onOpenFloorManager }) {
     const { activos, loading: assetsLoading } = useRealTimeAssets();
+    const location = useLocation();
     const [edificios, setEdificios] = useState([]);
     const [pisos, setPisos] = useState([]);
     const [selectedEdificio, setSelectedEdificio] = useState(null);
@@ -22,9 +25,9 @@ export default function MapView({ onOpenFloorManager }) {
     // Referencia al contenedor del mapa para cálculos de coordenadas
     const mapContainerRef = useRef(null);
 
-    const API_BUILDINGS = 'http://localhost:8000/api/buildings';
-    const API_FLOORS = 'http://localhost:8000/api/floors';
-    const API_ASSETS = 'http://localhost:8000/api/assets';
+    const API_BUILDINGS = API_ENDPOINTS.BUILDINGS;
+    const API_FLOORS = API_ENDPOINTS.FLOORS;
+    const API_ASSETS = API_ENDPOINTS.ASSETS;
 
     useEffect(() => {
         loadBuildings();
@@ -46,7 +49,11 @@ export default function MapView({ onOpenFloorManager }) {
         try {
             const response = await axios.get(API_BUILDINGS);
             setEdificios(response.data);
-            if (response.data.length > 0 && !selectedEdificio) {
+
+            // Si venimos de otra vista con un edificio específico
+            if (location.state?.edificioId) {
+                setSelectedEdificio(location.state.edificioId);
+            } else if (response.data.length > 0 && !selectedEdificio) {
                 setSelectedEdificio(response.data[0].id);
             }
         } catch (error) {
@@ -58,7 +65,11 @@ export default function MapView({ onOpenFloorManager }) {
         try {
             const response = await axios.get(`${API_BUILDINGS}/${edificioId}/floors`);
             setPisos(response.data);
-            if (response.data.length > 0) {
+
+            // Si venimos de otra vista con un piso específico y pertenece al edificio seleccionado
+            if (location.state?.pisoId && location.state?.edificioId === edificioId) {
+                setSelectedPiso(location.state.pisoId);
+            } else if (response.data.length > 0) {
                 setSelectedPiso(response.data[0].id);
             } else {
                 setSelectedPiso(null);

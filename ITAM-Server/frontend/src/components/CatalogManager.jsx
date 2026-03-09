@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Plus, Trash2, Save, X, Edit2 } from 'lucide-react';
+import { API_ENDPOINTS } from '../config';
 
 export default function CatalogManager({ category, title }) {
     const [items, setItems] = useState([]);
@@ -14,7 +15,7 @@ export default function CatalogManager({ category, title }) {
     const fetchItems = async () => {
         setLoading(true);
         try {
-            const res = await axios.get(`http://localhost:8000/api/catalogs/${category}`);
+            const res = await axios.get(`${API_ENDPOINTS.CATALOGS}/${category}`);
             setItems(res.data);
         } catch (error) {
             console.error("Error fetching catalog:", error);
@@ -26,7 +27,7 @@ export default function CatalogManager({ category, title }) {
     const handleCreate = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8000/api/catalogs', {
+            await axios.post(API_ENDPOINTS.CATALOGS, {
                 category,
                 code: newItem.code,
                 description: newItem.description
@@ -41,7 +42,7 @@ export default function CatalogManager({ category, title }) {
     const handleDelete = async (id) => {
         if (!confirm("¿Estás seguro de eliminar este item?")) return;
         try {
-            await axios.delete(`http://localhost:8000/api/catalogs/${id}`);
+            await axios.delete(`${API_ENDPOINTS.CATALOGS}/${id}`);
             fetchItems();
         } catch (error) {
             console.error(error);

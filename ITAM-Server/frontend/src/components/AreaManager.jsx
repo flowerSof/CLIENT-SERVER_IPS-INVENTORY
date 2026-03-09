@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Plus, Edit, Trash2, MapPin, Building2, Map } from 'lucide-react';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config';
 
 export default function AreaManager({ isOpen, onClose }) {
     const [areas, setAreas] = useState([]);
@@ -15,8 +16,8 @@ export default function AreaManager({ isOpen, onClose }) {
         coordenadas_json: ''
     });
 
-    const API_AREAS = 'http://localhost:8000/api/areas';
-    const API_FLOORS = 'http://localhost:8000/api/floors';
+    const API_AREAS = API_ENDPOINTS.AREAS;
+    const API_FLOORS = API_ENDPOINTS.FLOORS;
 
     useEffect(() => {
         if (isOpen) {

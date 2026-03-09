@@ -3203,3 +3203,385 @@
 2026-02-10 14:10:29 | ERROR    | ITAM-Agent | ✗ No se pudo enviar el reporte después de 3 intentos
 2026-02-10 14:10:29 | WARNING  | ITAM-Agent |   ✗ No se pudo enviar el reporte
 2026-02-10 14:10:29 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 14:15:30 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 14:15:30 | INFO     | ITAM-Agent | CICLO #21 - 2026-02-10 14:15:30
+2026-02-10 14:15:30 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 14:15:30 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 14:15:30 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 14:15:31 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 14:15:31 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 14:15:31 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 14:15:31 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 14:15:31 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 14:15:31 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 14:15:31 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 14:15:31 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 14:15:31 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 14:20:31 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 14:20:31 | INFO     | ITAM-Agent | CICLO #22 - 2026-02-10 14:20:31
+2026-02-10 14:20:31 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 14:20:31 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 14:20:31 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 14:20:33 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 14:20:33 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 14:20:33 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 14:20:33 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 14:20:33 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 14:20:33 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 14:20:33 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 14:20:33 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 14:20:33 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 14:25:33 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 14:25:33 | INFO     | ITAM-Agent | CICLO #23 - 2026-02-10 14:25:33
+2026-02-10 14:25:33 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 14:25:33 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 14:25:33 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 14:25:35 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 14:25:35 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 14:25:35 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 14:25:35 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 14:25:35 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 14:25:35 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 14:25:35 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 14:25:35 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 14:25:35 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-02-10 14:30:35 | INFO     | ITAM-Agent | 
+============================================================
+2026-02-10 14:30:35 | INFO     | ITAM-Agent | CICLO #24 - 2026-02-10 14:30:35
+2026-02-10 14:30:35 | INFO     | ITAM-Agent | ============================================================
+2026-02-10 14:30:35 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-02-10 14:30:35 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-02-10 14:30:37 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-02-10 14:30:37 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-02-10 14:30:37 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-02-10 14:30:37 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-02-10 14:30:37 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-02-10 14:30:37 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-02-10 14:30:37 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-02-10 14:30:37 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-02-10 14:30:37 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | AGENTE DE INVENTARIO ITAM - INICIADO
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | Servidor: http://localhost:8000
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | Intervalo de reporte: 300 segundos
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | Modo silencioso: True
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | Probando conexión con http://localhost:8000/
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | ✓ Servidor accesible
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | 📡 Command Server iniciado en puerto 5001
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | Servidor de comandos remotos activo - esperando instrucciones...
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | CICLO #1 - 2026-03-09 12:18:50
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:18:50 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:19:04 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 1
+2026-03-09 12:19:04 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:19:04 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:19:04 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:19:04 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:19:04 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:19:04 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:19:04 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:19:05 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:19:05 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:19:05 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:24:05 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:24:05 | INFO     | ITAM-Agent | CICLO #2 - 2026-03-09 12:24:05
+2026-03-09 12:24:05 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:24:05 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:24:05 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:24:13 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 12:24:13 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 1 trabajos, 1 páginas
+2026-03-09 12:24:13 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:24:13 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:24:13 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:24:13 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:24:13 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:24:13 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:24:13 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:24:13 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:24:13 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:24:13 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:29:13 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:29:13 | INFO     | ITAM-Agent | CICLO #3 - 2026-03-09 12:29:13
+2026-03-09 12:29:13 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:29:13 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:29:13 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:29:19 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 12:29:19 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 2 trabajos, 2 páginas
+2026-03-09 12:29:19 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:29:19 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:29:19 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:29:19 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:29:19 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:29:19 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:29:19 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:29:19 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:29:19 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:29:19 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:34:19 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:34:19 | INFO     | ITAM-Agent | CICLO #4 - 2026-03-09 12:34:19
+2026-03-09 12:34:19 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:34:19 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:34:19 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:34:24 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 12:34:24 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 3 trabajos, 3 páginas
+2026-03-09 12:34:24 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:34:24 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:34:24 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:34:24 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:34:24 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:34:24 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:34:24 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:34:24 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:34:24 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:34:24 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:39:25 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:39:25 | INFO     | ITAM-Agent | CICLO #5 - 2026-03-09 12:39:25
+2026-03-09 12:39:25 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:39:25 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:39:25 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:39:32 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 12:39:32 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 3 trabajos, 3 páginas
+2026-03-09 12:39:32 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:39:32 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:39:32 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:39:32 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:39:32 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:39:32 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:39:32 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:39:32 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:39:32 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:39:32 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:44:32 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:44:32 | INFO     | ITAM-Agent | CICLO #6 - 2026-03-09 12:44:32
+2026-03-09 12:44:32 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:44:32 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:44:32 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:44:39 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 12:44:39 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 3 trabajos, 3 páginas
+2026-03-09 12:44:39 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:44:39 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:44:39 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:44:39 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:44:39 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:44:39 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:44:39 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:44:40 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:44:40 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:44:40 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:49:40 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:49:40 | INFO     | ITAM-Agent | CICLO #7 - 2026-03-09 12:49:40
+2026-03-09 12:49:40 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:49:40 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:49:40 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:49:47 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 12:49:47 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 3 trabajos, 3 páginas
+2026-03-09 12:49:47 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:49:47 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:49:47 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:49:47 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:49:47 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:49:47 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:49:47 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:49:48 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:49:48 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:49:48 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:54:48 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:54:48 | INFO     | ITAM-Agent | CICLO #8 - 2026-03-09 12:54:48
+2026-03-09 12:54:48 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:54:48 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:54:48 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 12:54:55 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 12:54:55 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 3 trabajos, 3 páginas
+2026-03-09 12:54:55 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 12:54:55 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 12:54:55 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 12:54:55 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 12:54:55 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 12:54:55 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 12:54:55 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 12:54:55 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 12:54:55 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 12:54:55 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 12:59:56 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 12:59:56 | INFO     | ITAM-Agent | CICLO #9 - 2026-03-09 12:59:56
+2026-03-09 12:59:56 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 12:59:56 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 12:59:56 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:00:06 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:00:06 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 3 trabajos, 3 páginas
+2026-03-09 13:00:06 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:00:06 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:00:06 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:00:06 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:00:06 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:00:06 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:00:06 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:00:06 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:00:06 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:00:06 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:05:08 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:05:08 | INFO     | ITAM-Agent | CICLO #10 - 2026-03-09 13:05:08
+2026-03-09 13:05:08 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:05:08 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:05:08 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:05:15 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:05:15 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 4 trabajos, 4 páginas
+2026-03-09 13:05:15 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:05:15 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:05:15 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:05:15 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:05:15 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:05:15 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:05:15 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:05:15 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:05:15 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:05:15 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:10:16 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:10:16 | INFO     | ITAM-Agent | CICLO #11 - 2026-03-09 13:10:16
+2026-03-09 13:10:16 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:10:16 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:10:16 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:10:21 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:10:21 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 5 trabajos, 5 páginas
+2026-03-09 13:10:21 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:10:21 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:10:21 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:10:21 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:10:21 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:10:21 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:10:21 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:10:21 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:10:21 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:10:21 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:15:22 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:15:22 | INFO     | ITAM-Agent | CICLO #12 - 2026-03-09 13:15:22
+2026-03-09 13:15:22 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:15:22 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:15:22 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:15:28 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:15:28 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 5 trabajos, 5 páginas
+2026-03-09 13:15:28 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:15:28 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:15:28 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:15:28 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:15:28 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:15:28 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:15:28 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:15:28 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:15:28 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:15:28 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:20:28 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:20:28 | INFO     | ITAM-Agent | CICLO #13 - 2026-03-09 13:20:28
+2026-03-09 13:20:28 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:20:28 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:20:28 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:20:36 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:20:36 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 5 trabajos, 5 páginas
+2026-03-09 13:20:36 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:20:36 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:20:36 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:20:36 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:20:36 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:20:36 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:20:36 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:20:36 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:20:36 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:20:36 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:25:37 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:25:37 | INFO     | ITAM-Agent | CICLO #14 - 2026-03-09 13:25:37
+2026-03-09 13:25:37 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:25:37 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:25:37 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:25:42 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:25:42 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 5 trabajos, 5 páginas
+2026-03-09 13:25:42 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:25:42 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:25:42 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:25:42 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:25:42 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:25:42 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:25:42 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:25:42 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:25:42 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:25:42 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:30:42 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:30:42 | INFO     | ITAM-Agent | CICLO #15 - 2026-03-09 13:30:42
+2026-03-09 13:30:42 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:30:42 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:30:42 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:30:49 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:30:49 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 5 trabajos, 5 páginas
+2026-03-09 13:30:49 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:30:49 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:30:49 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:30:49 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:30:49 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:30:49 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:30:49 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:30:49 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:30:49 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:30:49 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:35:50 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:35:50 | INFO     | ITAM-Agent | CICLO #16 - 2026-03-09 13:35:50
+2026-03-09 13:35:50 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:35:50 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:35:50 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:35:56 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:35:56 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 5 trabajos, 5 páginas
+2026-03-09 13:35:56 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:35:56 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:35:56 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:35:56 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:35:56 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:35:56 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:35:56 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:35:57 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:35:57 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:35:57 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:40:57 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:40:57 | INFO     | ITAM-Agent | CICLO #17 - 2026-03-09 13:40:57
+2026-03-09 13:40:57 | INFO     | ITAM-Agent | ============================================================
+2026-03-09 13:40:57 | INFO     | ITAM-Agent | Paso 1/3: Recolectando datos del sistema...
+2026-03-09 13:40:57 | INFO     | ITAM-Agent | Iniciando recolección de datos del sistema...
+2026-03-09 13:41:09 | INFO     | ITAM-Agent |   ✓ Impresoras detectadas: 2
+2026-03-09 13:41:09 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series: 5 trabajos, 5 páginas
+2026-03-09 13:41:09 | INFO     | ITAM-Agent |     - HP Ink Tank Wireless 410 series [EC8147]: 1 trabajos, 0 páginas
+2026-03-09 13:41:09 | INFO     | ITAM-Agent | ✓ Datos recolectados: DESKTOP-A5CUK27 (1FTPHH2)
+2026-03-09 13:41:09 | INFO     | ITAM-Agent |   ✓ Host: DESKTOP-A5CUK27
+2026-03-09 13:41:09 | INFO     | ITAM-Agent |   ✓ Usuario: DESKTOP-A5CUK27\SOFIA
+2026-03-09 13:41:09 | INFO     | ITAM-Agent |   ✓ IP: 192.168.15.15
+2026-03-09 13:41:09 | INFO     | ITAM-Agent | Paso 2/3: Enviando reporte al servidor...
+2026-03-09 13:41:09 | INFO     | ITAM-Agent | Enviando reporte a http://localhost:8000/api/report (intento 1/3)
+2026-03-09 13:41:09 | INFO     | ITAM-Agent | ✓ Reporte enviado exitosamente: DESKTOP-A5CUK27
+2026-03-09 13:41:09 | INFO     | ITAM-Agent |   ✓ Reporte enviado exitosamente
+2026-03-09 13:41:09 | INFO     | ITAM-Agent | Paso 3/3: Esperando 300 segundos hasta el próximo ciclo...
+2026-03-09 13:42:36 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-03-09 13:42:36 | INFO     | ITAM-Agent | Señal de interrupción recibida. Deteniendo agente...
+2026-03-09 13:42:36 | INFO     | ITAM-Agent | 
+============================================================
+2026-03-09 13:42:36 | INFO     | ITAM-Agent | AGENTE DETENIDO
+2026-03-09 13:42:36 | INFO     | ITAM-Agent | ============================================================

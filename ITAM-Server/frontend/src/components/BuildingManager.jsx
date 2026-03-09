@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, Plus, Edit, Trash2, MapPin, Sparkles, Star } from 'lucide-react';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config';
 
 export default function BuildingManager({ isOpen, onClose, onBuildingSelected, embedded = false }) {
     const [edificios, setEdificios] = useState([]);
@@ -13,7 +14,7 @@ export default function BuildingManager({ isOpen, onClose, onBuildingSelected, e
         ciudad: ''
     });
 
-    const API_URL = 'http://localhost:8000/api/buildings';
+    const API_URL = API_ENDPOINTS.BUILDINGS;
 
     useEffect(() => {
         if (isOpen) {

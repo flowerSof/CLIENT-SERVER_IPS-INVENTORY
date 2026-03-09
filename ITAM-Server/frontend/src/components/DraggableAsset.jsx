@@ -3,6 +3,7 @@ import Draggable from 'react-draggable';
 import axios from 'axios';
 import AssetIcon from './AssetIcon';
 import { MapPinOff, Power, RotateCcw, XCircle, X, Timer } from 'lucide-react';
+import { API_ENDPOINTS } from '../config';
 
 export default function DraggableAsset({ asset, onStop, onUnassign }) {
     const nodeRef = useRef(null);
@@ -30,8 +31,8 @@ export default function DraggableAsset({ asset, onStop, onUnassign }) {
         return () => clearInterval(interval);
     }, [pendingShutdown]);
 
-    const API_ASSETS = 'http://localhost:8000/api/assets';
-    const API_REMOTE = 'http://localhost:8000/api/remote';
+    const API_ASSETS = API_ENDPOINTS.ASSETS;
+    const API_REMOTE = API_ENDPOINTS.REMOTE;
 
     const handleClick = (e) => {
         e.stopPropagation();

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Upload, Image as ImageIcon, Plus, Trash2, Edit, Building2, Sparkles } from 'lucide-react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config';
 
 export default function FloorManager({ isOpen, onClose, onFloorCreated, embedded = false }) {
     const [pisos, setPisos] = useState([]);
@@ -18,8 +19,8 @@ export default function FloorManager({ isOpen, onClose, onFloorCreated, embedded
         mapa_filename: null
     });
 
-    const API_URL = 'http://localhost:8000/api/floors';
-    const API_BUILDINGS = 'http://localhost:8000/api/buildings';
+    const API_URL = API_ENDPOINTS.FLOORS;
+    const API_BUILDINGS = API_ENDPOINTS.BUILDINGS;
 
     useEffect(() => {
         if (isOpen) {

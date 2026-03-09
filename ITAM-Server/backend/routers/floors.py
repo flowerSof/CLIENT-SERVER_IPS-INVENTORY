@@ -8,10 +8,12 @@ from PIL import Image
 from database import get_db
 from models import locations
 from schemas import floor_schema
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/floors",
-    tags=["Floors"]
+    tags=["Floors"],
+    dependencies=[Depends(get_current_user)]
 )
 
 # --- ENDPOINT 1: LISTAR TODOS LOS PISOS ---

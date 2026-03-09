@@ -5,10 +5,12 @@ from typing import List
 from database import get_db
 from models import locations
 from schemas import area_schema
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/areas",
-    tags=["Areas"]
+    tags=["Areas"],
+    dependencies=[Depends(get_current_user)]
 )
 
 # --- LISTAR ALL AREAS ---

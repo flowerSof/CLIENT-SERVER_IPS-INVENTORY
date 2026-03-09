@@ -5,8 +5,9 @@ from typing import List, Dict
 from database import get_db
 from models import glossary
 from schemas import glossary as schemas
+from dependencies import get_current_user
 
-router = APIRouter(prefix="/api/glossary", tags=["Glossary"])
+router = APIRouter(prefix="/api/glossary", tags=["Glossary"], dependencies=[Depends(get_current_user)])
 
 @router.get("/", response_model=List[schemas.GlossaryResponse])
 def get_all_conventions(db: Session = Depends(get_db)):

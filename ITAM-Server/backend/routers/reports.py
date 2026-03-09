@@ -10,14 +10,55 @@ from reportlab.lib.styles import getSampleStyleSheet
 import pandas as pd
 import io
 from datetime import datetime
+from typing import Optional
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/reports",
-    tags=["Reports"]
+    tags=["Reports"],
+    dependencies=[Depends(get_current_user)]
 )
 
+def get_filtered_activos(
+    db: Session,
+    estado: Optional[str] = None,
+    area: Optional[str] = None,
+    dominio: Optional[str] = None,
+    edificio_id: Optional[int] = None,
+    piso_id: Optional[int] = None,
+):
+    query = db.query(Activo)
+    
+    if area:
+        query = query.filter(Activo.area.ilike(f"%{area}%"))
+    if dominio == 'si':
+        query = query.filter(Activo.es_dominio == True)
+    elif dominio == 'no':
+        query = query.filter(Activo.es_dominio == False)
+    if edificio_id:
+        query = query.filter(Activo.edificio_id == edificio_id)
+    if piso_id:
+        query = query.filter(Activo.piso_id == piso_id)
+        
+    activos = query.all()
+    
+    if estado == 'online':
+        activos = [a for a in activos if a.is_online()]
+    elif estado == 'offline':
+        activos = [a for a in activos if not a.is_online()]
+        
+    return activos
+
+
 @router.get("/pdf")
-def generate_pdf_report(db: Session = Depends(get_db)):
+def generate_pdf_report(
+    db: Session = Depends(get_db),
+    estado: Optional[str] = None,
+    area: Optional[str] = None,
+    dominio: Optional[str] = None,
+    edificio_id: Optional[int] = None,
+    piso_id: Optional[int] = None,
+):
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=letter)
     elements = []
@@ -26,8 +67,8 @@ def generate_pdf_report(db: Session = Depends(get_db)):
     elements.append(Paragraph(f"Reporte de Inventario - {datetime.now().strftime('%Y-%m-%d')}", styles['Title']))
     elements.append(Spacer(1, 12))
     
-    # Fetch Data
-    activos = db.query(Activo).all()
+    # Fetch Data with Filters
+    activos = get_filtered_activos(db, estado, area, dominio, edificio_id, piso_id)
     
     data = [['Hostname', 'Estado', 'Area', 'IP Address', 'Usuario']]
     for a in activos:
@@ -62,8 +103,15 @@ def generate_pdf_report(db: Session = Depends(get_db)):
     )
 
 @router.get("/excel")
-def generate_excel_report(db: Session = Depends(get_db)):
-    activos = db.query(Activo).all()
+def generate_excel_report(
+    db: Session = Depends(get_db),
+    estado: Optional[str] = None,
+    area: Optional[str] = None,
+    dominio: Optional[str] = None,
+    edificio_id: Optional[int] = None,
+    piso_id: Optional[int] = None,
+):
+    activos = get_filtered_activos(db, estado, area, dominio, edificio_id, piso_id)
     
     data = []
     for a in activos:

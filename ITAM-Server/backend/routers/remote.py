@@ -10,10 +10,12 @@ import asyncio
 
 from database import get_db
 from models import assets
+from dependencies import get_current_user
 
 router = APIRouter(
     prefix="/api/remote",
-    tags=["Remote Commands"]
+    tags=["Remote Commands"],
+    dependencies=[Depends(get_current_user)]
 )
 
 # Configuración

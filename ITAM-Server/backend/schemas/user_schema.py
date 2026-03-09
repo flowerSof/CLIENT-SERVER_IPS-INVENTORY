@@ -40,8 +40,8 @@ class UsuarioCreate(BaseModel):
     @field_validator('password')
     @classmethod
     def password_valid(cls, v):
-        if len(v) < 4:
-            raise ValueError('Password debe tener al menos 4 caracteres')
+        if len(v) < 8:
+            raise ValueError('Password debe tener al menos 8 caracteres')
         return v
 
 class UsuarioUpdate(BaseModel):

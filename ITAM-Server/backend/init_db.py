@@ -160,14 +160,7 @@ def load_initial_catalogs(db):
         {"category": "OOJJ", "code": "PRES", "description": "Presidencia / Secretaria General"},
         {"category": "OOJJ", "code": "BIEN", "description": "Bienestar Social"},
 
-        # ÁREAS (Basado en imagen y lógica)
-        {"category": "AREA", "code": "MA", "description": "Mesa de Partes / Atención al Cliente"},
-        {"category": "AREA", "code": "IN", "description": "Informática"},
-        {"category": "AREA", "code": "CO", "description": "Coordinación / Contabilidad"},
-        {"category": "AREA", "code": "ST", "description": "Soporte Técnico"},
-        {"category": "AREA", "code": "MP", "description": "Mesa de Partes"},
-        {"category": "AREA", "code": "DE", "description": "Derrama?"},
-        {"category": "AREA", "code": "AS", "description": "Asistente / Asesoría"},
+
     ]
 
     print("\n📚 Cargando catálogos iniciales...")

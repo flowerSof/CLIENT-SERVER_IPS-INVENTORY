@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config';
 
 /**
  * Custom hook for real-time asset monitoring
@@ -11,7 +12,7 @@ export default function useRealTimeAssets(refreshInterval = 30000) {
     const [error, setError] = useState(null);
     const [lastUpdate, setLastUpdate] = useState(null);
 
-    const API_URL = 'http://localhost:8000/api/assets';
+    const API_URL = API_ENDPOINTS.ASSETS;
 
     const fetchAssets = async () => {
         try {

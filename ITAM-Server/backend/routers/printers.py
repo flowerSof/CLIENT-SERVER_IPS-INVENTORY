@@ -13,12 +13,14 @@ from models.locations import Piso, Edificio
 from utils.snmp_service import SNMPPrinterService
 import asyncio
 import logging
+from dependencies import get_current_user
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter(
     prefix="/api/printers",
-    tags=["Printers"]
+    tags=["Printers"],
+    dependencies=[Depends(get_current_user)]
 )
 
 

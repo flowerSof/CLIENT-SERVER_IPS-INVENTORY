@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:8000/api';
+import { API_ENDPOINTS } from '../config';
 
 export default function UserManagement() {
     const [users, setUsers] = useState([]);
@@ -43,9 +43,9 @@ export default function UserManagement() {
         setLoading(true);
         try {
             const [usersRes, edificiosRes, pisosRes] = await Promise.all([
-                axios.get(`${API_BASE}/users`, getAuthHeaders()),
-                axios.get(`${API_BASE}/buildings`),
-                axios.get(`${API_BASE}/floors`)
+                axios.get(API_ENDPOINTS.USERS, getAuthHeaders()),
+                axios.get(API_ENDPOINTS.BUILDINGS),
+                axios.get(API_ENDPOINTS.FLOORS)
             ]);
             setUsers(usersRes.data);
             setEdificios(edificiosRes.data);
@@ -66,7 +66,7 @@ export default function UserManagement() {
             if (editingUser) {
                 // Actualizar usuario
                 await axios.put(
-                    `${API_BASE}/users/${editingUser.id}`,
+                    `${API_ENDPOINTS.USERS}/${editingUser.id}`,
                     {
                         email: formData.email,
                         nombre_completo: formData.nombre_completo,
@@ -79,7 +79,7 @@ export default function UserManagement() {
                 // Actualizar permisos
                 if (!formData.es_superadmin) {
                     await axios.put(
-                        `${API_BASE}/users/${editingUser.id}/permisos`,
+                        `${API_ENDPOINTS.USERS}/${editingUser.id}/permisos`,
                         { permisos: formData.permisos },
                         getAuthHeaders()
                     );
@@ -89,7 +89,7 @@ export default function UserManagement() {
             } else {
                 // Crear usuario
                 await axios.post(
-                    `${API_BASE}/users`,
+                    API_ENDPOINTS.USERS,
                     formData,
                     getAuthHeaders()
                 );
@@ -109,7 +109,7 @@ export default function UserManagement() {
     const handleEdit = async (user) => {
         try {
             const response = await axios.get(
-                `${API_BASE}/users/${user.id}`,
+                `${API_ENDPOINTS.USERS}/${user.id}`,
                 getAuthHeaders()
             );
             const userData = response.data;
@@ -137,7 +137,7 @@ export default function UserManagement() {
         if (!window.confirm('¿Está seguro de eliminar este usuario?')) return;
 
         try {
-            await axios.delete(`${API_BASE}/users/${userId}`, getAuthHeaders());
+            await axios.delete(`${API_ENDPOINTS.USERS}/${userId}`, getAuthHeaders());
             setSuccess('Usuario eliminado');
             loadData();
         } catch (err) {
@@ -295,8 +295,8 @@ export default function UserManagement() {
                                 <td className="px-6 py-4">
                                     <div className="flex items-center gap-3">
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold ${user.es_superadmin
-                                                ? 'bg-gradient-to-br from-amber-500 to-amber-700'
-                                                : 'bg-gradient-to-br from-slate-600 to-slate-800'
+                                            ? 'bg-gradient-to-br from-amber-500 to-amber-700'
+                                            : 'bg-gradient-to-br from-slate-600 to-slate-800'
                                             }`}>
                                             {user.username.charAt(0).toUpperCase()}
                                         </div>
@@ -498,8 +498,8 @@ export default function UserManagement() {
                                                             type="button"
                                                             onClick={() => togglePermiso(edificio.id, null)}
                                                             className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${hasEdificioCompleto(edificio.id)
-                                                                    ? 'bg-red-700 text-white'
-                                                                    : 'bg-white border-2 border-gray-200 hover:border-red-300'
+                                                                ? 'bg-red-700 text-white'
+                                                                : 'bg-white border-2 border-gray-200 hover:border-red-300'
                                                                 }`}
                                                         >
                                                             <Building2 size={16} />
@@ -520,8 +520,8 @@ export default function UserManagement() {
                                                                     type="button"
                                                                     onClick={() => togglePermiso(edificio.id, piso.id)}
                                                                     className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm transition-all ${hasPermiso(edificio.id, piso.id)
-                                                                            ? 'bg-blue-600 text-white'
-                                                                            : 'bg-white border border-gray-200 hover:border-blue-300'
+                                                                        ? 'bg-blue-600 text-white'
+                                                                        : 'bg-white border border-gray-200 hover:border-blue-300'
                                                                         }`}
                                                                 >
                                                                     <Layers size={14} />

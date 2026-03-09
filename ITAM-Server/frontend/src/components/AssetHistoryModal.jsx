@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Clock, Calendar, User, ArrowRight } from 'lucide-react';
 import { format } from 'date-fns';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config';
 
 export default function AssetHistoryModal({ isOpen, onClose, assetId, hostname }) {
     const [history, setHistory] = useState([]);
@@ -17,7 +18,7 @@ export default function AssetHistoryModal({ isOpen, onClose, assetId, hostname }
     const fetchHistory = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:8000/api/history/${assetId}`);
+            const response = await axios.get(`${API_ENDPOINTS.HISTORY}/${assetId}`);
             setHistory(response.data);
         } catch (error) {
             console.error("Error fetching history:", error);

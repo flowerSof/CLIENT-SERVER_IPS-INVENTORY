@@ -7,7 +7,9 @@ import useRealTimeAssets from '../hooks/useRealTimeAssets';
 import { format } from 'date-fns';
 import axios from 'axios';
 import AssetHistoryModal from './AssetHistoryModal';
+import AssetDetailModal from './AssetDetailModal';
 import { Settings, FileText, Clock } from 'lucide-react';
+import { API_ENDPOINTS } from '../config';
 
 export default function InventoryTable() {
     const { activos, loading, lastUpdate, refresh } = useRealTimeAssets();
@@ -22,8 +24,10 @@ export default function InventoryTable() {
     // Datos de edificios y pisos
     const [edificios, setEdificios] = useState([]);
     const [pisos, setPisos] = useState([]);
+    const [organosJudiciales, setOrganosJudiciales] = useState([]);
 
     const [historyAsset, setHistoryAsset] = useState(null);
+    const [selectedAssetDetail, setSelectedAssetDetail] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [uploading, setUploading] = useState(false);
     const fileInputRef = useRef(null);
@@ -34,12 +38,14 @@ export default function InventoryTable() {
     useEffect(() => {
         const loadFilters = async () => {
             try {
-                const [edificiosRes, pisosRes] = await Promise.all([
-                    axios.get('http://localhost:8000/api/buildings'),
-                    axios.get('http://localhost:8000/api/floors')
+                const [edificiosRes, pisosRes, oojjRes] = await Promise.all([
+                    axios.get(API_ENDPOINTS.BUILDINGS),
+                    axios.get(API_ENDPOINTS.FLOORS),
+                    axios.get(`${API_ENDPOINTS.CATALOGS}/OOJJ`)
                 ]);
                 setEdificios(edificiosRes.data);
                 setPisos(pisosRes.data);
+                setOrganosJudiciales(oojjRes.data);
             } catch (error) {
                 console.error('Error loading filters:', error);
             }
@@ -59,8 +65,6 @@ export default function InventoryTable() {
 
     // Defensive check: Ensure activos is an array
     const safeActivos = Array.isArray(activos) ? activos : [];
-
-    const areas = ['all', ...new Set(safeActivos.map(a => a.area).filter(a => a && a !== 'Unknown'))];
 
     const filteredActivos = safeActivos
         .filter(pc => {
@@ -130,7 +134,7 @@ export default function InventoryTable() {
 
         setUploading(true);
         try {
-            await axios.post('http://localhost:8000/api/assets/upload', formData, {
+            await axios.post(`${API_ENDPOINTS.ASSETS}/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -147,11 +151,11 @@ export default function InventoryTable() {
     };
 
     const exportToCSV = () => {
-        window.location.href = 'http://localhost:8000/api/reports/excel';
+        window.location.href = `${API_ENDPOINTS.REPORTS}/excel`;
     };
 
     const exportToPDF = () => {
-        window.location.href = 'http://localhost:8000/api/reports/pdf';
+        window.location.href = `${API_ENDPOINTS.REPORTS}/pdf`;
     };
 
     // Obtener nombre de piso para mostrar en la tabla
@@ -266,8 +270,8 @@ export default function InventoryTable() {
                             className="px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-red-500 focus:border-red-500 transition-all text-sm bg-white cursor-pointer max-w-[150px]"
                         >
                             <option value="all">ÁREA: TODAS</option>
-                            {areas.filter(a => a !== 'all').map(area => (
-                                <option key={area} value={area}>{area}</option>
+                            {organosJudiciales.map(oojj => (
+                                <option key={oojj.code} value={oojj.description}>{oojj.description}</option>
                             ))}
                         </select>
 
@@ -345,7 +349,8 @@ export default function InventoryTable() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: index * 0.03 }}
-                                className="hover:bg-gray-50 transition-colors"
+                                onClick={() => setSelectedAssetDetail(pc)}
+                                className="hover:bg-red-50 cursor-pointer transition-colors"
                             >
                                 {/* Status */}
                                 <td className="px-6 py-4 whitespace-nowrap">
@@ -424,9 +429,12 @@ export default function InventoryTable() {
                                 </td>
 
                                 {/* Actions */}
-                                <td className="px-6 py-4 whitespace-nowrap text-right">
+                                <td className="px-6 py-4 whitespace-nowrap text-right" onClick={(e) => e.stopPropagation()}>
                                     <button
-                                        onClick={() => setHistoryAsset({ id: pc.id, hostname: pc.hostname })}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setHistoryAsset({ id: pc.id, hostname: pc.hostname });
+                                        }}
                                         className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
                                         title="Ver historial"
                                     >
@@ -471,6 +479,14 @@ export default function InventoryTable() {
                 onClose={() => setHistoryAsset(null)}
                 assetId={historyAsset?.id}
                 hostname={historyAsset?.hostname}
+            />
+
+            {/* Modal de Detalle Principal */}
+            <AssetDetailModal
+                isOpen={!!selectedAssetDetail}
+                onClose={() => setSelectedAssetDetail(null)}
+                asset={selectedAssetDetail}
+                onOpenHistory={(asset) => setHistoryAsset({ id: asset.id, hostname: asset.hostname })}
             />
         </motion.div>
     );

@@ -3,15 +3,59 @@ Endpoints para consultar estadísticas de impresión por computadora
 """
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
-from sqlalchemy import func, desc
+from sqlalchemy import func, desc, and_
 from database import get_db
 from models.print_stats import PrintStatsPC
 from models.assets import Activo
 from typing import Optional
 from datetime import date, timedelta, datetime
+from dependencies import get_current_user
 
-router = APIRouter(prefix="/api/print-stats", tags=["Print Stats"])
+router = APIRouter(prefix="/api/print-stats", tags=["Print Stats"], dependencies=[Depends(get_current_user)])
 
+@router.get("/ranking")
+def get_print_ranking(
+    fecha_inicio: Optional[date] = None,
+    fecha_fin: Optional[date] = None,
+    db: Session = Depends(get_db)
+):
+    """
+    Devuelve un ranking de las computadoras que más han impreso
+    """
+    join_conditions = [Activo.id == PrintStatsPC.activo_id]
+    if fecha_inicio:
+        join_conditions.append(PrintStatsPC.fecha >= fecha_inicio)
+    if fecha_fin:
+        join_conditions.append(PrintStatsPC.fecha <= fecha_fin)
+
+    query = db.query(
+        Activo.id.label("activo_id"),
+        Activo.hostname,
+        Activo.ip_address,
+        Activo.area,
+        func.coalesce(func.sum(PrintStatsPC.total_pages), 0).label("total_pages"),
+        func.coalesce(func.sum(PrintStatsPC.total_jobs), 0).label("total_jobs")
+    ).outerjoin(
+        PrintStatsPC, and_(*join_conditions)
+    )
+        
+    ranking = query.group_by(
+        Activo.id, Activo.hostname, Activo.ip_address, Activo.area
+    ).order_by(
+        desc("total_pages"), Activo.hostname
+    ).all()
+    
+    return [
+        {
+            "activo_id": r.activo_id,
+            "hostname": r.hostname,
+            "ip_address": r.ip_address,
+            "area": r.area,
+            "total_pages": r.total_pages or 0,
+            "total_jobs": r.total_jobs or 0
+        }
+        for r in ranking
+    ]
 
 @router.get("/by-asset/{asset_id}")
 def get_print_stats_by_asset(
