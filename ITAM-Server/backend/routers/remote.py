@@ -29,6 +29,7 @@ class CommandResponse(BaseModel):
     success: bool
     message: str
     asset_ip: str = None
+    error: str = None  # Contains error detail when success=False
 
 async def send_command_to_agent(ip_address: str, endpoint: str, timeout: int = AGENT_TIMEOUT) -> dict:
     """Envía un comando HTTP al agente ITAM en la PC destino"""
@@ -92,7 +93,7 @@ async def shutdown_asset(
     )
     
     if result["success"]:
-        msg = f"Comando de apagado enviado. La PC se apagará en {SHUTDOWN_DELAY} segundos."
+        msg = f"Comando de apagado enviado. La PC se apagara en {SHUTDOWN_DELAY} segundos."
         _log_notificacion(db, "SHUTDOWN", activo, current_user, True, msg)
         return CommandResponse(
             success=True,
@@ -100,10 +101,14 @@ async def shutdown_asset(
             asset_ip=activo.ip_address
         )
     else:
-        _log_notificacion(db, "SHUTDOWN", activo, current_user, False, result['error'])
-        raise HTTPException(
-            status_code=503,
-            detail=f"Error al enviar comando: {result['error']}"
+        err_msg = result.get('error', 'Error desconocido')
+        _log_notificacion(db, "SHUTDOWN", activo, current_user, False, err_msg)
+        # Return 200 with success=False so the notification is shown in the panel
+        return CommandResponse(
+            success=False,
+            message=f"El comando se registró pero no llegó a la PC: {err_msg}",
+            asset_ip=activo.ip_address,
+            error=err_msg
         )
 
 @router.post("/{asset_id}/restart", response_model=CommandResponse)
@@ -141,10 +146,13 @@ async def restart_asset(
             asset_ip=activo.ip_address
         )
     else:
-        _log_notificacion(db, "RESTART", activo, current_user, False, result['error'])
-        raise HTTPException(
-            status_code=503,
-            detail=f"Error al enviar comando: {result['error']}"
+        err_msg = result.get('error', 'Error desconocido')
+        _log_notificacion(db, "RESTART", activo, current_user, False, err_msg)
+        return CommandResponse(
+            success=False,
+            message=f"El comando se registró pero no llegó a la PC: {err_msg}",
+            asset_ip=activo.ip_address,
+            error=err_msg
         )
 
 @router.post("/{asset_id}/cancel", response_model=CommandResponse)
@@ -175,8 +183,11 @@ async def cancel_shutdown(
             asset_ip=activo.ip_address
         )
     else:
-        _log_notificacion(db, "CANCEL", activo, current_user, False, result['error'])
-        raise HTTPException(
-            status_code=503,
-            detail=f"Error al cancelar: {result['error']}"
+        err_msg = result.get('error', 'Error desconocido')
+        _log_notificacion(db, "CANCEL", activo, current_user, False, err_msg)
+        return CommandResponse(
+            success=False,
+            message=f"El comando se registró pero no llegó a la PC: {err_msg}",
+            asset_ip=activo.ip_address,
+            error=err_msg
         )

@@ -66,8 +66,12 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
         setLoading(true);
         try {
             const response = await axios.post(`${API_REMOTE}/${asset.id}/shutdown`);
-            alert(response.data.message);
-            setPendingShutdown(true);
+            if (response.data.success) {
+                alert(`✅ ${response.data.message}\n\nEl evento fue registrado en notificaciones.`);
+                setPendingShutdown(true);
+            } else {
+                alert(`⚠️ ${response.data.message}\n\nEl intento fue registrado en notificaciones como fallido.`);
+            }
         } catch (error) {
             const msg = error.response?.data?.detail || 'Error al enviar comando';
             alert(`Error: ${msg}`);
@@ -86,8 +90,12 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
         setLoading(true);
         try {
             const response = await axios.post(`${API_REMOTE}/${asset.id}/restart`);
-            alert(response.data.message);
-            setPendingShutdown(true);
+            if (response.data.success) {
+                alert(`✅ ${response.data.message}\n\nEl evento fue registrado en notificaciones.`);
+                setPendingShutdown(true);
+            } else {
+                alert(`⚠️ ${response.data.message}\n\nEl intento fue registrado en notificaciones como fallido.`);
+            }
         } catch (error) {
             const msg = error.response?.data?.detail || 'Error al enviar comando';
             alert(`Error: ${msg}`);
@@ -101,9 +109,13 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
         setLoading(true);
         try {
             const response = await axios.post(`${API_REMOTE}/${asset.id}/cancel`);
-            alert(response.data.message);
-            setPendingShutdown(false);
-            setCountdown(0);
+            if (response.data.success) {
+                alert(`✅ ${response.data.message}`);
+                setPendingShutdown(false);
+                setCountdown(0);
+            } else {
+                alert(`⚠️ ${response.data.message}`);
+            }
         } catch (error) {
             const msg = error.response?.data?.detail || 'Error al cancelar';
             alert(`Error: ${msg}`);

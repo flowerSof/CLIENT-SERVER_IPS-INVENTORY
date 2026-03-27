@@ -18,10 +18,18 @@ export default function MapView({ onOpenFloorManager, readOnly = false }) {
     const [edificios, setEdificios] = useState([]);
     const [pisos, setPisos] = useState([]);
     const [selectedEdificio, setSelectedEdificio] = useState(() => {
+        // Prioritize navigation state (coming from Inventory 'Ver en mapa')
+        if (window.history.state?.usr?.edificioId) {
+            return window.history.state.usr.edificioId;
+        }
         const saved = localStorage.getItem('map_selectedEdificio');
         return saved ? parseInt(saved) : null;
     });
     const [selectedPiso, setSelectedPiso] = useState(() => {
+        // Prioritize navigation state
+        if (window.history.state?.usr?.pisoId) {
+            return window.history.state.usr.pisoId;
+        }
         const saved = localStorage.getItem('map_selectedPiso');
         return saved ? parseInt(saved) : null;
     });

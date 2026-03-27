@@ -9,13 +9,25 @@ import { API_ENDPOINTS } from '../config';
 export default function AssetDetailModal({ isOpen, onClose, asset, onOpenHistory }) {
     const [printStats, setPrintStats] = useState(null);
     const [loadingPrints, setLoadingPrints] = useState(false);
+    const [pisos, setPisos] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
         if (isOpen && asset) {
             fetchPrintStats();
+            // Load pisos if not already loaded
+            if (pisos.length === 0) fetchPisos();
         }
     }, [isOpen, asset]);
+
+    const fetchPisos = async () => {
+        try {
+            const res = await axios.get(API_ENDPOINTS.FLOORS);
+            setPisos(res.data);
+        } catch (err) {
+            console.error('Error fetching pisos:', err);
+        }
+    };
 
     const fetchPrintStats = async () => {
         setLoadingPrints(true);
@@ -34,9 +46,12 @@ export default function AssetDetailModal({ isOpen, onClose, asset, onOpenHistory
     const handleViewOnMap = () => {
         onClose();
         if (asset.piso_id) {
+            // Resolve edificio_id from the pisos list
+            const piso = pisos.find(p => p.id === asset.piso_id);
+            const edificioId = piso?.edificio_id || null;
             navigate('/map', {
                 state: {
-                    edificioId: asset.edificio_id, // Asumiendo que InventoryTable enriquece este dato o MapView lo infiere
+                    edificioId,
                     pisoId: asset.piso_id,
                     highlightAsset: asset.id
                 }
