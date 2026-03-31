@@ -74,7 +74,24 @@ class SystemCollector:
             ram_gb = f"{round(ram_bytes / (1024**3), 1)} GB"
             
             # Usuario (limpiar dominio si existe)
-            full_user = sys_info.UserName if sys_info.UserName else "No User"
+            full_user = sys_info.UserName if sys_info.UserName else None
+            
+            # Fallback: si UserName es None (pantalla bloqueada), buscar dueño de explorer.exe
+            if not full_user:
+                try:
+                    for proc in c.Win32_Process(Name="explorer.exe"):
+                        owner = proc.GetOwner()
+                        if owner[0] == 0:  # ReturnValue == 0 means success
+                            domain = owner[1] or ""
+                            user = owner[2] or ""
+                            if user:
+                                full_user = f"{domain}\\{user}" if domain else user
+                                break
+                except Exception as e:
+                    logger.debug(f"Fallback explorer.exe owner falló: {e}")
+            
+            if not full_user:
+                full_user = "No User"
             
             # Obtener nombre completo del usuario desde Win32_UserAccount
             usuario_nombre_completo = full_user

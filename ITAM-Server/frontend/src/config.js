@@ -13,6 +13,7 @@ export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localho
 
 // Export standard endpoints using the base URL
 export const API_ENDPOINTS = {
+    BASE_URL: API_BASE_URL,
     AUTH: `${API_BASE_URL}/api/auth`,
     USERS: `${API_BASE_URL}/api/users`,
     ASSETS: `${API_BASE_URL}/api/assets`,

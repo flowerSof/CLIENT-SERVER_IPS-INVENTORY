@@ -121,8 +121,11 @@ def recibir_reporte(reporte: asset_schema.AssetReportCreate, db: Session = Depen
         activo.hostname = reporte.hostname
         activo.ip_address = reporte.ip_address
         activo.mac_address = reporte.mac_address
-        activo.usuario_detectado = reporte.usuario
-        activo.usuario_nombre_completo = reporte.usuario_nombre_completo
+        # Solo actualizar usuario si el agente reporta un usuario real
+        # (evita borrar el nombre cuando la pantalla está bloqueada o el usuario cierra sesión)
+        if reporte.usuario and reporte.usuario not in ("No User", "Unknown", ""):
+            activo.usuario_detectado = reporte.usuario
+            activo.usuario_nombre_completo = reporte.usuario_nombre_completo
         activo.marca = reporte.marca
         activo.modelo = reporte.modelo
         activo.sistema_operativo = reporte.sistema_operativo

@@ -8,12 +8,13 @@ import {
 } from 'lucide-react';
 import AssetIcon from './AssetIcon';
 import useRealTimeAssets from '../hooks/useRealTimeAssets';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 
-export default function MapView({ onOpenFloorManager, readOnly = false }) {
+export default function MapView({ readOnly = false }) {
     const { activos, loading: assetsLoading } = useRealTimeAssets();
     const location = useLocation();
+    const navigate = useNavigate();
     const { filterBuildingsByPermission, filterFloorsByPermission } = useAuth();
     const [edificios, setEdificios] = useState([]);
     const [pisos, setPisos] = useState([]);
@@ -323,7 +324,7 @@ export default function MapView({ onOpenFloorManager, readOnly = false }) {
                         </div>
 
                         <button
-                            onClick={onOpenFloorManager}
+                            onClick={() => navigate('/floors')}
                             className="w-full py-1.5 bg-white border border-gray-300 rounded text-xs hover:bg-gray-50 text-gray-600"
                         >
                             Gestionar Pisos
@@ -485,7 +486,7 @@ export default function MapView({ onOpenFloorManager, readOnly = false }) {
                                     <Upload size={48} className="text-gray-300 mb-4" />
                                     <p className="text-gray-500 font-medium">Seleccione un piso con plano cargado</p>
                                     <button
-                                        onClick={onOpenFloorManager}
+                                        onClick={() => navigate('/floors')}
                                         className="mt-4 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 text-sm font-medium shadow-sm"
                                     >
                                         Subir Plano

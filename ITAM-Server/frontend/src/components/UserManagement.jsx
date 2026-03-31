@@ -533,19 +533,19 @@ export default function UserManagement() {
 
                                         <div className="grid grid-cols-2 gap-3">
                                             {[
-                                                { key: 'perm_dashboard', label: 'Dashboard', icon: <LayoutDashboard size={16} />, color: 'red' },
-                                                { key: 'perm_inventario', label: 'Inventario', icon: <Server size={16} />, color: 'blue' },
-                                                { key: 'perm_mapa', label: 'Mapa', icon: <MapIcon size={16} />, color: 'green' },
-                                                { key: 'perm_edificios', label: 'Edificios', icon: <Building2 size={16} />, color: 'purple' },
-                                                { key: 'perm_impresiones', label: 'Impresiones', icon: <Printer size={16} />, color: 'orange' },
-                                                { key: 'perm_notificaciones', label: 'Notificaciones', icon: <Bell size={16} />, color: 'teal' },
-                                                { key: 'perm_usuarios', label: 'Gestión Usuarios', icon: <Users size={16} />, color: 'amber' },
-                                            ].map(({ key, label, icon, color }) => (
+                                                { key: 'perm_dashboard', label: 'Dashboard', icon: <LayoutDashboard size={16} />, active: 'border-red-300 bg-red-50' },
+                                                { key: 'perm_inventario', label: 'Inventario', icon: <Server size={16} />, active: 'border-blue-300 bg-blue-50' },
+                                                { key: 'perm_mapa', label: 'Mapa', icon: <MapIcon size={16} />, active: 'border-green-300 bg-green-50' },
+                                                { key: 'perm_edificios', label: 'Edificios', icon: <Building2 size={16} />, active: 'border-purple-300 bg-purple-50' },
+                                                { key: 'perm_impresiones', label: 'Impresiones', icon: <Printer size={16} />, active: 'border-orange-300 bg-orange-50' },
+                                                { key: 'perm_notificaciones', label: 'Notificaciones', icon: <Bell size={16} />, active: 'border-teal-300 bg-teal-50' },
+                                                { key: 'perm_usuarios', label: 'Gestión Usuarios', icon: <Users size={16} />, active: 'border-amber-300 bg-amber-50' },
+                                            ].map(({ key, label, icon, active }) => (
                                                 <label
                                                     key={key}
                                                     className={`flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all ${
                                                         formData[key]
-                                                            ? `border-${color}-300 bg-${color}-50`
+                                                            ? active
                                                             : 'border-gray-200 bg-white hover:border-gray-300'
                                                     }`}
                                                 >

@@ -65,22 +65,22 @@ export default function useRealTimeAssets(refreshInterval = 30000) {
             });
 
         return assets.filter(asset => {
-            // Non-domain PCs: only superadmin (already handled above)
-            if (!asset.es_dominio) return false;
-
             // PC has piso_id assigned → check if that piso is allowed
             if (asset.piso_id) {
                 return allowedPisoIds.has(asset.piso_id);
             }
 
             // Unplaced domain PC → match hostname floor code (positions 4-5)
-            if (asset.hostname && asset.hostname.length >= 6) {
+            if (asset.es_dominio && asset.hostname && asset.hostname.length >= 6) {
                 const hostnameClean = asset.hostname.toUpperCase().replace(/-/g, '');
                 if (hostnameClean.length >= 6) {
                     const pisoCode = hostnameClean.substring(4, 6);
                     return allowedNiveles.has(pisoCode);
                 }
             }
+
+            // Non-domain PCs without piso: show to all authenticated users
+            if (!asset.es_dominio) return true;
 
             return false;
         });

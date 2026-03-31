@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { 
-    Bell, Activity, Search, RefreshCw, AlertCircle, 
+    Bell, Activity, RefreshCw, AlertCircle, 
     CheckCircle2, Power, RotateCcw, XCircle, Calendar,
-    User, Monitor, Wifi
+    User, Monitor, Wifi, Trash2, AlertTriangle
 } from 'lucide-react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,7 +15,7 @@ export default function NotificationsPanel() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [filterTipo, setFilterTipo] = useState('ALL');
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(0);
     const [hasMore, setHasMore] = useState(true);
     const [totalCount, setTotalCount] = useState(0);
 
@@ -27,30 +27,33 @@ export default function NotificationsPanel() {
         }
     });
 
-    const loadNotifications = async (isNewPage = false) => {
+    const loadNotifications = async (isNextPage = false) => {
         try {
-            if (!isNewPage) setLoading(true);
+            if (!isNextPage) setLoading(true);
             
-            const skip = isNewPage ? page * limit : 0;
+            const skip = isNextPage ? (page + 1) * limit : 0;
             const params = new URLSearchParams({ skip, limit });
             if (filterTipo && filterTipo !== 'ALL') {
                 params.append('tipo', filterTipo);
             }
 
-            const [notifsRes, countRes] = await Promise.all([
-                axios.get(`${API_ENDPOINTS.BASE_URL}/api/notificaciones?${params.toString()}`, getAuthHeaders()),
-                axios.get(`${API_ENDPOINTS.BASE_URL}/api/notificaciones/count${filterTipo !== 'ALL' ? `?tipo=${filterTipo}` : ''}`, getAuthHeaders())
-            ]);
+            const response = await axios.get(
+                `${API_ENDPOINTS.BASE_URL}/api/notificaciones?${params.toString()}`,
+                getAuthHeaders()
+            );
 
-            if (isNewPage) {
-                setNotifications(prev => [...prev, ...notifsRes.data.items]);
+            const { items, count } = response.data;
+
+            if (isNextPage) {
+                setNotifications(prev => [...prev, ...items]);
+                setPage(p => p + 1);
             } else {
-                setNotifications(notifsRes.data.items || []);
-                setPage(1);
+                setNotifications(items || []);
+                setPage(0);
             }
 
-            setTotalCount(countRes.data.count);
-            setHasMore((notifsRes.data.items || []).length === limit);
+            setTotalCount(count);
+            setHasMore((items || []).length === limit);
             setError('');
         } catch (err) {
             setError(err.response?.data?.detail || 'Error al cargar las notificaciones');
@@ -64,8 +67,35 @@ export default function NotificationsPanel() {
     }, [filterTipo]);
 
     const handleLoadMore = () => {
-        setPage(p => p + 1);
         loadNotifications(true);
+    };
+
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(
+                `${API_ENDPOINTS.BASE_URL}/api/notificaciones/${id}`,
+                getAuthHeaders()
+            );
+            setNotifications(prev => prev.filter(n => n.id !== id));
+            setTotalCount(prev => prev - 1);
+        } catch (err) {
+            setError('Error al eliminar notificación');
+        }
+    };
+
+    const handleDeleteAll = async () => {
+        if (!window.confirm('¿Está seguro de eliminar todas las notificaciones' + (filterTipo !== 'ALL' ? ` de tipo "${getActionLabel(filterTipo)}"` : '') + '?')) return;
+        try {
+            const params = filterTipo !== 'ALL' ? `?tipo=${filterTipo}` : '';
+            await axios.delete(
+                `${API_ENDPOINTS.BASE_URL}/api/notificaciones${params}`,
+                getAuthHeaders()
+            );
+            setNotifications([]);
+            setTotalCount(0);
+        } catch (err) {
+            setError('Error al eliminar notificaciones');
+        }
     };
 
     const getActionIcon = (tipo) => {
@@ -73,6 +103,7 @@ export default function NotificationsPanel() {
             case 'SHUTDOWN': return <Power size={18} className="text-red-500" />;
             case 'RESTART': return <RotateCcw size={18} className="text-amber-500" />;
             case 'CANCEL': return <XCircle size={18} className="text-blue-500" />;
+            case 'TIMEOUT': return <AlertTriangle size={18} className="text-orange-500" />;
             default: return <Activity size={18} className="text-gray-500" />;
         }
     };
@@ -82,7 +113,18 @@ export default function NotificationsPanel() {
             case 'SHUTDOWN': return 'Apagado';
             case 'RESTART': return 'Reinicio';
             case 'CANCEL': return 'Cancelación';
+            case 'TIMEOUT': return 'Timeout';
             default: return tipo;
+        }
+    };
+
+    const getBorderColor = (notif) => {
+        if (!notif.exitoso) return 'border-l-orange-500';
+        switch (notif.tipo) {
+            case 'SHUTDOWN': return 'border-l-red-500';
+            case 'RESTART': return 'border-l-amber-500';
+            case 'CANCEL': return 'border-l-blue-500';
+            default: return 'border-l-gray-400';
         }
     };
 
@@ -103,11 +145,11 @@ export default function NotificationsPanel() {
                 </div>
 
                 {/* Filters */}
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-center">
                     <select
                         value={filterTipo}
                         onChange={(e) => setFilterTipo(e.target.value)}
-                        className="bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white outline-none focus:ring-2 focus:ring-red-500 mr-2"
+                        className="bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white outline-none focus:ring-2 focus:ring-red-500"
                     >
                         <option value="ALL" className="text-gray-800">Todos los Eventos</option>
                         <option value="SHUTDOWN" className="text-gray-800">Apagados</option>
@@ -120,8 +162,19 @@ export default function NotificationsPanel() {
                         className="p-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-colors flex items-center justify-center"
                         title="Actualizar"
                     >
-                        <RefreshCw size={20} className={loading && !page > 1 ? "animate-spin" : ""} />
+                        <RefreshCw size={20} className={loading ? "animate-spin" : ""} />
                     </button>
+
+                    {notifications.length > 0 && (
+                        <button
+                            onClick={handleDeleteAll}
+                            className="p-2 bg-red-600/30 hover:bg-red-600/50 border border-red-400/30 rounded-xl transition-colors flex items-center gap-2 text-sm"
+                            title="Borrar todas"
+                        >
+                            <Trash2 size={16} />
+                            Borrar {filterTipo !== 'ALL' ? 'filtradas' : 'todas'}
+                        </button>
+                    )}
                     
                     <div className="ml-auto flex items-center bg-white/10 px-4 py-2 rounded-xl text-sm font-medium">
                         <span className="text-red-300 mr-2">{totalCount}</span> eventos encontrados
@@ -156,12 +209,8 @@ export default function NotificationsPanel() {
                                     key={notif.id}
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: index * 0.05 }}
-                                    className={`bg-white rounded-xl p-5 border-l-4 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 ${
-                                        notif.tipo === 'SHUTDOWN' ? 'border-l-red-500' :
-                                        notif.tipo === 'RESTART' ? 'border-l-amber-500' :
-                                        'border-l-blue-500'
-                                    }`}
+                                    transition={{ delay: index * 0.03 }}
+                                    className={`bg-white rounded-xl p-5 border-l-4 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 group ${getBorderColor(notif)}`}
                                 >
                                     <div className="mt-1 p-2 bg-gray-50 rounded-lg">
                                         {getActionIcon(notif.tipo)}
@@ -181,9 +230,18 @@ export default function NotificationsPanel() {
                                                     {notif.exitoso ? 'Exitoso' : 'Fallido'}
                                                 </span>
                                             </div>
-                                            <div className="flex items-center text-xs text-gray-500 gap-1 font-medium bg-gray-50 px-2 py-1 rounded-md">
-                                                <Calendar size={14} />
-                                                {format(new Date(notif.fecha), "dd MMM yyyy, HH:mm:ss", { locale: es })}
+                                            <div className="flex items-center gap-2">
+                                                <div className="flex items-center text-xs text-gray-500 gap-1 font-medium bg-gray-50 px-2 py-1 rounded-md">
+                                                    <Calendar size={14} />
+                                                    {notif.fecha && format(new Date(notif.fecha), "dd MMM yyyy, HH:mm:ss", { locale: es })}
+                                                </div>
+                                                <button
+                                                    onClick={() => handleDelete(notif.id)}
+                                                    className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors opacity-0 group-hover:opacity-100"
+                                                    title="Eliminar"
+                                                >
+                                                    <Trash2 size={14} />
+                                                </button>
                                             </div>
                                         </div>
                                         
@@ -206,8 +264,14 @@ export default function NotificationsPanel() {
                                             </div>
                                         </div>
 
-                                        <p className="mt-3 text-sm text-gray-600 bg-gray-50 p-3 rounded-lg border border-gray-100 font-mono text-xs">
-                                            <span className="font-semibold text-gray-800 block mb-1 font-sans text-sm">Mensaje del sistema:</span>
+                                        <p className={`mt-3 text-sm p-3 rounded-lg border font-mono text-xs ${
+                                            notif.exitoso
+                                                ? 'text-gray-600 bg-gray-50 border-gray-100'
+                                                : 'text-red-700 bg-red-50 border-red-200'
+                                        }`}>
+                                            <span className={`font-semibold block mb-1 font-sans text-sm ${notif.exitoso ? 'text-gray-800' : 'text-red-800'}`}>
+                                                {notif.exitoso ? 'Mensaje del sistema:' : '⚠ Error del comando:'}
+                                            </span>
                                             {notif.mensaje}
                                         </p>
                                     </div>
@@ -217,7 +281,7 @@ export default function NotificationsPanel() {
                     )}
                 </AnimatePresence>
 
-                {loading && page > 1 && (
+                {loading && (
                     <div className="flex justify-center p-6">
                         <RefreshCw className="animate-spin text-gray-400" size={24} />
                     </div>
