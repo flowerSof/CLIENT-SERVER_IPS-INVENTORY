@@ -10,29 +10,62 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
     const [showMenu, setShowMenu] = useState(false);
     const [loading, setLoading] = useState(false);
     const [pendingShutdown, setPendingShutdown] = useState(false);
-    const [countdown, setCountdown] = useState(0);
-
-    // Auto-clear pendingShutdown después de 60 segundos
-    useEffect(() => {
-        if (!pendingShutdown) return;
-
-        setCountdown(60);
-        const interval = setInterval(() => {
-            setCountdown(prev => {
-                if (prev <= 1) {
-                    clearInterval(interval);
-                    setPendingShutdown(false);
-                    return 0;
-                }
-                return prev - 1;
-            });
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, [pendingShutdown]);
+    const [pendingType, setPendingType] = useState('');
+    const [deadlineTime, setDeadlineTime] = useState(null);
+    const [timeLeft, setTimeLeft] = useState(null);
 
     const API_ASSETS = API_ENDPOINTS.ASSETS;
     const API_COMMANDS = API_ENDPOINTS.COMMANDS;
+
+    // Al montar, verificar si hay comandos pendientes para este activo
+    useEffect(() => {
+        const checkPending = async () => {
+            try {
+                const response = await axios.get(`${API_COMMANDS}/${asset.id}/pending`);
+                if (response.data && response.data.length > 0) {
+                    const cmd = response.data[0];
+                    setPendingShutdown(true);
+                    setPendingType(cmd.tipo);
+                    
+                    if (cmd.estado === 'EJECUTANDO' && cmd.deadline) {
+                        setDeadlineTime(new Date(cmd.deadline).getTime());
+                    } else {
+                        setDeadlineTime(null);
+                    }
+                }
+            } catch (err) {
+                // Silenciar errores — no es crítico
+            }
+        };
+        checkPending();
+    }, [asset.id, API_COMMANDS]);
+
+    // Reloj para el contador de tiempo real
+    useEffect(() => {
+        if (!deadlineTime) {
+            setTimeLeft(null);
+            return;
+        }
+
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const diff = Math.floor((deadlineTime - now) / 1000);
+            if (diff > 0) {
+                setTimeLeft(diff);
+            } else {
+                setTimeLeft(0);
+                setTimeout(() => {
+                    setPendingShutdown(false);
+                    setPendingType('');
+                    setDeadlineTime(null);
+                }, 2000);
+            }
+        };
+
+        updateTimer();
+        const interval = setInterval(updateTimer, 1000);
+        return () => clearInterval(interval);
+    }, [deadlineTime]);
 
     const handleClick = (e) => {
         e.stopPropagation();
@@ -72,6 +105,8 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
             if (response.data.success) {
                 alert(`✅ ${response.data.message}`);
                 setPendingShutdown(true);
+                setPendingType('SHUTDOWN');
+                setDeadlineTime(null);
             } else {
                 alert(`⚠️ ${response.data.message}`);
             }
@@ -99,6 +134,8 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
             if (response.data.success) {
                 alert(`✅ ${response.data.message}`);
                 setPendingShutdown(true);
+                setPendingType('RESTART');
+                setDeadlineTime(null);
             } else {
                 alert(`⚠️ ${response.data.message}`);
             }
@@ -119,9 +156,10 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
                 { tipo: 'CANCEL', delay_segundos: 0 }
             );
             if (response.data.success) {
-                alert(`✅ Cancelación encolada. Se ejecutará en el próximo ciclo del agente.`);
+                alert(`✅ Comando cancelado.`);
                 setPendingShutdown(false);
-                setCountdown(0);
+                setPendingType('');
+                setDeadlineTime(null);
             } else {
                 alert(`⚠️ ${response.data.message}`);
             }
@@ -136,6 +174,9 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
 
     // Determinar si este activo tiene alerta crítica
     const hasAlert = asset.has_alert;
+
+    const actionText = pendingType === 'SHUTDOWN' ? 'Apagado' : pendingType === 'RESTART' ? 'Reinicio' : 'Comando';
+    const pendingLabel = timeLeft !== null ? `${actionText} en ${timeLeft}s` : `${actionText} pendiente`;
 
     return (
         <>
@@ -174,16 +215,16 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
                         </div>
                     )}
 
-                    {/* Countdown badge */}
+                    {/* Pending command badge */}
                     {pendingShutdown && (
-                        <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-[9px] font-bold rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
-                            {countdown}
+                        <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-[9px] font-bold rounded-full w-5 h-5 flex items-center justify-center animate-pulse" title={pendingLabel}>
+                            {timeLeft !== null ? timeLeft : '⏳'}
                         </div>
                     )}
 
                     {/* Tooltip Label */}
                     <div className="absolute top-full mt-1 px-2 py-0.5 bg-gray-900/90 text-white text-[10px] rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        {asset.hostname} {pendingShutdown ? `• Apagando en ${countdown}s` : hasAlert ? '• ⚠ Alerta crítica' : '• Click para opciones'}
+                        {asset.hostname} {pendingShutdown ? `• ${pendingLabel}` : hasAlert ? '• ⚠ Alerta crítica' : '• Click para opciones'}
                     </div>
 
                     {/* Menu desplegable al seleccionar */}
@@ -231,38 +272,45 @@ export default function DraggableAsset({ asset, onStop, onUnassign, disabled = f
 
                                 <div className="h-px bg-gray-100 my-1" />
 
-                                {/* Comandos remotos - solo si está online */}
+                                {/* Comandos remotos */}
                                 {asset.is_online ? (
-                                    <>
-                                        <button
-                                            onClick={handleShutdown}
-                                            disabled={loading || pendingShutdown}
-                                            className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-red-50 text-red-600 disabled:opacity-50"
-                                        >
-                                            <Power size={16} />
-                                            Apagar PC
-                                        </button>
-                                        <button
-                                            onClick={handleRestart}
-                                            disabled={loading || pendingShutdown}
-                                            className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-blue-50 text-blue-600 disabled:opacity-50"
-                                        >
-                                            <RotateCcw size={16} />
-                                            Reiniciar PC
-                                        </button>
-
-                                        {/* Cancelar SOLO si hay un shutdown/restart pendiente */}
-                                        {pendingShutdown && (
+                                    pendingShutdown ? (
+                                        /* Hay un comando pendiente — mostrar estado + cancelar */
+                                        <>
+                                            <div className="px-3 py-2 text-xs text-orange-600 font-semibold bg-orange-50 flex items-center gap-2">
+                                                <Timer size={14} className="animate-pulse" />
+                                                {timeLeft !== null ? `${pendingLabel}` : `${pendingLabel} — esperando al agente`}
+                                            </div>
                                             <button
                                                 onClick={handleCancelShutdown}
-                                                disabled={loading}
+                                                disabled={loading || (timeLeft !== null && timeLeft <= 5)}
                                                 className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-green-50 text-green-600 disabled:opacity-50 border-t border-gray-100"
                                             >
                                                 <XCircle size={16} />
-                                                Cancelar apagado ({countdown}s)
+                                                {timeLeft !== null && timeLeft <= 5 ? "Demasiado tarde..." : "Cancelar comando"}
                                             </button>
-                                        )}
-                                    </>
+                                        </>
+                                    ) : (
+                                        /* Sin comando pendiente — mostrar opciones */
+                                        <>
+                                            <button
+                                                onClick={handleShutdown}
+                                                disabled={loading}
+                                                className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-red-50 text-red-600 disabled:opacity-50"
+                                            >
+                                                <Power size={16} />
+                                                Apagar PC
+                                            </button>
+                                            <button
+                                                onClick={handleRestart}
+                                                disabled={loading}
+                                                className="w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-blue-50 text-blue-600 disabled:opacity-50"
+                                            >
+                                                <RotateCcw size={16} />
+                                                Reiniciar PC
+                                            </button>
+                                        </>
+                                    )
                                 ) : (
                                     <div className="px-3 py-2 text-xs text-gray-400 italic">
                                         PC offline - comandos no disponibles

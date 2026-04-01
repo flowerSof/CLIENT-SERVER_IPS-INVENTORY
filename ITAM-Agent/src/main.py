@@ -116,7 +116,7 @@ class ITAMAgent:
                             try:
                                 if tipo == "SHUTDOWN":
                                     subprocess.run(
-                                        f'shutdown /s /t {delay} /c "Apagado remoto via ITAM Server"',
+                                        f'shutdown /s /t {delay} /c "El administrador ha programado el apagado de este PC. Guarde su trabajo."',
                                         shell=True, check=True
                                     )
                                     msg = f"Apagado programado en {delay} segundos"
@@ -125,7 +125,7 @@ class ITAMAgent:
 
                                 elif tipo == "RESTART":
                                     subprocess.run(
-                                        f'shutdown /r /t {delay} /c "Reinicio remoto via ITAM Server"',
+                                        f'shutdown /r /t {delay} /c "El administrador ha programado el reinicio de este PC. Guarde su trabajo."',
                                         shell=True, check=True
                                     )
                                     msg = f"Reinicio programado en {delay} segundos"
@@ -149,6 +149,23 @@ class ITAMAgent:
                             # Reportar resultado al servidor
                             if cmd_id:
                                 self.network.report_command_result(cmd_id, exito, msg)
+                                
+                            # Entrar en ciclo rápido de polling para poder cancelar
+                            if exito and delay > 0 and tipo in ("SHUTDOWN", "RESTART"):
+                                logger.info(f"Entrando en modo polling rápido ({delay}s) para interceptar posibles cancelaciones...")
+                                import time as time_module
+                                end_time = time_module.time() + delay
+                                while time_module.time() < (end_time - 5): # Hasta 5 seg antes de que se apague
+                                    time_module.sleep(2)
+                                    try:
+                                        cmd_cancel = self.network.poll_command(data.get("serial_number", ""))
+                                        if cmd_cancel.get("tiene_comando") and cmd_cancel.get("tipo") == "CANCEL":
+                                            subprocess.run("shutdown /a", shell=True)
+                                            self.network.report_command_result(cmd_cancel.get("comando_id"), True, "Apagado cancelado")
+                                            logger.info("Apagado/reinicio CANCELADO remotamente")
+                                            break
+                                    except Exception as e:
+                                        logger.debug(f"Error en polling rapido: {e}")
                     except Exception as e:
                         logger.debug(f"Error en ciclo de comandos: {e}")
                 else:

@@ -37,6 +37,25 @@ def _enqueue_command(db: Session, activo, current_user: UsuarioAdmin, tipo: str,
             ComandoPendiente.activo_id == activo.id,
             ComandoPendiente.estado == "PENDIENTE"
         ).update({"estado": "CANCELADO"})
+        db.commit()
+        return CommandResponse(
+            success=True,
+            message="Comandos pendientes cancelados.",
+            asset_ip=activo.ip_address
+        )
+
+    # Evitar comandos duplicados
+    existing = db.query(ComandoPendiente).filter(
+        ComandoPendiente.activo_id == activo.id,
+        ComandoPendiente.estado == "PENDIENTE",
+        ComandoPendiente.tipo.in_(["SHUTDOWN", "RESTART"])
+    ).first()
+
+    if existing:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Ya hay un comando {existing.tipo} pendiente para esta PC. Cancélalo primero."
+        )
 
     cmd = ComandoPendiente(
         activo_id=activo.id,

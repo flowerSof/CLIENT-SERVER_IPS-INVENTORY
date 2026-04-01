@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from pydantic import BaseModel
 from typing import Optional
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 from database import get_db
 from models.commands import ComandoPendiente
@@ -65,6 +65,25 @@ async def queue_command(
             ComandoPendiente.activo_id == asset_id,
             ComandoPendiente.estado == "PENDIENTE"
         ).update({"estado": "CANCELADO"})
+        db.commit()
+        return {
+            "success": True,
+            "message": "Comandos pendientes cancelados.",
+            "comando_id": None
+        }
+
+    # Evitar comandos duplicados: si ya hay un SHUTDOWN o RESTART pendiente, rechazar
+    existing = db.query(ComandoPendiente).filter(
+        ComandoPendiente.activo_id == asset_id,
+        ComandoPendiente.estado == "PENDIENTE",
+        ComandoPendiente.tipo.in_(["SHUTDOWN", "RESTART"])
+    ).first()
+
+    if existing:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Ya hay un comando {existing.tipo} pendiente para esta PC. Cancélalo primero."
+        )
 
     # Encolar el nuevo comando
     cmd = ComandoPendiente(
@@ -166,9 +185,43 @@ async def get_pending_commands(
     db: Session = Depends(get_db),
     current_user: UsuarioAdmin = Depends(get_current_user)
 ):
-    """Devuelve los comandos pendientes para un activo (para mostrar estado en UI)."""
-    cmds = db.query(ComandoPendiente).filter(
+    """Devuelve los comandos pendientes y en ejecución (con cuenta regresiva) para un activo."""
+    ahora = datetime.now(timezone.utc)
+    resultados = []
+    
+    # 1. Comandos PENDIENTES (el agente aún no los ha recogido)
+    cmds_pendientes = db.query(ComandoPendiente).filter(
         ComandoPendiente.activo_id == asset_id,
         ComandoPendiente.estado == "PENDIENTE"
     ).all()
-    return [{"id": c.id, "tipo": c.tipo, "creado_en": c.creado_en} for c in cmds]
+    for c in cmds_pendientes:
+        resultados.append({
+            "id": c.id,
+            "tipo": c.tipo,
+            "estado": "PENDIENTE",
+            "creado_en": c.creado_en,
+            "delay_segundos": c.delay_segundos
+        })
+        
+    # 2. Comandos EJECUTADOS recientemente (el OS está haciendo el countdown)
+    cmds_ejecutados = db.query(ComandoPendiente).filter(
+        ComandoPendiente.activo_id == asset_id,
+        ComandoPendiente.estado == "EJECUTADO",
+        ComandoPendiente.tipo.in_(["SHUTDOWN", "RESTART"])
+    ).order_by(ComandoPendiente.ejecutado_en.desc()).limit(1).all()
+    
+    for c in cmds_ejecutados:
+        if c.ejecutado_en and c.delay_segundos:
+            # Check if timeframe has passed
+            fin = c.ejecutado_en + timedelta(seconds=c.delay_segundos)
+            if fin > ahora:
+                resultados.append({
+                    "id": c.id,
+                    "tipo": c.tipo,
+                    "estado": "EJECUTANDO",
+                    "ejecutado_en": c.ejecutado_en,
+                    "deadline": fin,
+                    "delay_segundos": c.delay_segundos
+                })
+
+    return resultados
